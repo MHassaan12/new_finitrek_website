@@ -1,0 +1,281 @@
+.icon,
+.icon1 {
+  position: absolute;
+  margin: 0 !important;
+}
+.icon {
+  height: 310px;
+  width: 292px;
+  top: -37px;
+  left: 648px;
+}
+.icon1 {
+  height: 297px;
+  width: 279px;
+  top: -197px;
+  right: 617px;
+  object-fit: contain;
+}
+.testimonials {
+  position: relative;
+  line-height: 150%;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 97px;
+}
+.testimonialTitle {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-lavenderblush);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-13xl) ;
+}
+.whatPeoleSay {
+  margin: 0;
+  height: 26px;
+  position: relative;
+  font-size: var(--font-size-19xl);
+  line-height: 130%;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--color-darkslategray-400);
+  display: inline-block;
+}
+.testimonialHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 var(--padding-xl);
+  box-sizing: border-box;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+}
+.customerReviewsChild {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  min-width: 258px;
+  min-height: 438px;
+}
+.stars1 {
+  font-size: var(--font-size-5xl);
+}
+.stars {
+  align-self: stretch;
+  height: 45px;
+  position: relative;
+  line-height: 150%;
+  font-weight: 500;
+  display: inline-block;
+  white-space: nowrap;
+}
+.frameChild,
+.frameChild1,
+.frameInner,
+.frameItem,
+.starIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  border-radius: 0.75px;
+  min-height: 24px;
+}
+.starParent,
+.starsParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-9xs);
+}
+.starsParent {
+  width: 164px;
+  flex-direction: column;
+  gap: var(--gap-5xl);
+}
+.iFeelVery {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: inherit;
+  line-height: 108px;
+  font-weight: 400;
+  font-family: inherit;
+}
+.charlieJohnson,
+.fromNewYork {
+  position: relative;
+  line-height: 150%;
+  display: inline-block;
+}
+.charlieJohnson {
+  margin: 0;
+  align-self: stretch;
+  height: 17px;
+  font-size: inherit;
+  font-weight: 500;
+  font-family: inherit;
+}
+.fromNewYork {
+  width: 127px;
+  height: 10px;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-300);
+}
+.charlieJohnsonParent {
+  width: 198px;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+  font-size: var(--font-size-5xl);
+  color: var(--color-gray-500);
+}
+.charlieJohnsonParent,
+.frameParent,
+.iFeelVerySecureWhenUsingParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.iFeelVerySecureWhenUsingParent {
+  align-self: stretch;
+  justify-content: flex-start;
+  gap: var(--gap-47xl);
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-300);
+}
+.frameParent {
+  flex: 0.7985;
+  justify-content: center;
+  padding: var(--padding-21xl);
+  box-sizing: border-box;
+  gap: var(--gap-29xl);
+  min-width: 258px;
+  max-width: 100%;
+}
+.customerReviews {
+  width: 794px;
+  box-shadow: 0 12px 24px rgba(16, 76, 139, 0.16);
+  border-radius: var(--br-5xl);
+  background-color: var(--color-white);
+  flex-shrink: 0;
+  flex-direction: row;
+  align-items: center;
+  row-gap: 20px;
+  color: var(--color-gray-500);
+}
+.customerReviews,
+.customerReviewsParent,
+.testimonialContent {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.customerReviewsParent {
+  width: 1480px;
+  /* overflow-x: auto; */
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 var(--padding-xl);
+  box-sizing: border-box;
+  gap: var(--gap-21xl);
+  font-size: var(--font-size-45xl);
+  color: var(--color-darkslategray-300);
+}
+.testimonialContent {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-61xl);
+  z-index: 1;
+}
+.quotesWrapper,
+.whatPeopleSay {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.quotesWrapper {
+  margin-left: -511px;
+  width: 2462px;
+  flex-direction: row;
+  position: relative;
+  max-width: 171%;
+  flex-shrink: 0;
+}
+.whatPeopleSay {
+  align-self: stretch;
+  background-color: var(--color-ghostwhite);
+  overflow: hidden;
+  flex-direction: column;
+  padding: var(--padding-108xl) 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-purple-100);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 1050px) {
+  .whatPeopleSay {
+    padding-top: var(--padding-64xl);
+    padding-bottom: var(--padding-64xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 750px) {
+  .whatPeoleSay {
+    font-size: var(--font-size-11xl);
+    line-height: 40px;
+  }
+  .customerReviewsChild,
+  .frameParent {
+    flex: 1;
+  }
+  .customerReviews {
+    flex-wrap: wrap;
+  }
+  .customerReviewsParent {
+    gap: var(--gap-xl);
+  }
+  .testimonialContent {
+    gap: var(--gap-21xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .whatPeoleSay {
+    font-size: var(--font-size-4xl);
+    line-height: 30px;
+  }
+  .charlieJohnson,
+  .stars {
+    font-size: var(--font-size-lgi);
+    line-height: 77px;
+  }
+  .charlieJohnson {
+    line-height: 29px;
+  }
+  .iFeelVerySecureWhenUsingParent {
+    gap: var(--gap-14xl);
+  }
+  .frameParent {
+    gap: var(--gap-5xl);
+    padding-top: var(--padding-7xl);
+    padding-bottom: var(--padding-7xl);
+    box-sizing: border-box;
+  }
+  .testimonialContent {
+    gap: var(--gap-xl);
+  }
+  .whatPeopleSay {
+    padding-top: var(--padding-35xl);
+    padding-bottom: var(--padding-35xl);
+    box-sizing: border-box;
+  }
+}

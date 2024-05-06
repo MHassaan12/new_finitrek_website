@@ -1,0 +1,208 @@
+.whyChooseUs1 {
+  position: relative;
+  line-height: 150%;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 117px;
+}
+.whyChooseUsWrapper {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-purple-300);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-13xl) ;
+  white-space: nowrap;
+}
+.weOfferThe {
+  margin: 0;
+  align-self: stretch;
+  height: 75px;
+  position: relative;
+  font-size: var(--font-size-19xl);
+  line-height: 130%;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--color-darkslategray-400);
+  display: inline-block;
+}
+.frameGroup {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-13xl);
+}
+.vuesaxboldwalletIcon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+.iconCar {
+  border-radius: var(--br-base);
+  background-color: var(--color-lavenderblush);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xl);
+}
+.bookYourCar {
+  position: relative;
+  line-height: 150%;
+  font-weight: 500;
+}
+.selectYourPick,
+.timeToBook {
+  margin: 0;
+}
+.bookYourCarContainer {
+  height: 31px;
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 150%;
+  font-weight: 500;
+  color: var(--color-dimgray);
+  text-align: center;
+  display: inline-block;
+}
+.bookYourCarParent,
+.iconCarParent {
+  flex-direction: column;
+  align-items: center;
+}
+.bookYourCarParent {
+  width: 230px;
+  display: none;
+  justify-content: center;
+  gap: var(--gap-5xs);
+}
+.iconCarParent {
+  display: flex;
+  justify-content: flex-start;
+  gap: var(--gap-21xl);
+}
+.bestPriceGuaranteed {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 150%;
+  font-weight: 500;
+  font-family: inherit;
+}
+.findALower,
+.ofTheDifference {
+  margin: 0;
+}
+.findALowerContainer {
+  height: 35px;
+  position: relative;
+  font-size: var(--font-size-base);
+  line-height: 150%;
+  color: var(--color-dimgray);
+  display: inline-block;
+}
+.bestPrice,
+.priceDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.bestPrice {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+}
+.bestPriceParent,
+.frameParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 100%;
+}
+.bestPriceParent {
+  padding: 0 var(--padding-xl) 0 0;
+  box-sizing: border-box;
+  gap: var(--gap-21xl);
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+}
+.frameParent {
+  position: absolute;
+  top: calc(50% - 308px);
+  left: 942px;
+  width: 576px;
+  gap: var(--gap-37xl);
+  z-index: 1;
+}
+.vectorIcon {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: -346px;
+  max-height: 100%;
+  width: 1123px;
+  object-fit: contain;
+}
+.audi1Icon {
+  position: absolute;
+  top: 122px;
+  left: -253px;
+  width: 957px;
+  height: 448px;
+  object-fit: cover;
+  z-index: 1;
+}
+.vectorParent {
+  position: absolute;
+  top: 98px;
+  left: 0;
+  width: 777px;
+  height: 859px;
+}
+.whyChooseUs {
+  align-self: stretch;
+  height: 800px;
+  position: relative;
+  background-color: var(--color-white);
+  overflow: hidden;
+  flex-shrink: 0;
+  max-width: 100%;
+  width: 100%;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-purple-100);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 750px) {
+  .weOfferThe {
+    font-size: var(--font-size-11xl);
+    line-height: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .weOfferThe {
+    font-size: var(--font-size-4xl);
+    line-height: 30px;
+  }
+  .bestPriceGuaranteed,
+  .bookYourCar {
+    font-size: var(--font-size-base);
+    line-height: 24px;
+  }
+  .bestPrice {
+    flex-wrap: wrap;
+  }
+  .whyChooseUs {
+    height: auto;
+    min-height: 800;
+  }
+}

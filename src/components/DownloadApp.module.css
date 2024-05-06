@@ -1,0 +1,250 @@
+.appDownloadGraphic {
+  height: 684px;
+  width: 893px;
+  position: absolute;
+  margin: 0 !important;
+  top: -93px;
+  left: -244px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.downloadAppChild {
+  height: 455px;
+  width: 495px;
+  position: relative;
+  flex-shrink: 0;
+  display: none;
+  z-index: 1;
+}
+.findALower,
+.ofTheDifference {
+  margin: 0;
+}
+.findALowerContainer {
+  width: 322px;
+  position: relative;
+  line-height: 150%;
+  display: inline-block;
+  flex-shrink: 0;
+  debug_commit: 1de1738;
+  max-width: 100%;
+}
+.findALowerPriceWellRefuWrapper {
+  margin-top: -1400.5px;
+  margin-left: -1041px;
+  width: 842px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-xl) 0 0;
+  box-sizing: border-box;
+}
+.coomingSoon {
+  position: relative;
+  line-height: 150%;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 110px;
+}
+.appInfoLabel {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-purple-100);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-base) var(--padding-13xl) ;
+  white-space: nowrap;
+}
+.free {
+  color: var(--color-purple-100);
+}
+.downloadFinitrekAppContainer {
+  margin: 0;
+  align-self: stretch;
+  height: 92px;
+  position: relative;
+  font-size: var(--font-size-29xl);
+  line-height: 120%;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  color: var(--color-gray-300);
+}
+.appInfoStatus {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+}
+.forFasterEasier {
+  position: relative;
+  font-size: var(--font-size-base);
+  line-height: 150%;
+  color: var(--color-darkslategray-200);
+  display: inline-block;
+  max-width: 100%;
+}
+.image2Icon,
+.image3Icon {
+  align-self: stretch;
+  width: 174.9px;
+  position: relative;
+  border-radius: 10.14px;
+  max-height: 100%;
+  object-fit: cover;
+  min-height: 52px;
+}
+.appStoreIcons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base-3);
+  max-width: 100%;
+}
+.appInfoAvailability,
+.appInfoAvailabilityWrapper {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.appInfoAvailability {
+  align-self: stretch;
+  gap: var(--gap-14xl-5);
+  debug_commit: 1de1738;
+  max-width: 100%;
+  z-index: 1;
+}
+.appInfoAvailabilityWrapper {
+  width: 480px;
+  padding: var(--padding-9xl) 0 0;
+  box-sizing: border-box;
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+}
+.shadowIcon {
+  top: 0;
+  left: 0;
+  height: 1054.4px;
+  object-fit: cover;
+}
+.mainIcon,
+.phoneShadow,
+.shadowIcon {
+  width: 520.2px;
+  position: absolute;
+}
+.mainIcon {
+  top: 0;
+  left: 0;
+  height: 1054.4px;
+  object-fit: cover;
+  z-index: 1;
+}
+.phoneShadow {
+  height: 803px;
+  margin: 0 !important;
+  top: -20.1px;
+  right: -26.8px;
+}
+.iphone14ProSpaceBlackMock1 {
+  height: 1011.3px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  mix-blend-mode: normal;
+  z-index: 2;
+}
+.downloadApp,
+.iphone14ProSpaceBlackMock,
+.phoneMockupContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.phoneMockupContainer {
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+}
+.downloadApp,
+.iphone14ProSpaceBlackMock {
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+.iphone14ProSpaceBlackMock {
+  width: 520.2px;
+  padding: var(--padding-xl-1) var(--padding-5xl-7) var(--padding-4xl);
+  debug_commit: 1de1738;
+}
+.downloadApp {
+  width: 100%;
+  height: 500px;
+  background-color: var(--color-white);
+  overflow: hidden;
+  overflow-y: -webkit-scroll;
+  overflow-y: -moz-scroll;
+  padding: var(--padding-53xl) var(--padding-61xl-8) var(--padding-80xl-3)
+    var(--padding-141xl);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  /* gap: var(--gap-180xl); */
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-dimgray);
+  font-family: var(--font-poppins);
+  z-index: -1;
+}
+@media screen and (max-width: 1250px) {
+  .downloadApp {
+    gap: var(--gap-80xl);
+    padding: var(--padding-28xl) var(--padding-21xl) var(--padding-46xl)
+      var(--padding-61xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .iphone14ProSpaceBlackMock {
+    padding-top: var(--padding-xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 750px) {
+  .downloadFinitrekAppContainer {
+    font-size: var(--font-size-19xl);
+    line-height: 46px;
+  }
+  .downloadApp {
+    gap: var(--gap-31xl);
+    padding-left: var(--padding-21xl);
+    padding-top: var(--padding-12xl);
+    padding-bottom: var(--padding-23xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .downloadFinitrekAppContainer {
+    font-size: var(--font-size-10xl);
+    line-height: 35px;
+  }
+  .appStoreIcons {
+    flex-wrap: wrap;
+  }
+  .downloadApp {
+    height: auto;
+    gap: var(--gap-6xl);
+  }
+}

@@ -1,0 +1,62 @@
+.vuesaxbolduserTickIcon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+.iconCar {
+  border-radius: var(--br-base);
+  background-color: var(--color-lavenderblush);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-xl);
+}
+.experienceDriver {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 150%;
+  font-weight: 500;
+  font-family: inherit;
+}
+.dontHaveDriver,
+.experiencedDriverFor {
+  margin: 0;
+}
+.dontHaveDriverContainer {
+  height: 35px;
+  position: relative;
+  font-size: var(--font-size-base);
+  line-height: 150%;
+  color: var(--color-dimgray);
+  display: inline-block;
+}
+.experience,
+.experienceDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.experience {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-5xl);
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 450px) {
+  .experienceDriver {
+    font-size: var(--font-size-base);
+    line-height: 24px;
+  }
+  .experience {
+    flex-wrap: wrap;
+  }
+}

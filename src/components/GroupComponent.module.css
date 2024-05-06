@@ -1,0 +1,259 @@
+.carImagesChild {
+  height: 155px;
+  width: 256px;
+  position: relative;
+  border-radius: var(--br-base) var(--br-base) 0 0;
+  background-color: var(--color-white);
+  display: none;
+}
+.image12Icon {
+  height: 104px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  object-fit: contain;
+  z-index: 1;
+}
+.carImages {
+  align-self: stretch;
+  border-radius: var(--br-base) var(--br-base) 0 0;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-7xl) var(--padding-5xl) var(--padding-6xl);
+}
+.saloonCar {
+  position: relative;
+  line-height: 17px;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 90px;
+}
+.ratingStarsIcon {
+  height: 16px;
+  width: 16px;
+  position: relative;
+  border-radius: var(--br-12xs-5);
+}
+.span {
+  font-weight: 500;
+}
+.reviews1 {
+  color: var(--color-gray-200);
+}
+.reviews {
+  position: relative;
+  line-height: 8px;
+  display: inline-block;
+  min-width: 113px;
+}
+.carReviewRow,
+.carTypeRow {
+  display: flex;
+  justify-content: flex-start;
+  gap: var(--gap-7xs);
+}
+.carReviewRow {
+  flex-direction: row;
+  align-items: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-black);
+}
+.carTypeRow {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.vuesaxlinearuserIcon {
+  height: 20px;
+  width: 20px;
+  position: relative;
+}
+.passagers {
+  height: 8px;
+  position: relative;
+  line-height: 17px;
+  display: inline-block;
+  min-width: 73px;
+}
+.capacityRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-9xs);
+}
+.transmissionIcon {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.auto {
+  height: 8px;
+  position: relative;
+  line-height: 17px;
+  display: inline-block;
+  min-width: 28px;
+}
+.capacityRowParent,
+.transmissionRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-8xs);
+}
+.capacityRowParent {
+  align-self: stretch;
+  justify-content: space-between;
+  padding: 0 var(--padding-mid) 0 0;
+  gap: var(--gap-xl);
+}
+.airConditioningIcon {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.airConditioning {
+  height: 8px;
+  position: relative;
+  line-height: 17px;
+  display: inline-block;
+  min-width: 96px;
+}
+.airConditioningIconParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-9xs);
+}
+.frameIcon {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.doors {
+  height: 8px;
+  position: relative;
+  line-height: 17px;
+  display: inline-block;
+  min-width: 46px;
+}
+.doorsWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-8xs);
+}
+.airConditioningWrapper,
+.carCapacityWrapper,
+.carFeatures {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.airConditioningWrapper {
+  flex-direction: row;
+  padding: 0;
+  gap: var(--gap-lgi);
+}
+.carCapacityWrapper,
+.carFeatures {
+  flex-direction: column;
+}
+.carCapacityWrapper {
+  gap: var(--gap-5xs);
+  font-size: var(--font-size-xs);
+  color: var(--color-darkgray);
+}
+.carFeatures {
+  gap: var(--gap-base);
+}
+.frameChild {
+  align-self: stretch;
+  height: 1px;
+  position: relative;
+  border-top: 1px solid var(--color-gainsboro);
+  box-sizing: border-box;
+}
+.rentNow {
+  height: 10px;
+  position: relative;
+  line-height: 17px;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 66px;
+}
+.rentNowWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) 0 0;
+}
+.vuesaxlineararrowRightIcon {
+  height: 20px;
+  width: 20px;
+  position: relative;
+}
+.rentButtonWrapper {
+  align-self: stretch;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-purple-100);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs) var(--padding-38xl);
+  gap: var(--gap-5xs);
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+}
+.carFeaturesParent {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-4xl-5);
+}
+.carDetailsWrapper,
+.carFeaturesParent,
+.carImageWrapper,
+.carImageWrapperWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.carDetailsWrapper {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 var(--padding-5xl);
+}
+.carImageWrapper,
+.carImageWrapperWrapper {
+  flex: 1;
+}
+.carImageWrapper {
+  border-radius: var(--br-base);
+  background-color: var(--color-white);
+  flex-direction: column;
+  padding: 0 0 var(--padding-5xl);
+}
+.carImageWrapperWrapper {
+  box-shadow: 0 12px 24px rgba(16, 76, 139, 0.16);
+  flex-direction: row;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-400);
+  font-family: var(--font-poppins);
+  border-radius: 18px;
+}
