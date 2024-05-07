@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
-import Experience from "./Experience";
-import styles from "./WhyChooseUs.module.css";
+import Experience from "../Common/Experience";
+import styles from "../../Assets/css/WhyChooseUs.module.css";
 
 const WhyChooseUs: FunctionComponent = () => {
   return (

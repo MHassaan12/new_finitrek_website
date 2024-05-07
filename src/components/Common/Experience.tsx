@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import styles from "./Experience.module.css";
+import styles from "../../Assets/css/Experience.module.css";
 
 export type ExperienceType = {
   vuesaxbolduserTick?: string;

@@ -1,5 +1,5 @@
 import { FunctionComponent, useMemo, type CSSProperties } from "react";
-import styles from "./GroupComponent.module.css";
+import styles from "../../Assets/css/GroupComponent.module.css";
 
 export type GroupComponentType = {
   image12?: string;

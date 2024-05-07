@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import styles from "./DownloadApp.module.css";
+import styles from "../../Assets/css/DownloadApp.module.css";
 
 const DownloadApp: FunctionComponent = () => {
   return (

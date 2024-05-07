@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
-import GroupComponent from "./GroupComponent";
-import styles from "./PopularRentalCars.module.css";
+import GroupComponent from "../Common/GroupComponent";
+import styles from "../../Assets/css/PopularRentalCars.module.css";
 
 const PopularRentalCars: FunctionComponent = () => {
   return (

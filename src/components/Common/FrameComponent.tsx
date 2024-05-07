@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import styles from "./FrameComponent.module.css";
+import styles from "../../Assets/css/FrameComponent.module.css";
 
 export type FrameComponentType = {
   vuesaxboldlocationTick?: string;

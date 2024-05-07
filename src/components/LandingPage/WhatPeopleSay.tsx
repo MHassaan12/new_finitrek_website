@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
-import CustomerReviews from "./CustomerReviews";
-import styles from "./WhatPeopleSay.module.css";
+import CustomerReviews from "../Common/CustomerReviews";
+import styles from "../../Assets/css/WhatPeopleSay.module.css";
 
 const WhatPeopleSay: FunctionComponent = () => {
   return (

@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
-import FrameComponent from "./FrameComponent";
-import styles from "./HowItWork.module.css";
+import FrameComponent from "../Common/FrameComponent";
+import styles from "../../Assets/css/HowItWork.module.css";
 
 const HowItWork: FunctionComponent = () => {
   return (

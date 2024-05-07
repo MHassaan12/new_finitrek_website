@@ -1,12 +1,12 @@
 import { FunctionComponent } from "react";
-import Header from "../components/Header";
-import HowItWork from "../components/HowItWork";
-import WhyChooseUs from "../components/WhyChooseUs";
-import PopularRentalCars from "../components/PopularRentalCars";
-import WhatPeopleSay from "../components/WhatPeopleSay";
-import DownloadApp from "../components/DownloadApp";
-import Footer from "../components/Footer";
-import styles from "./LandingPage.module.css";
+import Header from "../components/LandingPage/Header";
+import HowItWork from "../components/LandingPage/HowItWork";
+import WhyChooseUs from "../components/LandingPage/WhyChooseUs";
+import PopularRentalCars from "../components/LandingPage/PopularRentalCars";
+import WhatPeopleSay from "../components/LandingPage/WhatPeopleSay";
+import DownloadApp from "../components/LandingPage/DownloadApp";
+import Footer from "../components/LandingPage/Footer";
+import styles from "../Assets/css/LandingPage.module.css";
 
 const LandingPage: FunctionComponent = () => {
   return (

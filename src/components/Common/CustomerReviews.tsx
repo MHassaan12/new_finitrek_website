@@ -1,5 +1,5 @@
 import { FunctionComponent, useMemo, type CSSProperties } from "react";
-import styles from "./CustomerReviews.module.css";
+import styles from "../../Assets/css/CustomerReviews.module.css";
 
 export type CustomerReviewsType = {
   iHaveBeenUsingYourService?: string;
