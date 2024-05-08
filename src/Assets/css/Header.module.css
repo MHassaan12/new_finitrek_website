@@ -3,6 +3,7 @@
   width: 52.5px;
   position: relative;
 }
+
 .groupIcon1 {
   align-self: stretch;
   height: 28.6px;
@@ -11,6 +12,7 @@
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .rentalSteps {
   flex: 1;
   display: flex;
@@ -19,6 +21,7 @@
   justify-content: flex-end;
   padding: 0 0 var(--padding-3xs-6);
 }
+
 .uSPItems {
   width: 151px;
   display: flex;
@@ -27,6 +30,7 @@
   justify-content: flex-start;
   gap: var(--gap-6xs-5);
 }
+
 .businessAccount,
 .operatorSignup,
 .popularDestinations {
@@ -35,6 +39,7 @@
   font-weight: 500;
   white-space: nowrap;
 }
+
 .help {
   position: relative;
   line-height: 11px;
@@ -42,6 +47,7 @@
   display: inline-block;
   min-width: 45px;
 }
+
 .benefitItems,
 .benefitItemsWrapper {
   margin: 0;
@@ -49,6 +55,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .benefitItems {
   flex-direction: row;
   gap: var(--gap-21xl);
@@ -57,12 +64,14 @@
   color: var(--color-darkslategray-100);
   font-family: var(--font-poppins);
 }
+
 .benefitItemsWrapper {
   flex-direction: column;
   /* padding: var(--padding-lgi-2) 0 0; */
   box-sizing: border-box;
   max-width: 100%;
 }
+
 .signIn {
   height: 11px;
   position: relative;
@@ -72,6 +81,7 @@
   min-width: 54px;
   white-space: nowrap;
 }
+
 .signInButton {
   /* display: flex;
   flex-direction: column;
@@ -79,6 +89,7 @@
   justify-content: flex-start; */
   padding: var(--padding-xs) 0 0;
 }
+
 .signUp {
   position: relative;
   line-height: 11px;
@@ -86,6 +97,7 @@
   display: inline-block;
   min-width: 61px;
 }
+
 .signUpWrapper {
   border-radius: var(--br-5xs);
   background-color: var(--color-purple-100);
@@ -97,10 +109,12 @@
   white-space: nowrap;
   color: var(--color-white);
 }
+
 .authOptions {
   flex-direction: row;
   gap: var(--gap-5xl);
 }
+
 .authOptions,
 .authentication,
 .treeStructure,
@@ -109,15 +123,18 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .authentication {
   flex-direction: column;
   padding: var(--padding-9xs-2) 0 0;
 }
+
 .treeStructure,
 .uSPLayout {
   flex-direction: row;
   max-width: 100%;
 }
+
 .treeStructure {
   flex: 1;
   justify-content: space-between;
@@ -125,6 +142,7 @@
   /* gap: var(--gap-59xl-5); */
   z-index: 1;
 }
+
 .uSPLayout {
   align-self: stretch;
   padding: 0 var(--padding-3xs);
@@ -137,9 +155,11 @@
   color: var(--color-darkslategray-100);
   font-family: var(--font-poppins);
 }
+
 .easily {
   color: var(--color-purple-100);
 }
+
 .findBookAndContainer {
   margin: 0;
   flex: 1;
@@ -152,42 +172,73 @@
   max-width: 100%;
   z-index: 2;
 }
+
+.frameParent {
+  width: 50%;
+}
+
+.frameContainer {
+  width: 50%;
+  /* position: relative; */
+
+}
+
 .findBookAndRentACarEasiWrapper {
   width: 410px;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 var(--padding-3xs);
+  flex-direction: column;
+  gap: var(--gap-5xl);
+  /* align-items: flex-start; */
+  /* justify-content: flex-start; */
+  /* padding: 0 var(--padding-3xs); */
   box-sizing: border-box;
   max-width: 100%;
 }
+
 .formContentIcon {
   position: absolute;
-  top: -33px;
-  left: 459.7px;
+  top: 0;
+  right: 0;
   width: 803px;
   height: 866px;
   overflow: hidden;
-  object-fit: contain;
+  /* object-fit: contain; */
+
 }
-.car21,
-.formLayoutChild {
+
+.formContentIcon .bgframe {
+ 
+  position: absolute;
+  right: -220px;
+  top: -24px;
+  /* right: -220px; */
+
+}
+
+.car21 {
   position: absolute;
   top: 186px;
-  left: 9.7px;
-  width: 1311px;
-  height: 630px;
+  left: -230px;
+  width: 1300px;
+  /* height: 200px; */
   object-fit: contain;
   z-index: 1;
 }
+.formLayoutChild{
+  position: absolute;
+    left: 402px !important;
+    /* width: 100%; */
+    /* top: 92px; */
+}
+
 .formLayoutChild {
-  top: 260.1px;
-  left: 0;
-  width: 134.2px;
-  height: 47.7px;
+  top: 280.1px;
+  left: -186px;
+  /* width: 134.2px; */
+  height: 20px;
   z-index: 3;
 }
+
 .formLayout {
   height: 833px;
   width: 1033.7px;
@@ -196,6 +247,7 @@
   top: -319px;
   right: -832px;
 }
+
 .frameChild {
   width: 458px;
   height: 418px;
@@ -205,6 +257,7 @@
   display: none;
   max-width: 100%;
 }
+
 .enterPickUp {
   position: relative;
   font-size: var(--font-size-xs);
@@ -213,6 +266,7 @@
   color: var(--color-silver);
   text-align: left;
 }
+
 .inputBox {
   align-self: stretch;
   box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
@@ -227,12 +281,14 @@
   white-space: nowrap;
   z-index: 1;
 }
+
 .vuesaxboldlocationAddIcon {
   height: 24px;
   width: 24px;
   position: relative;
   z-index: 1;
 }
+
 .via {
   position: relative;
   font-size: var(--font-size-sm);
@@ -245,6 +301,7 @@
   min-width: 25px;
   z-index: 1;
 }
+
 .viaWrapper {
   flex: 1;
   display: flex;
@@ -255,12 +312,14 @@
   box-sizing: border-box;
   min-width: 190px;
 }
+
 .vuesaxboldarrangeSquare2Icon {
   height: 24px;
   width: 24px;
   position: relative;
   z-index: 1;
 }
+
 .iconLayout,
 .viaDropdown {
   display: flex;
@@ -269,16 +328,19 @@
   justify-content: flex-start;
   max-width: 100%;
 }
+
 .iconLayout {
   flex: 1;
   flex-wrap: wrap;
   gap: var(--gap-8xs);
 }
+
 .viaDropdown {
   align-self: stretch;
   padding: 0 var(--padding-mini) 0 var(--padding-3xs);
   box-sizing: border-box;
 }
+
 .enterDropLocation {
   position: relative;
   font-size: var(--font-size-xs);
@@ -289,6 +351,7 @@
   display: inline-block;
   min-width: 117px;
 }
+
 .dropOffLocation,
 .locationIcon,
 .pickUpLocation {
@@ -297,6 +360,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .dropOffLocation {
   box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
   border-radius: var(--br-5xs);
@@ -307,15 +371,18 @@
   white-space: nowrap;
   z-index: 1;
 }
+
 .locationIcon,
 .pickUpLocation {
   flex-direction: column;
   gap: var(--gap-8xs);
   max-width: 100%;
 }
+
 .pickUpLocation {
   gap: var(--gap-4xs-5);
 }
+
 .oneWay,
 .return {
   position: relative;
@@ -329,9 +396,11 @@
   min-width: 74px;
   z-index: 1;
 }
+
 .return {
   min-width: 53px;
 }
+
 .typeButtons {
   display: flex;
   flex-direction: column;
@@ -339,6 +408,7 @@
   justify-content: flex-start;
   gap: var(--gap-15xl-9);
 }
+
 .selectDate {
   position: relative;
   font-size: var(--font-size-xs);
@@ -349,6 +419,7 @@
   display: inline-block;
   min-width: 69px;
 }
+
 .selectDateWrapper {
   align-self: stretch;
   box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
@@ -365,6 +436,7 @@
   white-space: nowrap;
   z-index: 1;
 }
+
 .selectDate1 {
   position: relative;
   font-size: var(--font-size-xs);
@@ -375,12 +447,14 @@
   display: inline-block;
   min-width: 69px;
 }
+
 .datePickerLayout,
 .endDatePicker {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .endDatePicker {
   align-self: stretch;
   box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
@@ -394,12 +468,14 @@
   white-space: nowrap;
   z-index: 1;
 }
+
 .datePickerLayout {
   flex: 1;
   flex-direction: column;
   gap: var(--gap-2xl-2);
   min-width: 83px;
 }
+
 .selectTime {
   position: relative;
   font-size: var(--font-size-xs);
@@ -410,6 +486,7 @@
   display: inline-block;
   min-width: 69px;
 }
+
 .selectTimeWrapper {
   align-self: stretch;
   box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
@@ -426,6 +503,7 @@
   white-space: nowrap;
   z-index: 1;
 }
+
 .selectTime1 {
   position: relative;
   font-size: var(--font-size-xs);
@@ -436,12 +514,14 @@
   display: inline-block;
   min-width: 69px;
 }
+
 .endTimePicker,
 .timePickerLayout {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .endTimePicker {
   align-self: stretch;
   box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
@@ -455,12 +535,14 @@
   white-space: nowrap;
   z-index: 1;
 }
+
 .timePickerLayout {
   flex: 1;
   flex-direction: column;
   gap: var(--gap-2xl-2);
   min-width: 83px;
 }
+
 .datePickers,
 .tripOptions,
 .tripType {
@@ -468,28 +550,33 @@
   flex-direction: row;
   justify-content: flex-start;
 }
+
 .datePickers {
   flex: 1;
   align-items: flex-start;
   gap: var(--gap-xs);
   min-width: 173px;
 }
+
 .tripOptions,
 .tripType {
   max-width: 100%;
 }
+
 .tripOptions {
   flex: 1;
   flex-wrap: wrap;
   align-items: flex-end;
   gap: var(--gap-12xl);
 }
+
 .tripType {
   align-self: stretch;
   align-items: flex-start;
   padding: 0 0 0 var(--padding-8xs);
   box-sizing: border-box;
 }
+
 .passengers {
   position: relative;
   font-size: var(--font-size-xs);
@@ -500,6 +587,7 @@
   display: inline-block;
   min-width: 70px;
 }
+
 .travelerOptions {
   flex: 1;
   box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
@@ -515,6 +603,7 @@
   min-width: 117px;
   z-index: 1;
 }
+
 .luggage {
   position: relative;
   font-size: var(--font-size-xs);
@@ -525,6 +614,7 @@
   display: inline-block;
   min-width: 53px;
 }
+
 .luggageCount,
 .travelers {
   display: flex;
@@ -532,6 +622,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .luggageCount {
   flex: 1;
   box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
@@ -543,11 +634,13 @@
   min-width: 114px;
   z-index: 1;
 }
+
 .travelers {
   align-self: stretch;
   flex-wrap: wrap;
   gap: var(--gap-xl);
 }
+
 .bookNow {
   position: relative;
   font-size: var(--font-size-base);
@@ -559,6 +652,7 @@
   display: inline-block;
   min-width: 79px;
 }
+
 .bookButton {
   border-radius: var(--br-5xs);
   background-color: var(--color-purple-100);
@@ -570,6 +664,7 @@
   white-space: nowrap;
   z-index: 1;
 }
+
 .rectangleParent {
   margin: 0;
   flex: 1;
@@ -581,6 +676,7 @@
   gap: var(--gap-3xl-2);
   z-index: 2;
 }
+
 .bookingForm,
 .header,
 .mainContent,
@@ -589,20 +685,26 @@
   align-items: flex-start;
   justify-content: flex-start;
   max-width: 100%;
+  overflow: hidden;
 }
+
 .bookingForm {
   align-self: stretch;
   flex-direction: row;
   position: relative;
 }
+
 .header,
 .mainContent {
   flex-direction: column;
 }
+
 .mainContent {
-  width: 458px;
-  gap: var(--gap-18xl);
+  width: 100%;
+  flex-direction: row;
+  /* gap: var(--gap-18xl); */
 }
+
 .header {
   align-self: stretch;
   background-color: var(--color-white);
@@ -614,30 +716,37 @@
   color: var(--color-gray-600);
   font-family: var(--font-poppins);
 }
+
 @media screen and (max-width: 1250px) {
   .treeStructure {
     gap: var(--gap-20xl);
   }
 }
+
 @media screen and (max-width: 1050px) {
   .benefitItemsWrapper {
     display: none;
   }
+
   .header {
     padding-top: var(--padding-7xl);
     padding-bottom: var(--padding-22xl);
     box-sizing: border-box;
   }
 }
+
 @media screen and (max-width: 750px) {
+
   .benefitItems,
   .treeStructure {
     gap: var(--gap-xl);
   }
+
   .findBookAndContainer {
     font-size: var(--font-size-19xl);
     line-height: 38px;
   }
+
   .header {
     gap: var(--gap-29xl);
     padding-left: var(--padding-56xl);
@@ -645,25 +754,31 @@
     box-sizing: border-box;
   }
 }
+
 @media screen and (max-width: 450px) {
   .findBookAndContainer {
     font-size: var(--font-size-10xl);
     line-height: 29px;
   }
+
   .datePickers {
     flex-wrap: wrap;
   }
+
   .tripOptions {
     gap: var(--gap-mini);
   }
+
   .rectangleParent {
     padding-top: var(--padding-2xl);
     padding-bottom: var(--padding-2xl);
     box-sizing: border-box;
   }
+
   .mainContent {
     gap: var(--gap-lg);
   }
+
   .header {
     gap: var(--gap-5xl);
     padding: var(--padding-xl) var(--padding-xl) var(--padding-8xl);
