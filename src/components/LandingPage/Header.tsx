@@ -1,7 +1,39 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState } from "react";
 import styles from "../../Assets/css/Header.module.css";
+import ReactGoogleAutocomplete from "react-google-autocomplete";
+import DatePickerComponent from "../Common/DatePicker";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { bookingCarsState, bookingFormState } from "../../stores/atoms";
+import TimePicker from "../Common/TimePicker";
+import { useSearchParams } from "react-router-dom";
+import { post, useGet } from "../../utils/api";
 
 const Header: FunctionComponent = () => {
+  const [bookingForm, setBookingForm] = useRecoilState(bookingFormState);
+  const [bookingCars, setBookingCars] = useRecoilState(bookingCarsState);
+  // const searchParams = useSearchParams() 
+
+
+  const handleSubmit = async () => {
+    try {
+      let params = new URLSearchParams();
+      for (const key in bookingForm) {
+        if (Object.prototype.hasOwnProperty.call(bookingForm, key)) {
+          const element = (bookingForm as { [key: string]: any })[key];
+          params.set(key, element)
+        }
+      }
+      const { data } = await post(`/api/price?${params}`, {})
+      if (data.cars.length > 0) {
+        setBookingCars(data.cars)
+      }
+      console.log('FFFFFFFFFFFFFFFFFFFFFFFFF', data)
+    } catch (error) {
+      console.log('FFFFFFFFFFFFFFFFFFFFFFFF EEEErrrrrF', error)
+
+    }
+  }
+
   return (
     <section className={styles.header}>
       <header className={styles.uSPLayout}>
@@ -50,9 +82,20 @@ const Header: FunctionComponent = () => {
             <form className={styles.rectangleParent}>
               <div className={styles.frameChild} />
               <div className={styles.pickUpLocation}>
-                <div className={styles.inputBox}>
-                  <div className={styles.enterPickUp}>Enter Pick Up Location</div>
-                </div>
+                {/* <div className={styles.inputBox}> */}
+                <ReactGoogleAutocomplete
+                  apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
+                  onPlaceSelected={(place) => {
+                    if (place?.formatted_address) {
+                      setBookingForm((prev: any) => ({ ...prev, pickup: place.formatted_address }))
+                    }
+                  }}
+
+                  className={styles.inputBox}
+
+                />
+                {/* <div className={styles.enterPickUp}>Enter Pick Up Location</div> */}
+                {/* </div> */}
                 <div className={styles.locationIcon}>
                   <div className={styles.viaDropdown}>
                     <div className={styles.iconLayout}>
@@ -73,49 +116,66 @@ const Header: FunctionComponent = () => {
                       />
                     </div>
                   </div>
-                  <div className={styles.dropOffLocation}>
+                  <ReactGoogleAutocomplete
+                    apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
+                    onPlaceSelected={(place) => {
+                      if (place.formatted_address) {
+                        setBookingForm((prev: any) => ({ ...prev, dropoff: place.formatted_address }))
+                        // setTo(place.formatted_address)
+                      }
+                    }}
+                    className={styles.dropOffLocation}
+
+                  />
+                  {/* <div className={styles.dropOffLocation}>
                     <div className={styles.enterDropLocation}>
                       Enter Drop Location
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className={styles.tripType}>
                 <div className={styles.tripOptions}>
-                  <div className={styles.typeButtons}>
+                  <div className={styles.oneWayWrapper}>
                     <div className={styles.oneWay}>One Way</div>
-                    <div className={styles.return}>Return</div>
-                  </div>
-                  <div className={styles.datePickers}>
                     <div className={styles.datePickerLayout}>
                       <div className={styles.selectDateWrapper}>
-                        <div className={styles.selectDate}>Select Date</div>
+                        <DatePickerComponent setStart={(date: any) => setBookingForm((prev: any) => ({ ...prev, myDate: date }))} start={bookingForm.myDate} disabled={false} />
                       </div>
-                      <div className={styles.endDatePicker}>
-                        <div className={styles.selectDate1}>Select Date</div>
+                      <div>
+                        <TimePicker setTime={(time) => setBookingForm((prev: any) => ({ ...prev, myTime: time }))} time={bookingForm.myTime} disabled={false} />
                       </div>
-                    </div>
-                    <div className={styles.timePickerLayout}>
-                      <div className={styles.selectTimeWrapper}>
-                        <div className={styles.selectTime}>Select Time</div>
-                      </div>
-                      <div className={styles.endTimePicker}>
-                        <div className={styles.selectTime1}>Select Time</div>
-                      </div>
+
                     </div>
                   </div>
+                  <div className={styles.oneWayWrapper}>
+                    <div className={styles.oneWay}>Return</div>
+                    <div className={styles.datePickerLayout}>
+                      <div className={styles.selectDateWrapper}>
+                        <DatePickerComponent setStart={(date: any) => setBookingForm((prev: any) => ({ ...prev, hiddenmyDate: date }))} start={bookingForm.hiddenmyDate} disabled={false} />
+                      </div>
+                      <div>
+                        <TimePicker setTime={(time) => setBookingForm((prev: any) => ({ ...prev, retmyTime: time }))} time={bookingForm.retmyTime} disabled={false} />
+                      </div>
+
+                    </div>
+                  </div>
+
+
                 </div>
               </div>
               <div className={styles.travelers}>
                 <div className={styles.travelerOptions}>
-                  <div className={styles.passengers}>Passengers</div>
+
+                  <input className={styles.passengers} type="number" placeholder="Passengers" onChange={(e) => setBookingForm((prev: any) => ({ ...prev, passengers: e.target.value }))} />
+
                 </div>
                 <div className={styles.luggageCount}>
-                  <div className={styles.luggage}>Luggage</div>
+                  <input className={styles.luggage} type="number" placeholder="Luggage" onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))} />
                 </div>
               </div>
               <div className={styles.bookButton}>
-                <div className={styles.bookNow}>Book Now</div>
+                <div className={styles.bookNow} onClick={handleSubmit}>Book Now</div>
               </div>
             </form>
             <img
@@ -153,7 +213,7 @@ const Header: FunctionComponent = () => {
           src="/form-content.svg"
         />
         <img className={styles.car21} alt="" src="/car-2-1@2x.png" />
-       
+
       </div>
     </section>
   );

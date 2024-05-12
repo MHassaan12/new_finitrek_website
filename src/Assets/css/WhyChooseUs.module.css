@@ -163,14 +163,14 @@
 }
 .vectorParent {
   position: absolute;
-  top: 98px;
+  top: 224px;
   left: 0;
   width: 777px;
   height: 859px;
 }
 .whyChooseUs {
   /* align-self: stretch; */
-  height: 800px;
+  height: 920px;
   position: relative;
   background-color: var(--color-white);
   overflow: hidden;
@@ -185,7 +185,6 @@
 .images1Icon {
   width: 407px;
   /* position: relative; */
-  
   max-height: 100%;
   object-fit: cover;
   max-width: 100%;

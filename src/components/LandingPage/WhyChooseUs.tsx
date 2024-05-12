@@ -5,12 +5,7 @@ import styles from "../../Assets/css/WhyChooseUs.module.css";
 const WhyChooseUs: FunctionComponent = () => {
   return (
     <section className={styles.whyChooseUs}>
-      <img
-          className={styles.images1Icon}
-          loading="lazy"
-          alt=""
-          src="/images-1@2x.png"
-        />
+
       <div className={styles.frameParent}>
         <div className={styles.frameGroup}>
           <div className={styles.whyChooseUsWrapper}>
@@ -82,6 +77,16 @@ const WhyChooseUs: FunctionComponent = () => {
           src="/audi-1@2x.png"
         />
       </div>
+      <div>
+
+      <img
+        className={styles.images1Icon}
+        loading="lazy"
+        alt=""
+        src="/images-1@2x.png"
+      />
+      </div>
+
     </section>
   );
 };
