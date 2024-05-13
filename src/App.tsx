@@ -6,6 +6,9 @@ import {
   useLocation,
 } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
+import Layout from "./Layouts";
+import CarSearchPage from "./pages/CarSearchPage";
+import CarBookingPage from "./pages/CarBooking";
 
 function App() {
   const action = useNavigationType();
@@ -45,7 +48,11 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
+      <Route path="/" element={<Layout />}>
+        <Route index element={<LandingPage />} />
+        <Route path="/car-search" element={<CarSearchPage />} />
+        <Route path="/car-booking" element={<CarBookingPage />} />
+      </Route>
     </Routes>
   );
 }

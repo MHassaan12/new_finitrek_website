@@ -5,14 +5,13 @@ import DatePickerComponent from "../Common/DatePicker";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { bookingCarsState, bookingFormState } from "../../stores/atoms";
 import TimePicker from "../Common/TimePicker";
-import { useSearchParams } from "react-router-dom";
-import { post, useGet } from "../../utils/api";
+import { post } from "../../utils/api";
+import { useNavigate } from "react-router-dom";
 
 const Header: FunctionComponent = () => {
   const [bookingForm, setBookingForm] = useRecoilState(bookingFormState);
   const [bookingCars, setBookingCars] = useRecoilState(bookingCarsState);
-  // const searchParams = useSearchParams() 
-
+  const navigation = useNavigate()
 
   const handleSubmit = async () => {
     try {
@@ -26,6 +25,7 @@ const Header: FunctionComponent = () => {
       const { data } = await post(`/api/price?${params}`, {})
       if (data.cars.length > 0) {
         setBookingCars(data.cars)
+        navigation('/car-search')
       }
       console.log('FFFFFFFFFFFFFFFFFFFFFFFFF', data)
     } catch (error) {
@@ -36,41 +36,7 @@ const Header: FunctionComponent = () => {
 
   return (
     <section className={styles.header}>
-      <header className={styles.uSPLayout}>
-        <div className={styles.treeStructure}>
-          <div className={styles.uSPItems}>
-            <img
-              className={styles.groupIcon}
-              loading="lazy"
-              alt=""
-              src="/group.svg"
-            />
-            <div className={styles.rentalSteps}>
-              <img className={styles.groupIcon1} alt="" src="/group-1.svg" />
-            </div>
-          </div>
-          <nav className={styles.benefitItemsWrapper}>
-            <nav className={styles.benefitItems}>
-              <div className={styles.popularDestinations}>
-                Popular Destinations
-              </div>
-              <div className={styles.businessAccount}>Business Account</div>
-              <div className={styles.operatorSignup}>Operator Signup</div>
-              <div className={styles.help}>Help?</div>
-            </nav>
-          </nav>
-          <div className={styles.authentication}>
-            <div className={styles.authOptions}>
-              <div className={styles.signInButton}>
-                <div className={styles.signIn}>Sign in</div>
-              </div>
-              <div className={styles.signUpWrapper}>
-                <div className={styles.signUp}>Sign up</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+     
       <div className={styles.mainContent}>
         <div className={styles.frameParent}>
 

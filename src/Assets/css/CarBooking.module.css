@@ -1,0 +1,1220 @@
+.information {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    line-height: 100%;
+    font-weight: 600;
+    font-family: inherit;
+}
+
+.locationDetailsChild {
+    width: 576px;
+    height: 186px;
+    position: relative;
+    border-radius: var(--br-3xs);
+    background-color: var(--color-lavenderblush);
+    display: none;
+    max-width: 100%;
+}
+
+.pickUp {
+    position: relative;
+    line-height: 17px;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 59px;
+    z-index: 1;
+}
+
+.date29Apr20241120 {
+    height: 8px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.date29Apr20241120,
+.londonHeathrowTerminal {
+    position: relative;
+    line-height: 17px;
+    z-index: 1;
+}
+
+.pickupTimeLocation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 var(--padding-6xs);
+    gap: 10px;
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-200);
+}
+
+.dropUp,
+.londonStanstedAirport {
+    position: relative;
+    line-height: 17px;
+    display: inline-block;
+    z-index: 1;
+}
+
+.dropUp {
+    font-weight: 500;
+    min-width: 65px;
+}
+
+.londonStanstedAirport {
+    height: 8px;
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-200);
+}
+
+.dropoffInformation,
+.locationDetails,
+.pickupInformation {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.dropoffInformation {
+    flex-direction: column;
+    gap: var(--gap-sm);
+}
+
+.locationDetails,
+.pickupInformation {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.locationDetails {
+    flex: 1;
+    border-radius: var(--br-3xs);
+    background-color: var(--color-lavenderblush);
+    flex-direction: column;
+    padding: var(--padding-11xl) 64px;
+    gap: var(--gap-sm);
+}
+
+.pickupInformation {
+    align-self: stretch;
+    flex-direction: row;
+    padding: 0 0 0 var(--padding-10xs);
+}
+
+.contactDetails {
+    margin: 0;
+    position: relative;
+    font-size: var(--font-size-17xl);
+    line-height: 100%;
+    font-weight: 600;
+    font-family: inherit;
+    color: var(--color-purple-100);
+}
+
+.bookingDetails,
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.bookingDetails {
+    align-self: stretch;
+    gap: var(--gap-11xl);
+    font-size: var(--font-size-base);
+    color: var(--color-gray-400);
+}
+
+.content {
+    width: 579px;
+    gap: var(--gap-lgi);
+    min-width: 579px;
+}
+
+.bookingSummary {
+    margin: 0;
+    flex: 1;
+    position: relative;
+    font-size: inherit;
+    line-height: 100%;
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.bookingOverview {
+    width: 355px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-10xs);
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.frameChild {
+    width: 448px;
+    height: 186px;
+    position: relative;
+    border-radius: var(--br-3xs);
+    background-color: var(--color-lavenderblush);
+    display: none;
+    max-width: 100%;
+}
+
+.saloonCar,
+.starIcon {
+    position: relative;
+    z-index: 1;
+}
+
+.saloonCar {
+    line-height: 17px;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 90px;
+}
+
+.starIcon {
+    height: 16px;
+    width: 16px;
+    border-radius: var(--br-12xs-5);
+}
+
+.span {
+    font-weight: 500;
+}
+
+.reviews1 {
+    color: var(--color-gray-200);
+}
+
+.reviews {
+    height: 8px;
+    position: relative;
+    line-height: 17px;
+    display: inline-block;
+    min-width: 113px;
+    z-index: 1;
+}
+
+.reviewCount,
+.vehicleRating,
+.vehicleType {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.reviewCount {
+    flex-direction: column;
+    padding: var(--padding-9xs) 0 0;
+}
+
+.vehicleRating,
+.vehicleType {
+    gap: var(--gap-7xs);
+}
+
+.vehicleRating {
+    flex-direction: row;
+    font-size: var(--font-size-xs);
+    color: var(--color-black);
+}
+
+.vehicleType {
+    flex-direction: column;
+}
+
+.vuesaxlinearuserIcon {
+    height: 20px;
+    width: 20px;
+    position: relative;
+}
+
+.passagers {
+    height: 8px;
+    position: relative;
+    line-height: 17px;
+    display: inline-block;
+    min-width: 73px;
+}
+
+.featureIcons,
+.passengerAndComfort {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.passengerAndComfort {
+    gap: var(--gap-9xs);
+}
+
+.featureIcons {
+    align-self: stretch;
+}
+
+.frameIcon {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.auto {
+    height: 8px;
+    position: relative;
+    line-height: 17px;
+    display: inline-block;
+    min-width: 28px;
+}
+
+.featureIcons1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-8xs);
+}
+
+.frameIcon1 {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.doors {
+    height: 8px;
+    position: relative;
+    line-height: 17px;
+    display: inline-block;
+    min-width: 46px;
+}
+
+.featureIcons2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-8xs);
+}
+
+.frameIcon2 {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.airConditioning {
+    height: 8px;
+    position: relative;
+    line-height: 17px;
+    display: inline-block;
+    min-width: 96px;
+}
+
+.featureIcons3,
+.frameParent {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.frameParent {
+    align-items: center;
+    gap: var(--gap-9xs);
+}
+
+.featureIcons3 {
+    align-self: stretch;
+    align-items: flex-start;
+}
+
+.image12Icon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0 !important;
+    top: -19px;
+    right: -185px;
+    object-fit: contain;
+    z-index: 2;
+}
+
+.rectangleParent,
+.summary,
+.vehicleFeatures {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.vehicleFeatures {
+    width: 208px;
+    position: relative;
+    gap: var(--gap-5xs);
+    z-index: 1;
+    font-size: var(--font-size-xs);
+    color: var(--color-darkgray);
+}
+
+.rectangleParent,
+.summary {
+    align-self: stretch;
+    max-width: 100%;
+}
+
+.rectangleParent {
+    border-radius: var(--br-3xs);
+    background-color: var(--color-lavenderblush);
+    padding: var(--padding-mini) var(--padding-4xl);
+    box-sizing: border-box;
+    gap: 13px;
+    font-size: var(--font-size-base);
+    color: var(--color-gray-400);
+}
+
+.summary {
+    gap: var(--gap-lgi);
+}
+
+.bookingSummary1 {
+    margin: 0;
+    flex: 1;
+    position: relative;
+    font-size: inherit;
+    line-height: 100%;
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.bookingConfirmation {
+    width: 355px;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0 var(--padding-10xs);
+    box-sizing: border-box;
+}
+
+.bookingConfirmation,
+.page,
+.summaryAndActions {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+}
+
+.summaryAndActions {
+    width: 448px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--gap-12xl);
+    min-width: 448px;
+}
+
+.page {
+    width: 1123px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--gap-xl);
+    text-align: left;
+    font-size: var(--font-size-17xl);
+    color: var(--color-purple-100);
+    font-family: var(--font-poppins);
+}
+
+.passengerInformationChild {
+    width: 576px;
+    height: 457px;
+    position: relative;
+    border-radius: var(--br-3xs);
+    background-color: var(--color-lavenderblush);
+    display: none;
+    max-width: 100%;
+}
+
+.contactDetailsInput,
+.contactInformation {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 100%;
+}
+
+.contactDetailsInput {
+    flex: 1;
+    justify-content: flex-start;
+    gap: var(--gap-5xl);
+}
+
+.contactInformation {
+    align-self: stretch;
+    justify-content: flex-end;
+    padding: 0 var(--padding-12xs);
+    box-sizing: border-box;
+}
+
+.noOfPassengers {
+    flex: 1;
+    position: relative;
+    font-size: var(--font-size-sm);
+    line-height: 12px;
+    font-weight: 500;
+    font-family: var(--font-poppins);
+    color: var(--color-purple-100);
+    text-align: left;
+    z-index: 1;
+}
+
+.specialRequest {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 var(--padding-xl);
+}
+
+.enterDropLocation {
+    position: relative;
+    font-size: var(--font-size-xs);
+    line-height: 8px;
+    font-family: var(--font-poppins);
+    color: var(--color-silver);
+    text-align: left;
+    display: inline-block;
+    min-width: 117px;
+}
+
+.dropoffLocationInput,
+.locationInput {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.dropoffLocationInput {
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    flex-direction: row;
+    padding: var(--padding-sm) var(--padding-xl);
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.locationInput {
+    flex: 1;
+    flex-direction: column;
+    gap: var(--gap-8xs);
+    min-width: 119px;
+}
+
+.noOfLuggage {
+    flex: 1;
+    position: relative;
+    font-size: var(--font-size-sm);
+    line-height: 12px;
+    font-weight: 500;
+    font-family: var(--font-poppins);
+    color: var(--color-purple-100);
+    text-align: left;
+    z-index: 1;
+}
+
+.luggageInput {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-3xs) 0 var(--padding-xl);
+}
+
+.enterDropLocation1 {
+    position: relative;
+    font-size: var(--font-size-xs);
+    line-height: 8px;
+    font-family: var(--font-poppins);
+    color: var(--color-silver);
+    text-align: left;
+    display: inline-block;
+    min-width: 117px;
+}
+
+.dropoffConfirmation,
+.luggageInformation {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.dropoffConfirmation {
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    flex-direction: row;
+    padding: var(--padding-sm) var(--padding-xl);
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.luggageInformation {
+    flex: 1;
+    flex-direction: column;
+    gap: var(--gap-8xs);
+    min-width: 119px;
+}
+
+.noOfHand {
+    position: relative;
+    font-size: var(--font-size-sm);
+    line-height: 12px;
+    font-weight: 500;
+    font-family: var(--font-poppins);
+    color: var(--color-purple-100);
+    text-align: left;
+    z-index: 1;
+}
+
+.handLuggageInput {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 11px;
+}
+
+.enterDropLocation2 {
+    position: relative;
+    font-size: var(--font-size-xs);
+    line-height: 8px;
+    font-family: var(--font-poppins);
+    color: var(--color-silver);
+    text-align: left;
+    display: inline-block;
+    min-width: 117px;
+}
+
+.dropoffConfirmationRepeat {
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    flex-direction: row;
+    padding: var(--padding-sm) var(--padding-xl);
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.dropoffConfirmationRepeat,
+.handLuggageInfo,
+.passengerDetails {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.handLuggageInfo {
+    flex: 1;
+    flex-direction: column;
+    gap: var(--gap-8xs);
+    min-width: 119px;
+}
+
+.passengerDetails {
+    align-self: stretch;
+    flex-direction: row;
+    gap: var(--gap-xl);
+}
+
+.specialRequest1 {
+    flex: 1;
+    position: relative;
+    font-size: var(--font-size-sm);
+    line-height: 12px;
+    font-weight: 500;
+    font-family: var(--font-poppins);
+    color: var(--color-purple-100);
+    text-align: left;
+    z-index: 1;
+}
+
+.specialRequestWrapper {
+    width: 178px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-xl);
+    box-sizing: border-box;
+}
+
+.writeHere {
+    position: relative;
+    font-size: var(--font-size-xs);
+    line-height: 8px;
+    font-family: var(--font-poppins);
+    color: var(--color-silver);
+    text-align: left;
+    display: inline-block;
+    min-width: 72px;
+}
+
+.writeHereWrapper {
+    align-self: stretch;
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-sm) var(--padding-xl);
+    z-index: 1;
+}
+
+.frameGroup,
+.passengerDetails1 {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+}
+
+.frameGroup {
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--gap-8xs);
+}
+
+.passengerDetails1 {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 var(--padding-11xs) 0 var(--padding-12xs);
+    box-sizing: border-box;
+}
+
+.proceedToPay {
+    position: relative;
+    font-size: var(--font-size-base);
+    line-height: 11px;
+    font-weight: 500;
+    font-family: var(--font-poppins);
+    color: var(--color-white);
+    text-align: left;
+    display: inline-block;
+    min-width: 124px;
+}
+
+.paymentButtonContainer {
+    border-radius: var(--br-5xs);
+    background-color: var(--color-purple-100);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-smi);
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.paymentButtonContainerWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 var(--padding-8xs);
+}
+
+.frameItem,
+.passengerInformation {
+    border-radius: var(--br-3xs);
+    background-color: var(--color-lavenderblush);
+    max-width: 100%;
+}
+
+.passengerInformation {
+    margin: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: var(--padding-6xl) var(--padding-11xl);
+    box-sizing: border-box;
+    gap: var(--gap-xl);
+    min-width: 374px;
+}
+
+.frameItem {
+    width: 448px;
+    height: 309px;
+    position: relative;
+    display: none;
+}
+
+.detail01,
+.insurance,
+.totalTax {
+    position: relative;
+    font-weight: 300;
+    z-index: 1;
+}
+
+.detail01 {
+    width: 144.3px;
+    display: inline-block;
+}
+
+.insurance,
+.totalTax {
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.totalTax {
+    align-self: stretch;
+}
+
+.insurance {
+    width: 177px;
+    height: 35px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.costBreakdownLabels {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-5xl);
+    min-width: 120px;
+}
+
+.div,
+.div1,
+.div2 {
+    align-self: stretch;
+    position: relative;
+    font-weight: 300;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.div2 {
+    height: 35px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.costBreakdownLabels1,
+.costDetails,
+.priceLabels {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.costBreakdownLabels1 {
+    width: 128px;
+    flex-direction: column;
+    gap: var(--gap-5xl);
+    min-width: 128px;
+    text-align: right;
+}
+
+.costDetails,
+.priceLabels {
+    flex-direction: row;
+}
+
+.priceLabels {
+    flex: 1;
+    gap: 7.3px;
+}
+
+.costDetails {
+    align-self: stretch;
+    padding: 0 var(--padding-6xl) 0 var(--padding-4xl-2);
+}
+
+.totalCostChild {
+    height: 47px;
+    width: 367.7px;
+    position: relative;
+    border-radius: var(--br-4xs);
+    background-color: var(--color-thistle);
+    display: none;
+    max-width: 100%;
+}
+
+.grandTotal,
+.totalCostLabel {
+    height: 35px;
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+
+.grandTotal {
+    margin: 0;
+    font-size: inherit;
+    font-weight: 400;
+    font-family: inherit;
+    min-width: 106.5px;
+}
+
+.totalCostLabel {
+    width: 130px;
+    text-align: right;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.priceBreakdown,
+.rectangleGroup,
+.totalCost {
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.totalCost {
+    align-self: stretch;
+    border-radius: var(--br-4xs);
+    background-color: var(--color-thistle);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--padding-3xs) var(--padding-4xl) var(--padding-11xs) var(--padding-4xl-2);
+    max-width: 100%;
+    gap: var(--gap-xl);
+    z-index: 1;
+    color: var(--color-purple-100);
+}
+
+.priceBreakdown,
+.rectangleGroup {
+    flex-direction: column;
+}
+
+.rectangleGroup {
+    align-self: stretch;
+    border-radius: var(--br-3xs);
+    background-color: var(--color-lavenderblush);
+    display: flex;
+    justify-content: flex-start;
+    padding: var(--padding-38xl) 38.6px var(--padding-36xl) 41.7px;
+    gap: var(--gap-6xl);
+    max-width: 100%;
+}
+
+.priceBreakdown {
+    width: 448px;
+    padding: var(--padding-12xs) 0 0;
+    min-width: 448px;
+}
+
+.bookingForm,
+.carBooking,
+.priceBreakdown {
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.bookingForm {
+    width: 1120px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 96px;
+    text-align: left;
+    font-size: var(--font-size-lg);
+    color: var(--color-darkslategray-500);
+    font-family: var(--font-inter);
+}
+
+.carBooking {
+    width: 1440px;
+    background-color: var(--color-white);
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    padding: 69px var(--padding-4xl) var(--padding-11xl) var(--padding-xl);
+    box-sizing: border-box;
+    gap: var(--gap-lg);
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+@media screen and (max-width: 1125px) {
+
+    .content,
+    .summaryAndActions {
+        flex: 1;
+    }
+
+    .page {
+        flex-wrap: wrap;
+    }
+
+    .bookingForm {
+        gap: var(--gap-29xl);
+    }
+}
+
+@media screen and (max-width: 1025px) {
+
+    .bookingSummary,
+    .bookingSummary1,
+    .contactDetails,
+    .information {
+        font-size: var(--font-size-10xl);
+        line-height: 29px;
+    }
+
+    .priceBreakdown {
+        flex: 1;
+    }
+
+    .bookingForm {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .content,
+    .summaryAndActions {
+        min-width: 100%;
+    }
+
+    .contactDetailsInput,
+    .passengerDetails {
+        flex-wrap: wrap;
+    }
+
+    .priceBreakdown {
+        min-width: 100%;
+    }
+
+    .bookingForm {
+        gap: var(--gap-5xl);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .information {
+        font-size: var(--font-size-3xl);
+        line-height: 22px;
+    }
+
+    .locationDetails {
+        padding-left: var(--padding-xl);
+        padding-right: var(--padding-xl);
+        box-sizing: border-box;
+    }
+
+    .bookingSummary,
+    .bookingSummary1,
+    .contactDetails {
+        font-size: var(--font-size-3xl);
+        line-height: 22px;
+    }
+
+    .summaryAndActions {
+        gap: var(--gap-mini);
+    }
+
+    .passengerInformation {
+        padding-top: var(--padding-xl);
+        padding-bottom: var(--padding-xl);
+        box-sizing: border-box;
+        min-width: 100%;
+    }
+
+    .costBreakdownLabels1 {
+        flex: 1;
+    }
+
+    .priceLabels,
+    .totalCost {
+        flex-wrap: wrap;
+    }
+
+    .rectangleGroup {
+        padding-left: var(--padding-xl);
+        box-sizing: border-box;
+    }
+}
+
+.name {
+    flex: 1;
+    position: relative;
+    line-height: 12px;
+    font-weight: 500;
+    z-index: 1;
+  }
+  .contactDetailsLabels {
+    width: 109px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .enterPickUp {
+    position: relative;
+    line-height: 24px;
+    padding: inherit;
+  }
+  .locationInputRepeat,
+  .pickupLocationInput {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .pickupLocationInput {
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    flex-direction: row;
+    padding: var(--padding-sm) var(--padding-xl);
+    white-space: nowrap;
+    z-index: 1;
+    font-size: var(--font-size-xs);
+    color: var(--color-silver);
+  }
+  .locationInputRepeat {
+    flex-direction: column;
+    gap: var(--gap-8xs);
+  }
+  .contactNumber {
+    position: relative;
+    line-height: 12px;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 120px;
+    z-index: 1;
+  }
+  .additionalContactDetails {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-xl);
+  }
+  .enterDropLocation {
+    position: relative;
+    line-height: 8px;
+    display: inline-block;
+    min-width: 117px;
+  }
+  .contactInfoInput,
+  .dropoffLocationRepeat {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .dropoffLocationRepeat {
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    flex-direction: row;
+    padding: var(--padding-sm) var(--padding-xl);
+    white-space: nowrap;
+    z-index: 1;
+    font-size: var(--font-size-xs);
+    color: var(--color-silver);
+  }
+  .contactInfoInput {
+    flex-direction: column;
+    gap: var(--gap-8xs);
+  }
+  .flightNumber {
+    flex: 1;
+    position: relative;
+    line-height: 12px;
+    font-weight: 500;
+    z-index: 1;
+  }
+  .flightInfoInput {
+    width: 160px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .enterDropLocation1 {
+    position: relative;
+    line-height: 8px;
+    display: inline-block;
+    min-width: 117px;
+  }
+  .enterDropLocationWrapper {
+    align-self: stretch;
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-sm) var(--padding-xl);
+    white-space: nowrap;
+    z-index: 1;
+    font-size: var(--font-size-xs);
+    color: var(--color-silver);
+  }
+  .flightDetailsInput,
+  .nameEmailInput {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .flightDetailsInput {
+    align-self: stretch;
+    gap: var(--gap-8xs);
+  }
+  .nameEmailInput {
+    flex: 1;
+    gap: var(--gap-xl);
+    min-width: 159px;
+    text-align: left;
+    font-size: var(--font-size-sm);
+    color: var(--color-purple-100);
+    font-family: var(--font-poppins);
+  }
+  

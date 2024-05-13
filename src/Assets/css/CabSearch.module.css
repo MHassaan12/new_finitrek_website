@@ -1,0 +1,517 @@
+.frameChild {
+  height: 247px;
+  width: 1120px;
+  position: relative;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-lavenderblush);
+  display: none;
+  max-width: 100%;
+}
+
+.enterPickUp {
+  position: relative;
+  font-size: var(--font-size-xs);
+  line-height: 8px;
+  font-family: var(--font-poppins);
+  color: var(--color-silver);
+  text-align: left;
+}
+
+.enterPickUpLocationWrapper {
+  align-self: stretch;
+  box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 0.3px solid var(--color-purple-200);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-sm) var(--padding-xl);
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.vuesaxboldlocationAddIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.via {
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 150%;
+  font-weight: 500;
+  font-family: var(--font-poppins);
+  color: var(--color-purple-100);
+  text-align: left;
+  display: inline-block;
+  min-width: 25px;
+  z-index: 1;
+}
+
+.viaWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-7xs) var(--padding-xl) 0 0;
+  box-sizing: border-box;
+  min-width: 190px;
+}
+
+.vuesaxboldarrangeSquare2Icon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.dropoffLocationOptions,
+.dropoffLocationOptionsWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.dropoffLocationOptions {
+  flex: 1;
+  gap: var(--gap-8xs);
+}
+
+.dropoffLocationOptionsWrapper {
+  align-self: stretch;
+  padding: 0 var(--padding-mini) 0 var(--padding-3xs);
+  box-sizing: border-box;
+}
+
+.enterDropLocation {
+  position: relative;
+  font-size: var(--font-size-xs);
+  line-height: 8px;
+  font-family: var(--font-poppins);
+  color: var(--color-silver);
+  text-align: left;
+  display: inline-block;
+  min-width: 117px;
+}
+
+.dropoffArea,
+.enterDropLocationWrapper,
+.frameParent {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.enterDropLocationWrapper {
+  box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 0.3px solid var(--color-purple-200);
+  flex-direction: row;
+  padding: var(--padding-sm) var(--padding-xl);
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.dropoffArea,
+.frameParent {
+  flex-direction: column;
+  gap: var(--gap-8xs);
+  max-width: 100%;
+}
+
+.frameParent {
+  gap: var(--gap-4xs-5);
+}
+
+.passengers {
+  position: relative;
+  font-size: var(--font-size-xs);
+  line-height: 8px;
+  font-family: var(--font-poppins);
+  color: var(--color-silver);
+  text-align: left;
+  display: inline-block;
+  min-width: 70px;
+  padding: var(--padding-sm) var(--padding-xl);
+  border: inherit;
+  border-radius: inherit;
+}
+
+.passengersWrapper {
+  flex: 1;
+  box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 0.3px solid var(--color-purple-200);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+ 
+  min-width: 117px;
+  z-index: 1;
+}
+
+.luggage {
+  position: relative;
+  font-size: var(--font-size-xs);
+  line-height: 8px;
+  font-family: var(--font-poppins);
+  color: var(--color-silver);
+  text-align: left;
+  display: inline-block;
+  min-width: 53px;
+  padding: var(--padding-sm) var(--padding-xl);
+  border: inherit;
+  border-radius: inherit;
+}
+
+.luggageWrapper {
+  flex: 1;
+  box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 0.3px solid var(--color-purple-200);
+  box-sizing: border-box;
+ 
+  min-width: 114px;
+  z-index: 1;
+  
+ 
+}
+
+.luggageWrapper,
+.passengerArea,
+.pickupArea {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.passengerArea {
+  align-self: stretch;
+  flex-direction: row;
+  gap: var(--gap-xl);
+}
+
+.pickupArea {
+  width: 434px;
+  flex-direction: column;
+  padding: 0 58px 0 0;
+  box-sizing: border-box;
+  gap: 22.5px;
+  max-width: 100%;
+}
+
+.oneWay,
+.return {
+  position: relative;
+  font-size: var(--font-size-base);
+  line-height: 150%;
+  font-weight: 500;
+  font-family: var(--font-poppins);
+  color: var(--color-purple-100);
+  text-align: left;
+  display: inline-block;
+  min-width: 79px;
+  /* z-index: 1; */
+}
+
+.return {
+  height: 12px;
+  flex-shrink: 0;
+  min-width: 57px;
+}
+
+.oneWayParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 34px;
+}
+
+.tripTypeAreaInner {
+  flex-direction: column;
+  padding: var(--padding-smi) 0 0;
+}
+
+.tripDetailsArea,
+.tripTypeArea,
+.tripTypeAreaInner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.tripTypeArea {
+  align-self: stretch;
+  flex-direction: row;
+  gap: var(--gap-5xl);
+}
+
+.tripDetailsArea {
+  width: 324px;
+  flex-direction: column;
+  padding: 0 0 70px;
+  box-sizing: border-box;
+  min-height: 166px;
+  max-width: 100%;
+}
+
+.search {
+  position: relative;
+  font-size: var(--font-size-base);
+  line-height: 11px;
+  font-weight: 500;
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 57px;
+}
+
+.searchWrapper {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-purple-100);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-smi) 46.5px;
+  z-index: 1;
+}
+
+.rectangleParent,
+.timeArea {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+}
+
+.timeArea {
+  margin: 24px 0px;
+  align-items: start;
+}
+
+.rectangleParent {
+  margin: 0;
+  /* width: 1120px; */
+  border-radius: var(--br-3xs);
+  background-color: var(--color-lavenderblush);
+  flex-direction: row;
+  padding: var(--padding-14xl) var(--padding-22xl) 38.1px;
+  box-sizing: border-box;
+  gap: var(--gap-2xl);
+  max-width: 100%;
+}
+
+.all {
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 10px;
+  font-weight: 500;
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 18px;
+}
+
+.tabList {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-purple-100);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-mini) 39px;
+}
+
+.popular {
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 10px;
+  font-weight: 500;
+  font-family: var(--font-poppins);
+  color: var(--color-purple-100);
+  text-align: left;
+  display: inline-block;
+  min-width: 55px;
+}
+
+.tabList1 {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-lavenderblush);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-mini) 20.5px;
+}
+
+.latest {
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 10px;
+  font-weight: 500;
+  font-family: var(--font-poppins);
+  color: var(--color-purple-100);
+  text-align: left;
+  display: inline-block;
+  min-width: 43px;
+}
+
+.tabList2 {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-lavenderblush);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-mini) 26.5px;
+}
+
+.trending {
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 10px;
+  font-weight: 500;
+  font-family: var(--font-poppins);
+  color: var(--color-purple-100);
+  text-align: left;
+  display: inline-block;
+  min-width: 63px;
+}
+
+.tabList3 {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-lavenderblush);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-mini) 16.5px;
+}
+
+.filterTabs {
+  flex-direction: row;
+  gap: var(--gap-xl);
+  max-width: 100%;
+}
+
+.filterTabs,
+.filteredCarCard,
+.listingFilterArea {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.filteredCarCard {
+  /* align-self: stretch; */
+  flex-direction: row;
+  gap: var(--gap-13xl);
+  max-width: 100%;
+}
+
+.listingFilterArea {
+  width: 544px;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: var(--gap-11xl);
+}
+
+.cabSearch,
+.carCard,
+.carListingArea {
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.carCard {
+  flex: 1;
+  overflow-x: auto;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: var(--gap-13xl);
+}
+
+.cabSearch,
+.carListingArea {
+  box-sizing: border-box;
+}
+
+.carListingArea {
+  /* width: 1128px; */
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 4px;
+}
+
+.cabSearch {
+  margin: 0;
+  width: 1440px;
+  background-color: var(--color-white);
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px var(--padding-xl);
+  gap: var(--gap-11xl);
+  line-height: normal;
+  letter-spacing: normal;
+}
+.oneWayWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ 
+  /* justify-content: start; */
+  /* gap: var(--gap-10xl); */
+  /* width: 100%; */
+  /* margin-bottom: 0.5rem; */
+}
+
+@media screen and (max-width: 1050px) {
+  .rectangleParent {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .carCard {
+    gap: var(--gap-base);
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+  .dropoffLocationOptions,
+  .passengerArea {
+    flex-wrap: wrap;
+  }
+
+  .pickupArea {
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+
+  .tripTypeArea {
+    flex-wrap: wrap;
+  }
+}

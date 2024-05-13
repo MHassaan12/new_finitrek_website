@@ -1,0 +1,53 @@
+.selectDate {
+  position: relative;
+  line-height: 8px;
+  display: inline-block;
+  min-width: 69px;
+}
+.selectDateWrapper {
+  align-self: stretch;
+  box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 0.3px solid var(--color-purple-200);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-sm) var(--padding-xl);
+  white-space: nowrap;
+  z-index: 1;
+}
+.selectDate1 {
+  position: relative;
+  line-height: 8px;
+  display: inline-block;
+  min-width: 69px;
+}
+.dateArea,
+.selectDateContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.selectDateContainer {
+  align-self: stretch;
+  box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+  border-radius: var(--br-5xs);
+  background-color: var(--color-white);
+  border: 0.3px solid var(--color-purple-200);
+  flex-direction: row;
+  padding: var(--padding-sm) var(--padding-xl);
+  white-space: nowrap;
+  z-index: 1;
+}
+.dateArea {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-2xl);
+  min-width: 144px;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-silver);
+  font-family: var(--font-poppins);
+}

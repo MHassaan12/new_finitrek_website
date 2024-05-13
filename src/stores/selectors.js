@@ -1,4 +1,5 @@
-import {  bookingCarsState, bookingFormState } from "./atoms";
+import { selector } from "recoil";
+import { bookingCarsState, bookingFormState, selectedCarState } from "./atoms";
 
 export const bookingFormSelector = selector({
     key: 'bookingForm',
@@ -19,5 +20,15 @@ export const bookingCarsSelector = selector({
             return bookingForm;
         }
         return [];
+    },
+});
+export const selectedCarSelector = selector({
+    key: 'bookingForm',
+    get: ({ get }) => {
+        const bookingForm = get(selectedCarState);
+        if (bookingForm) {
+            return bookingForm;
+        }
+        return {};
     },
 });
