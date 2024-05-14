@@ -19,19 +19,18 @@ const CabSearch: FunctionComponent = () => {
       for (const key in bookingForm) {
         if (Object.prototype.hasOwnProperty.call(bookingForm, key)) {
           const element = (bookingForm as { [key: string]: any })[key];
-          params.set(key, element)
+          params.set(key, element);
         }
       }
-      const { data } = await post(`/api/price?${params}`, {})
+      const { data } = await post(`/api/price?${params}`, {});
       if (data.cars.length > 0) {
-        setBookingCars(data.cars)
+        setBookingCars(data.cars);
       }
-      console.log('FFFFFFFFFFFFFFFFFFFFFFFFF', data)
+      console.log("FFFFFFFFFFFFFFFFFFFFFFFFF", data);
     } catch (error) {
-      console.log('FFFFFFFFFFFFFFFFFFFFFFFF EEEErrrrrF', error)
-
+      console.log("FFFFFFFFFFFFFFFFFFFFFFFF EEEErrrrrF", error);
     }
-  }
+  };
   return (
     <form className={styles.rectangleParent}>
       <div className={styles.frameChild} />
@@ -42,12 +41,13 @@ const CabSearch: FunctionComponent = () => {
             apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
             onPlaceSelected={(place) => {
               if (place?.formatted_address) {
-                setBookingForm((prev: any) => ({ ...prev, pickup: place.formatted_address }))
+                setBookingForm((prev: any) => ({
+                  ...prev,
+                  pickup: place.formatted_address,
+                }));
               }
             }}
-
             className={styles.enterPickUpLocationWrapper}
-
           />
           {/* </div> */}
           <div className={styles.dropoffArea}>
@@ -74,12 +74,14 @@ const CabSearch: FunctionComponent = () => {
               apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
               onPlaceSelected={(place) => {
                 if (place.formatted_address) {
-                  setBookingForm((prev: any) => ({ ...prev, dropoff: place.formatted_address }))
+                  setBookingForm((prev: any) => ({
+                    ...prev,
+                    dropoff: place.formatted_address,
+                  }));
                   // setTo(place.formatted_address)
                 }
               }}
               className={styles.enterDropLocationWrapper}
-
             />
             {/* <div className={styles.enterDropLocationWrapper}>
               <div className={styles.enterDropLocation}>
@@ -90,11 +92,33 @@ const CabSearch: FunctionComponent = () => {
         </div>
         <div className={styles.passengerArea}>
           <div className={styles.passengersWrapper}>
-            <input className={styles.passengers} type="number" placeholder="Passengers" value={bookingForm.passengers} onChange={(e) => setBookingForm((prev: any) => ({ ...prev, passengers: e.target.value }))} />
+            <input
+              className={styles.passengers}
+              type="number"
+              placeholder="Passengers"
+              value={bookingForm.passengers}
+              onChange={(e) =>
+                setBookingForm((prev: any) => ({
+                  ...prev,
+                  passengers: e.target.value,
+                }))
+              }
+            />
             {/* <div className={styles.passengers}>Passengers</div> */}
           </div>
           <div className={styles.luggageWrapper}>
-            <input className={styles.luggage} type="number" placeholder="Luggage" value={bookingForm.luggage} onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))} />
+            <input
+              className={styles.luggage}
+              type="number"
+              placeholder="Luggage"
+              value={bookingForm.luggage}
+              onChange={(e) =>
+                setBookingForm((prev: any) => ({
+                  ...prev,
+                  luggage: e.target.value,
+                }))
+              }
+            />
             {/* <div className={styles.luggage}>Luggage</div> */}
           </div>
         </div>
@@ -105,30 +129,58 @@ const CabSearch: FunctionComponent = () => {
             <div className={styles.oneWay}>One Way</div>
             <div className={styles.datePickerLayout}>
               <div className={styles.selectDateWrapper}>
-                <DatePickerComponent setStart={(date: any) => setBookingForm((prev: any) => ({ ...prev, myDate: date }))} start={bookingForm.myDate} disabled={false} />
+                <DatePickerComponent
+                  setStart={(date: any) =>
+                    setBookingForm((prev: any) => ({ ...prev, myDate: date }))
+                  }
+                  start={bookingForm.myDate}
+                  disabled={false}
+                />
               </div>
               <div>
-                <TimePicker setTime={(time) => setBookingForm((prev: any) => ({ ...prev, myTime: time }))} time={bookingForm.myTime} disabled={false} />
+                <TimePicker
+                  setTime={(time) =>
+                    setBookingForm((prev: any) => ({ ...prev, myTime: time }))
+                  }
+                  time={bookingForm.myTime}
+                  disabled={false}
+                />
               </div>
-
             </div>
           </div>
           <div className={styles.oneWayWrapper}>
             <div className={styles.oneWay}>Return</div>
             <div className={styles.datePickerLayout}>
               <div className={styles.selectDateWrapper}>
-                <DatePickerComponent setStart={(date: any) => setBookingForm((prev: any) => ({ ...prev, hiddenmyDate: date }))} start={bookingForm.hiddenmyDate} disabled={false} />
+                <DatePickerComponent
+                  setStart={(date: any) =>
+                    setBookingForm((prev: any) => ({
+                      ...prev,
+                      hiddenmyDate: date,
+                    }))
+                  }
+                  start={bookingForm.hiddenmyDate}
+                  disabled={false}
+                />
               </div>
               <div>
-                <TimePicker setTime={(time) => setBookingForm((prev: any) => ({ ...prev, retmyTime: time }))} time={bookingForm.retmyTime} disabled={false} />
+                <TimePicker
+                  setTime={(time) =>
+                    setBookingForm((prev: any) => ({
+                      ...prev,
+                      retmyTime: time,
+                    }))
+                  }
+                  time={bookingForm.retmyTime}
+                  disabled={false}
+                />
               </div>
-
-            </div>
+            </div>    
           </div>
+          <div className={styles.searchWrapper}>
+              <div className={styles.search}>Search</div>
+            </div>
         </div>
-      </div>
-      <div className={styles.searchWrapper}>
-        <div className={styles.search}>Search</div>
       </div>
     </form>
   );

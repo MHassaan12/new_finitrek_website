@@ -222,9 +222,10 @@
   font-weight: 500;
   font-family: var(--font-poppins);
   color: var(--color-purple-100);
-  text-align: left;
+  text-align: center;
   display: inline-block;
   min-width: 79px;
+  padding-right: 4px;
   /* z-index: 1; */
 }
 
@@ -257,20 +258,22 @@
 
 .tripTypeArea {
   align-self: stretch;
-  flex-direction: row;
+  flex-direction: column;
   gap: var(--gap-5xl);
 }
 
 .tripDetailsArea {
-  width: 324px;
+  /* width: 324px; */
   flex-direction: column;
-  padding: 0 0 70px;
+  /* padding: 0 0 70px; */
   box-sizing: border-box;
-  min-height: 166px;
+  min-height: 190px;
   max-width: 100%;
 }
 
+
 .search {
+  float: right;
   position: relative;
   font-size: var(--font-size-base);
   line-height: 11px;
@@ -280,6 +283,14 @@
   text-align: left;
   display: inline-block;
   min-width: 57px;
+}
+.tripTypeArea {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.searchWrapper {
+  margin-left: auto;
 }
 
 .searchWrapper {
@@ -291,7 +302,39 @@
   justify-content: flex-start;
   padding: var(--padding-smi) 46.5px;
   z-index: 1;
+
 }
+
+.datePickerLayout,
+.endDatePicker {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.datePickerLayout {
+  flex: 1;
+  flex-direction: row;
+  gap: var(--gap-2xl-2);
+  min-width: 76%;
+  display: flex;
+    gap: var(--gap-xl);
+  /* min-width: 83px; */
+}
+
+.selectDateWrapper {
+  width: 80%;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* align-items: flex-start; */
+  /* justify-content: flex-start; */
+  /* flex-shrink: 0; */
+  /* debug_commit: 1de1738; */
+  /* white-space: nowrap; */
+  /* z-index: 1; */
+}
+
+
 
 .rectangleParent,
 .timeArea {
@@ -309,6 +352,7 @@
 }
 
 .rectangleParent {
+  justify-content: space-around;
   margin: 0;
   /* width: 1120px; */
   border-radius: var(--br-3xs);
@@ -316,7 +360,7 @@
   flex-direction: row;
   padding: var(--padding-14xl) var(--padding-22xl) 38.1px;
   box-sizing: border-box;
-  gap: var(--gap-2xl);
+  /* gap: var(--gap-2xl); */
   max-width: 100%;
 }
 

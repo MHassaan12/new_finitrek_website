@@ -450,6 +450,7 @@
   justify-content: flex-start;
 }
 
+
 .endDatePicker {
   align-self: stretch;
   box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
@@ -478,7 +479,7 @@
   background-color: var(--color-white);
   border: 0.3px solid var(--color-purple-200);
   padding: var(--padding-sm) 0px;
-  width: 100%;
+  width: auto;
 }
 
 .selectTimeWrapper {
