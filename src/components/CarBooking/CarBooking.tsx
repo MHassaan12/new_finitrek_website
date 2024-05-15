@@ -6,11 +6,13 @@ import { bookingFormSelector, selectedCarSelector } from "../../stores/selectors
 import { useForm } from "react-hook-form";
 import moment from "moment";
 import { post } from "../../utils/api";
+import { useNavigate } from "react-router-dom";
 
 const CarBooking: FunctionComponent = () => {
     const bookingForm = useRecoilValue(bookingFormSelector)
     const selectedCar = useRecoilValue(selectedCarSelector)
     const { register, handleSubmit, } = useForm();
+    const nvigation = useNavigate()
 
     const onSubmit = async (body: any) => {
         const params = new URLSearchParams();
@@ -41,6 +43,7 @@ const CarBooking: FunctionComponent = () => {
             }
             const { data } = await post(`/api/userRequest?${params}`, body);
             if (data.message) {
+                nvigation('/payment')
                 // localStorage.setItem('user', JSON.stringify(data.authUser))
                 // ('/cab/booking/booking-payment')
             }
@@ -279,9 +282,11 @@ const CarBooking: FunctionComponent = () => {
                         </div>
                     </div>
                     <div className={styles.paymentButtonContainerWrapper}>
-                        <div className={styles.paymentButtonContainer}>
-                            <div className={styles.proceedToPay}>Proceed To Pay</div>
-                        </div>
+                        <button type="submit">
+                            <div className={styles.paymentButtonContainer}>
+                                <div className={styles.proceedToPay}>Proceed To Pay</div>
+                            </div>
+                        </button>
                     </div>
                 </form>
                 <div className={styles.priceBreakdown}>

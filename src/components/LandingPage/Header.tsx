@@ -109,7 +109,7 @@ const Header: FunctionComponent = () => {
                         <DatePickerComponent setStart={(date: any) => setBookingForm((prev: any) => ({ ...prev, myDate: date }))} start={bookingForm.myDate} disabled={false} />
                       </div>
                       <div>
-                        <TimePicker setTime={(time) => setBookingForm((prev: any) => ({ ...prev, myTime: time }))} time={bookingForm.myTime} disabled={false} />
+                        <TimePicker setTime={(time: any) => setBookingForm((prev: any) => ({ ...prev, myTime: time }))} time={bookingForm.myTime} disabled={false} />
                       </div>
 
                     </div>
@@ -121,7 +121,7 @@ const Header: FunctionComponent = () => {
                         <DatePickerComponent setStart={(date: any) => setBookingForm((prev: any) => ({ ...prev, hiddenmyDate: date }))} start={bookingForm.hiddenmyDate} disabled={false} />
                       </div>
                       <div>
-                        <TimePicker setTime={(time) => setBookingForm((prev: any) => ({ ...prev, retmyTime: time }))} time={bookingForm.retmyTime} disabled={false} />
+                        <TimePicker setTime={(time: any) => setBookingForm((prev: any) => ({ ...prev, retmyTime: time }))} time={bookingForm.retmyTime} disabled={false} />
                       </div>
 
                     </div>

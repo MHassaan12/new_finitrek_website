@@ -2,7 +2,7 @@ import { selector } from "recoil";
 import { bookingCarsState, bookingFormState, selectedCarState } from "./atoms";
 
 export const bookingFormSelector = selector({
-    key: 'bookingForm',
+    key: 'bookingFormSelector',
     get: ({ get }) => {
         const bookingForm = get(bookingFormState);
         if (bookingForm) {
@@ -13,21 +13,21 @@ export const bookingFormSelector = selector({
 });
 
 export const bookingCarsSelector = selector({
-    key: 'bookingForm',
+    key: 'bookingCarsSelector',
     get: ({ get }) => {
-        const bookingForm = get(bookingCarsState);
-        if (bookingForm) {
-            return bookingForm;
+        const bookingCars = get(bookingCarsState);
+        if (bookingCars) {
+            return bookingCars;
         }
         return [];
     },
 });
 export const selectedCarSelector = selector({
-    key: 'bookingForm',
+    key: 'selectedCarSelector',
     get: ({ get }) => {
-        const bookingForm = get(selectedCarState);
-        if (bookingForm) {
-            return bookingForm;
+        const bookingCars = get(selectedCarState);
+        if (bookingCars) {
+            return bookingCars;
         }
         return {};
     },

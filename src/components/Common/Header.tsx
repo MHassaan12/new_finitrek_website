@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react"
 import styles from "../../Assets/css/Header.module.css"
+import { Link } from "react-router-dom";
 
 
 
@@ -8,6 +9,7 @@ const Header: FunctionComponent = () => {
         <div className={styles.header}>
             <header className={styles.uSPLayout}>
                 <div className={styles.treeStructure}>
+                        <Link to="/">
                     <div className={styles.uSPItems}>
                         <img
                             className={styles.groupIcon}
@@ -19,6 +21,7 @@ const Header: FunctionComponent = () => {
                             <img className={styles.groupIcon1} alt="" src="/group-1.svg" />
                         </div>
                     </div>
+                        </Link>
                     <nav className={styles.benefitItemsWrapper}>
                         <nav className={styles.benefitItems}>
                             <div className={styles.popularDestinations}>

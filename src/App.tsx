@@ -9,6 +9,7 @@ import LandingPage from "./pages/LandingPage";
 import Layout from "./Layouts";
 import CarSearchPage from "./pages/CarSearchPage";
 import CarBookingPage from "./pages/CarBooking";
+import PaymentPage from "./pages/Payment";
 
 function App() {
   const action = useNavigationType();
@@ -52,6 +53,7 @@ function App() {
         <Route index element={<LandingPage />} />
         <Route path="/car-search" element={<CarSearchPage />} />
         <Route path="/car-booking" element={<CarBookingPage />} />
+        <Route path="/payment" element={<PaymentPage />} />
       </Route>
     </Routes>
   );
