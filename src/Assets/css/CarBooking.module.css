@@ -1,7 +1,7 @@
 .information {
     margin: 0;
     position: relative;
-    font-size: inherit;
+    font-size: 36px;
     line-height: 100%;
     font-weight: 600;
     font-family: inherit;
@@ -106,7 +106,7 @@
 .contactDetails {
     margin: 0;
     position: relative;
-    font-size: var(--font-size-17xl);
+    font-size:36px;
     line-height: 100%;
     font-weight: 600;
     font-family: inherit;
@@ -139,7 +139,7 @@
     margin: 0;
     flex: 1;
     position: relative;
-    font-size: inherit;
+    font-size: 36px;
     line-height: 100%;
     font-weight: 600;
     font-family: inherit;
@@ -396,7 +396,7 @@
     margin: 0;
     flex: 1;
     position: relative;
-    font-size: inherit;
+    font-size: 36px;
     line-height: 100%;
     font-weight: 600;
     font-family: inherit;
@@ -1079,7 +1079,7 @@
     z-index: 1;
   }
   .contactDetailsLabels {
-    width: 109px;
+    /* width: 109px; */
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -1200,15 +1200,18 @@
   .flightDetailsInput,
   .nameEmailInput {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    flex-direction: row;
+    /* align-items: flex-start;*/
+    justify-content: space-evenly; 
   }
+
   .flightDetailsInput {
     align-self: stretch;
     gap: var(--gap-8xs);
   }
   .nameEmailInput {
+    display: flex;
+    flex-wrap: wrap;
     flex: 1;
     gap: var(--gap-xl);
     min-width: 159px;

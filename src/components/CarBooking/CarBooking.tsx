@@ -77,8 +77,8 @@ const CarBooking: FunctionComponent = () => {
                                 </div>
                             </div>
                         </div>
-                        <h1 className={styles.contactDetails}>Contact Details</h1>
                     </div>
+            <h1 className={styles.contactDetails}>Contact Details</h1>
                 </div>
                 <div className={styles.summaryAndActions}>
                     <div className={styles.summary}>
@@ -177,14 +177,14 @@ const CarBooking: FunctionComponent = () => {
                                         <div className={styles.name}>Name</div>
                                     </div>
                                     {/* <div className={styles.pickupLocationInput}> */}
-                                    <input className={styles.pickupLocationInput} placeholder="Name" {...register("name")} />
+                                    <input className={styles.pickupLocationInput} placeholder="Enter Pick Up  Location" {...register("name")} />
                                     {/* </div> */}
                                 </div>
                                 <div className={styles.locationInputRepeat}>
                                     <div className={styles.contactDetailsLabels}>
                                         <div className={styles.name}>Email</div>
                                     </div>
-                                    <input className={styles.pickupLocationInput} placeholder="Email" {...register("email")} />
+                                    <input className={styles.pickupLocationInput} placeholder="Enter Pick Up  Location" {...register("email")} />
                                     {/* <div className={styles.pickupLocationInput}>
                                         <div className={styles.enterPickUp}>Enter Pick Up Location</div>
                                     </div> */}
@@ -193,9 +193,9 @@ const CarBooking: FunctionComponent = () => {
                                     <div className={styles.contactDetailsLabels}>
                                         <div className={styles.name}>Contact Number</div>
                                     </div>
-                                    <input className={styles.pickupLocationInput} placeholder="Contact Number" {...register("contact_number")} />
+                                    <input className={styles.pickupLocationInput} placeholder="Enter Drop Location" {...register("contact_number")} />
                                     {/* <div className={styles.pickupLocationInput}>
-                                        <div className={styles.enterPickUp}>Enter Pick Up Location</div>
+                                        <div className={styles.enterPickUp}>Enter Pick Up Location</div>  
                                     </div> */}
                                 </div>
                                 <div className={styles.locationInputRepeat}>

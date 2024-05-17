@@ -208,9 +208,11 @@
 
 .formContentIcon .bgframe {
 
+  right: -277px;
+  top: -59px;
+  width: 951px;
   position: absolute;
-  right: -220px;
-  top: -24px;
+
   /* right: -220px; */
 
 }
@@ -233,7 +235,7 @@
 }
 
 .formLayoutChild {
-  top: 280.1px;
+  top:284.1px;
   left: -186px;
   /* width: 134.2px; */
   height: 20px;

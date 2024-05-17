@@ -79,12 +79,12 @@ const WhyChooseUs: FunctionComponent = () => {
       </div>
       <div>
 
-      <img
+      {/* <img
         className={styles.images1Icon}
         loading="lazy"
         alt=""
         src="/images-1@2x.png"
-      />
+      /> */}
       </div>
 
     </section>
