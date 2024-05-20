@@ -125,7 +125,7 @@
     gap: var(--gap-xl);
   }
   .frameParent {
-    gap: var(--gap-20xl);
+    /* gap: var(--gap-13xl); */
   }
   .howItWork {
     padding-top: var(--padding-24xl);

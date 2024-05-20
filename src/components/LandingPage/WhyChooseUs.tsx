@@ -77,7 +77,7 @@ const WhyChooseUs: FunctionComponent = () => {
           src="/audi-1@2x.png"
         />
       </div>
-      <div>
+      {/* <div>
 
       <img
         className={styles.images1Icon}
@@ -85,7 +85,7 @@ const WhyChooseUs: FunctionComponent = () => {
         alt=""
         src="/images-1@2x.png"
       />
-      </div>
+      </div> */}
 
     </section>
   );

@@ -1,0 +1,361 @@
+.socialLogin {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-9xl);
+    max-width: 100%;
+  }
+  .frameChild {
+    align-self: stretch;
+    height: 1px;
+    position: relative;
+    border-top: 1px solid var(--color-silver-100);
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .lineWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-2xs) 0 0;
+    box-sizing: border-box;
+    min-width: 190px;
+  }
+  .frameItem,
+  .or {
+    position: relative;
+    z-index: 1;
+  }
+  .or {
+    font-size: var(--font-size-base);
+    line-height: 22px;
+    font-family: var(--font-poppins);
+    color: var(--black);
+    text-align: left;
+    display: inline-block;
+    min-width: 23px;
+  }
+  .frameItem {
+    align-self: stretch;
+    height: 1px;
+    border-top: 1px solid var(--color-silver-100);
+    box-sizing: border-box;
+  }
+  .lineContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-2xs) 0 0;
+    box-sizing: border-box;
+    min-width: 187px;
+  }
+  .frameParent,
+  .loginOptionsInner {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .frameParent {
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: var(--gap-16xl);
+  }
+  .loginOptionsInner {
+    align-self: stretch;
+    justify-content: flex-end;
+    padding: 0 var(--padding-8xs) 0 var(--padding-10xs);
+    box-sizing: border-box;
+  }
+  .emailChild {
+    height: 77px;
+    width: 671px;
+    position: relative;
+    border-radius: var(--br-5xs);
+    background-color: var(--color-thistle);
+    display: none;
+    max-width: 100%;
+  }
+  .emailIcon {
+    width: 30px;
+    height: 24px;
+    position: relative;
+    z-index: 1;
+  }
+  .inputContainers {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 var(--padding-7xs);
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+  }
+  .email1,
+  .examplegmailcom {
+    position: relative;
+    font-family: var(--font-poppins);
+    color: var(--black);
+    text-align: left;
+    z-index: 1;
+  }
+  .email1 {
+    font-size: var(--font-size-xs);
+    line-height: 135.5%;
+    display: inline-block;
+    min-width: 33px;
+  }
+  .examplegmailcom {
+    font-size: var(--font-size-base);
+    line-height: 22px;
+    white-space: nowrap;
+  }
+  .emailField {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-7xs);
+  }
+  .email,
+  .passwordChild {
+    border-radius: var(--br-5xs);
+    background-color: var(--color-thistle);
+    max-width: 100%;
+  }
+  .email {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: var(--padding-mini) var(--padding-4xl) var(--padding-lg);
+    box-sizing: border-box;
+    gap: var(--gap-10xl);
+    z-index: 1;
+  }
+  .passwordChild {
+    height: 77px;
+    width: 671px;
+    position: relative;
+    display: none;
+  }
+  .groupIcon {
+    width: 27px;
+    height: 27px;
+    position: relative;
+    z-index: 1;
+  }
+  .groupWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 var(--padding-2xs);
+  }
+  .empty,
+  .password1 {
+    position: relative;
+    font-size: var(--font-size-xs);
+    line-height: 135.5%;
+    font-family: var(--font-poppins);
+    color: var(--black);
+    text-align: left;
+    display: inline-block;
+    min-width: 58px;
+    z-index: 1;
+  }
+  .empty {
+    font-size: var(--font-size-base);
+    line-height: 22px;
+    min-width: 95px;
+  }
+  .frameGroup,
+  .passwordField {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .passwordField {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--gap-xs);
+  }
+  .frameGroup {
+    width: 151px;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: var(--gap-10xl);
+  }
+  .bieyeFillIcon {
+    width: 22px;
+    height: 22px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .bieyeFillWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 var(--padding-2xs);
+  }
+  .inputFields,
+  .password {
+    align-self: stretch;
+    display: flex;
+    gap: var(--gap-xl);
+    max-width: 100%;
+  }
+  .password {
+    border-radius: var(--br-5xs);
+    background-color: var(--color-thistle);
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: var(--padding-mini) var(--padding-2xl) var(--padding-xs)
+      var(--padding-7xl);
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .inputFields {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .check {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    border-radius: var(--br-9xs);
+    background-color: var(--color-thistle);
+    border: 1px solid var(--color-thistle-100);
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-11xs) 0 0;
+  }
+  .rememberMe1 {
+    position: relative;
+    font-size: var(--font-size-base);
+    line-height: 22px;
+    font-family: var(--font-poppins);
+    color: var(--black);
+    text-align: left;
+    display: inline-block;
+    min-width: 120px;
+    z-index: 1;
+  }
+  .rememberBox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-mini);
+  }
+  .forgotPassword {
+    position: relative;
+    font-size: var(--font-size-base);
+    line-height: 22px;
+    font-family: var(--font-poppins);
+    color: var(--color-purple-100);
+    text-align: left;
+    z-index: 1;
+  }
+  .optionsArea,
+  .rememberMe {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .rememberMe {
+    flex: 1;
+    justify-content: space-between;
+    gap: var(--gap-xl);
+  }
+  .optionsArea {
+    align-self: stretch;
+    justify-content: flex-start;
+    padding: 0 var(--padding-8xs) 0 var(--padding-11xs);
+    box-sizing: border-box;
+  }
+  .buttonChild {
+    height: 77px;
+    width: 671px;
+    position: relative;
+    border-radius: var(--br-5xs);
+    background-color: var(--color-purple-100);
+    display: none;
+    max-width: 100%;
+  }
+  .login {
+    position: relative;
+    font-size: var(--font-size-base);
+    line-height: 22px;
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    color: var(--color-white);
+    text-align: left;
+    display: inline-block;
+    min-width: 44px;
+    z-index: 1;
+  }
+  .button,
+  .credentialsArea,
+  .loginOptions {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .button {
+    border-radius: var(--br-5xs);
+    background-color: var(--color-purple-100);
+    flex-direction: row;
+    justify-content: center;
+    padding: var(--padding-8xl) var(--padding-xl) var(--padding-9xl);
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .credentialsArea,
+  .loginOptions {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--gap-5xl);
+  }
+  .loginOptions {
+    margin: 0;
+    align-items: flex-end;
+    gap: var(--gap-16xl-5);
+  }
+  @media screen and (max-width: 700px) {
+    .frameParent {
+      gap: var(--gap-mid);
+    }
+    .loginOptions {
+      gap: var(--gap-lg);
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .email,
+    .rememberMe {
+      flex-wrap: wrap;
+    }
+  }
+  

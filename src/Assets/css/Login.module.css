@@ -1,0 +1,130 @@
+.bg {
+    width: 788px;
+    height: 940px;
+    position: relative;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-lavenderblush);
+    display: none;
+    max-width: 100%;
+}
+
+.welcomeTo {
+    margin: 0;
+    font-weight: 500;
+}
+
+.finitrek {
+    margin: 0;
+    font-size: 46px;
+    font-weight: 900;
+    color: var(--color-purple-100);
+}
+
+.welcomeToFinitrekContainer {
+    position: relative;
+    line-height: 135.5%;
+    z-index: 1;
+}
+
+.welcomePanel {
+    width: 660px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 0 var(--padding-7xs);
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.register {
+    color: var(--color-purple-100);
+}
+
+.dontHaveAnContainer {
+    position: relative;
+    line-height: 135.5%;
+    z-index: 1;
+}
+
+.bgParent,
+.login,
+.registerArea {
+    display: flex;
+    align-items: flex-start;
+}
+
+.registerArea {
+    width: 659px;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+    text-align: left;
+    font-size: var(--font-size-base);
+    color: var(--color-black);
+}
+
+.bgParent,
+.login {
+    box-sizing: border-box;
+}
+
+.bgParent {
+    width: 788px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-lavenderblush);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: var(--padding-25xl) var(--padding-24xl) 79px var(--padding-45xl);
+    gap: 47px;
+    max-width: 100%;
+}
+
+.login {
+    width: 100%;
+    position: relative;
+    background-color: var(--color-white);
+    overflow: hidden;
+    flex-direction: row;
+    justify-content: center;
+    padding: 143px var(--padding-xl);
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    font-size: var(--font-size-17xl);
+    color: var(--black);
+    font-family: var(--font-poppins);
+}
+
+@media screen and (max-width: 950px) {
+    .welcomeToFinitrekContainer {
+        font-size: var(--font-size-10xl);
+        line-height: 50px;
+    }
+
+    .bgParent {
+        padding: 29px var(--padding-2xl) 51px var(--padding-13xl);
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .bgParent {
+        padding-top: var(--padding-xl);
+        padding-bottom: var(--padding-14xl);
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .welcomeToFinitrekContainer {
+        font-size: var(--font-size-3xl);
+        line-height: 37px;
+    }
+
+    .bgParent {
+        gap: 23px;
+    }
+}

@@ -10,6 +10,8 @@ import Layout from "./Layouts";
 import CarSearchPage from "./pages/CarSearchPage";
 import CarBookingPage from "./pages/CarBooking";
 import PaymentPage from "./pages/Payment";
+import LoginPage from "./pages/Login";
+import RegisterPage from "./pages/Register";
 
 function App() {
   const action = useNavigationType();
@@ -49,6 +51,8 @@ function App() {
 
   return (
     <Routes>
+      <Route path="/signin" element={<LoginPage />} />
+      <Route path="/signup" element={<RegisterPage />} />
       <Route path="/" element={<Layout />}>
         <Route index element={<LandingPage />} />
         <Route path="/car-search" element={<CarSearchPage />} />
