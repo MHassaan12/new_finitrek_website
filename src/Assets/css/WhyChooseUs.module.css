@@ -5,6 +5,7 @@
   display: inline-block;
   min-width: 117px;
 }
+
 .whyChooseUsWrapper {
   border-radius: var(--br-5xs);
   background-color: var(--color-purple-300);
@@ -12,9 +13,10 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-base) var(--padding-13xl) ;
+  padding: var(--padding-base) var(--padding-13xl);
   white-space: nowrap;
 }
+
 .weOfferThe {
   margin: 0;
   align-self: stretch;
@@ -27,6 +29,7 @@
   color: var(--color-darkslategray-400);
   display: inline-block;
 }
+
 .frameGroup {
   align-self: stretch;
   display: flex;
@@ -35,11 +38,13 @@
   justify-content: center;
   gap: var(--gap-13xl);
 }
+
 .vuesaxboldwalletIcon {
   width: 24px;
   height: 24px;
   position: relative;
 }
+
 .iconCar {
   border-radius: var(--br-base);
   background-color: var(--color-lavenderblush);
@@ -49,15 +54,18 @@
   justify-content: center;
   padding: var(--padding-xl);
 }
+
 .bookYourCar {
   position: relative;
   line-height: 150%;
   font-weight: 500;
 }
+
 .selectYourPick,
 .timeToBook {
   margin: 0;
 }
+
 .bookYourCarContainer {
   height: 31px;
   position: relative;
@@ -68,22 +76,26 @@
   text-align: center;
   display: inline-block;
 }
+
 .bookYourCarParent,
 .iconCarParent {
   flex-direction: column;
   align-items: center;
 }
+
 .bookYourCarParent {
   width: 230px;
   display: none;
   justify-content: center;
   gap: var(--gap-5xs);
 }
+
 .iconCarParent {
   display: flex;
   justify-content: flex-start;
   gap: var(--gap-21xl);
 }
+
 .bestPriceGuaranteed {
   margin: 0;
   position: relative;
@@ -92,10 +104,12 @@
   font-weight: 500;
   font-family: inherit;
 }
+
 .findALower,
 .ofTheDifference {
   margin: 0;
 }
+
 .findALowerContainer {
   height: 35px;
   position: relative;
@@ -104,6 +118,7 @@
   color: var(--color-dimgray);
   display: inline-block;
 }
+
 .bestPrice,
 .priceDetails {
   display: flex;
@@ -113,12 +128,14 @@
   gap: var(--gap-5xs);
   max-width: 100%;
 }
+
 .bestPrice {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   gap: var(--gap-5xl);
 }
+
 .bestPriceParent,
 .frameParent {
   display: flex;
@@ -127,6 +144,7 @@
   justify-content: center;
   max-width: 100%;
 }
+
 .bestPriceParent {
   padding: 0 var(--padding-xl) 0 0;
   box-sizing: border-box;
@@ -134,24 +152,28 @@
   font-size: var(--font-size-xl);
   color: var(--color-black);
 }
+
 .frameParent {
-  position: absolute;
+  /* position: absolute;
   top: calc(50% - 308px);
-  left: 942px;
-  width: 576px;
-  gap: var(--gap-37xl);
-  z-index: 1;
+  left: 942px; */
+  width: 50%;
+  background: transparent;
+  /* gap: var(--gap-37xl); */
+  /* z-index: 1; */
 }
+
 .vectorIcon {
   position: absolute;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: -346px;
-  max-height: 100%;
-  width: 1123px;
+  height: inherit;
+  /* bottom: 0; */
+  left: -224px;
+  max-height: inherit;
+  width: 908px;
   object-fit: contain;
+  /* border: 2px solid red; */
 }
+
 .audi1Icon {
   position: absolute;
   top: 122px;
@@ -161,27 +183,39 @@
   object-fit: cover;
   z-index: 1;
 }
+
 .vectorParent {
-  position: absolute;
+  /* position: absolute;
   top: 224px;
-  left: 0;
-  width: 777px;
-  height: 859px;
+  left: 0; */
+  /* width: 777px; */
+  /* height: 859px; */
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+
 }
+
 .whyChooseUs {
   /* align-self: stretch; */
-  height: 920px;
-  position: relative;
+  /* height: 920px; */
+  /* position: relative; */
   background-color: var(--color-white);
-  overflow: hidden;
-  flex-shrink: 0;
+  /* overflow: hidden; */
+  /* flex-shrink: 0; */
   max-width: 100%;
   width: 100%;
-  text-align: left;
+  /* text-align: left; */
   font-size: var(--font-size-sm);
   color: var(--color-purple-100);
   font-family: var(--font-poppins);
+  display: flex;
+  flex-direction: row-reverse;
+  /* align-items: center; */
+  justify-content: center;
+  /* gap: var(--gap-5xl) */
 }
+
 .images1Icon {
   width: 407px;
   /* position: relative; */
@@ -189,25 +223,30 @@
   object-fit: cover;
   max-width: 100%;
 }
+
 @media screen and (max-width: 750px) {
   .weOfferThe {
     font-size: var(--font-size-11xl);
     line-height: 40px;
   }
 }
+
 @media screen and (max-width: 450px) {
   .weOfferThe {
     font-size: var(--font-size-4xl);
     line-height: 30px;
   }
+
   .bestPriceGuaranteed,
   .bookYourCar {
     font-size: var(--font-size-base);
     line-height: 24px;
   }
+
   .bestPrice {
     flex-wrap: wrap;
   }
+
   .whyChooseUs {
     height: auto;
     min-height: 800;
