@@ -35,7 +35,7 @@ const Header: FunctionComponent = () => {
   }
 
   return (
-    <section className={styles.header}>
+    <section className={styles.hero}>
      
       <div className={styles.mainContent}>
         <div className={styles.frameParent}>

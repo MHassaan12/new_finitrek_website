@@ -21,6 +21,26 @@ const PopularRentalCars: FunctionComponent = () => {
       </div>
       <div className={styles.frameParent}>
         <div className={styles.frameGroup}>
+
+        {
+          Array.from({ length: 7 }).map((_, index) => (
+            <GroupComponent
+            image12="/image-11@2x.png"
+            saloonCar="People Carrier"
+            prop="4.3"
+            reviews="(2.236 reviews)"
+            passagers="2 Passagers"
+            doors="2 Doors"
+            propMinWidth="unset"
+            propPadding="var(--padding-19xl) var(--padding-5xl) var(--padding-13xl)"
+            propHeight="85px"
+            propMinWidth1="115px"
+            propDisplay="inline-block"
+            />
+          ))
+        }
+        </div>
+        {/* <div className={styles.frameGroup}>
           <GroupComponent
             image12="/image-12@2x.png"
             saloonCar="Saloon Car"
@@ -111,7 +131,7 @@ const PopularRentalCars: FunctionComponent = () => {
               propDisplay="inline-block"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

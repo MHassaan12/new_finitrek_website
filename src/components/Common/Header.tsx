@@ -9,19 +9,19 @@ const Header: FunctionComponent = () => {
         <div className={styles.header}>
             <header className={styles.uSPLayout}>
                 <div className={styles.treeStructure}>
-                        <Link to="/">
-                    <div className={styles.uSPItems}>
-                        <img
-                            className={styles.groupIcon}
-                            loading="lazy"
-                            alt=""
-                            src="/group.svg"
-                        />
-                        <div className={styles.rentalSteps}>
-                            <img className={styles.groupIcon1} alt="" src="/group-1.svg" />
+                    <Link to="/">
+                        <div className={styles.uSPItems}>
+                            <img
+                                className={styles.groupIcon}
+                                loading="lazy"
+                                alt=""
+                                src="/group.svg"
+                            />
+                            <div className={styles.rentalSteps}>
+                                <img className={styles.groupIcon1} alt="" src="/group-1.svg" />
+                            </div>
                         </div>
-                    </div>
-                        </Link>
+                    </Link>
                     <nav className={styles.benefitItemsWrapper}>
                         <nav className={styles.benefitItems}>
                             <div className={styles.popularDestinations}>
@@ -35,10 +35,16 @@ const Header: FunctionComponent = () => {
                     <div className={styles.authentication}>
                         <div className={styles.authOptions}>
                             <div className={styles.signInButton}>
-                                <div className={styles.signIn}>Sign in</div>
+                                <Link to="/signin">
+                                    <div className={styles.signIn}>
+                                        Sign in
+                                    </div>
+                                </Link>
                             </div>
                             <div className={styles.signUpWrapper}>
-                                <div className={styles.signUp}>Sign up</div>
+                                <Link to="/signup">
+                                    <div className={styles.signUp}>Sign up</div>
+                                </Link>
                             </div>
                         </div>
                     </div>

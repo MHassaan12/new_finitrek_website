@@ -55,12 +55,20 @@
   gap: var(--gap-13xl);
 }
 .frameContainer,
-.frameGroup,
 .frameWrapper {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 }
+.frameGroup{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* First row */
+  /* gap: var(--gap-13xl); */
+  justify-content: center;
+  justify-self: center;
+}
+ 
+
 .frameContainer {
   width: 832px;
   justify-content: flex-start;
@@ -108,6 +116,9 @@
     padding-bottom: var(--padding-49xl);
     box-sizing: border-box;
   }
+  .frameGroup{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media screen and (max-width: 750px) {
   .mostPopularCars {
@@ -122,6 +133,9 @@
     padding-top: var(--padding-17xl);
     padding-bottom: var(--padding-25xl);
     box-sizing: border-box;
+  }
+  .frameGroup{
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media screen and (max-width: 450px) {

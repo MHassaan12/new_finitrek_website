@@ -229,14 +229,14 @@
 
 .formLayoutChild {
   position: absolute;
-  left: 402px !important;
+  left: 400px !important;
   /* width: 100%; */
   /* top: 92px; */
 }
 
 .formLayoutChild {
-  top:284.1px;
-  left: -186px;
+  top: 304px;
+  /* left: -182px; */
   /* width: 134.2px; */
   height: 20px;
   z-index: 3;
@@ -684,6 +684,7 @@
 
 .bookingForm,
 .header,
+.hero,
 .mainContent,
 .rectangleParent {
   display: flex;
@@ -700,6 +701,7 @@
 }
 
 .header,
+.hero,
 .mainContent {
   flex-direction: column;
 }
@@ -711,6 +713,8 @@
 }
 
 .header {
+  position: absolute;
+  width: 100%;
   align-self: stretch;
   background-color: var(--color-white);
   padding: var(--padding-21xl) var(--padding-131xl) var(--padding-44xl);
@@ -720,6 +724,19 @@
   font-size: var(--font-size-29xl);
   color: var(--color-gray-600);
   font-family: var(--font-poppins);
+}
+
+.hero{
+  align-self: stretch;
+  background-color: var(--color-white);
+  padding: var(--padding-21xl) var(--padding-131xl) var(--padding-44xl);
+  box-sizing: border-box;
+  gap: var(--gap-77xl-6);
+  text-align: left;
+  font-size: var(--font-size-29xl);
+  color: var(--color-gray-600);
+  font-family: var(--font-poppins);
+  padding-top: 212px;
 }
 
 .oneWayWrapper {
@@ -737,6 +754,12 @@
   .treeStructure {
     gap: var(--gap-20xl);
   }
+  .frameParent{
+    width: 100% ;
+  }
+  /* .formLayoutChild{
+    top: 288px;
+  } */
 }
 
 @media screen and (max-width: 1050px) {
@@ -744,11 +767,16 @@
     display: none;
   }
 
-  .header {
+  .header, .hero {
     padding-top: var(--padding-7xl);
     padding-bottom: var(--padding-22xl);
     box-sizing: border-box;
   }
+  .hero{
+    padding-top: 212px;
+
+  }
+
 }
 
 @media screen and (max-width: 750px) {
@@ -763,11 +791,17 @@
     line-height: 38px;
   }
 
-  .header {
+  .header, .hero {
     gap: var(--gap-29xl);
-    padding-left: var(--padding-56xl);
-    padding-right: var(--padding-56xl);
+    padding-left: var(--padding-44xl);
+    padding-right: var(--padding-44xl);
     box-sizing: border-box;
+  }
+  .formLayoutChild{
+    top: 286px;
+    left: 148px !important;
+    height: 17px;
+
   }
 }
 
@@ -795,9 +829,13 @@
     gap: var(--gap-lg);
   }
 
-  .header {
+  .header, .hero {
     gap: var(--gap-5xl);
     padding: var(--padding-xl) var(--padding-xl) var(--padding-8xl);
     box-sizing: border-box;
+  }
+  .hero{
+    padding-top: 212px;
+
   }
 }

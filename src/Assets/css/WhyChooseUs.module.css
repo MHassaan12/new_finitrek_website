@@ -169,7 +169,7 @@
   height: 859px;
 }
 .whyChooseUs {
-  /* align-self: stretch; */
+  align-self: stretch;
   height: 920px;
   position: relative;
   background-color: var(--color-white);
@@ -209,7 +209,7 @@
     flex-wrap: wrap;
   }
   .whyChooseUs {
-    height: auto;
+    /* height: auto; */
     min-height: 800;
   }
 }
