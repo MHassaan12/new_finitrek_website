@@ -23,7 +23,7 @@
 
 .welcomeToFinitrekContainer {
     position: relative;
-    line-height: 135.5%;
+    /* line-height: 135.5%; */
     z-index: 1;
 }
 
@@ -71,7 +71,9 @@
 }
 
 .bgParent {
-    width: 788px;
+    width: 40%;
+    height: 900px;
+    align-items: center;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
     border-radius: var(--br-5xs);
     background-color: var(--color-lavenderblush);

@@ -10,6 +10,7 @@
   align-items: flex-start;
 }
 .rentalDeals {
+  margin-top: 30px;
   border-radius: var(--br-5xs);
   background-color: var(--color-lavenderblush);
   justify-content: flex-start;
@@ -22,7 +23,8 @@
   padding: 0 var(--padding-xl);
 }
 .mostPopularCars {
-  margin: 0;
+  /* margin: 0; */
+  text-align: center;
   height: 26px;
   position: relative;
   font-size: var(--font-size-19xl);
@@ -50,7 +52,7 @@
   justify-content: center;
 }
 .frameGroup {
-  width: 1120px;
+  /* width: 1120px; */
   justify-content: flex-start;
   gap: var(--gap-13xl);
 }
@@ -89,9 +91,10 @@
   max-width: 100%;
 }
 .frameParent {
+  align-items: center;
   width: 1120px;
   /* overflow-x: auto; */
-  align-items: flex-start;
+  /* align-items: flex-start; */
   gap: var(--gap-26xl);
   font-size: var(--font-size-base);
   color: var(--color-gray-400);

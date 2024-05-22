@@ -244,7 +244,7 @@
     flex-wrap: wrap;
   }
   .downloadApp {
-    height: auto;
+    /* height: auto; */
     gap: var(--gap-6xl);
   }
 }
