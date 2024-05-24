@@ -73,6 +73,7 @@
 }
 
 .signIn {
+  color: #484848;
   height: 11px;
   position: relative;
   line-height: 150%;
@@ -91,11 +92,13 @@
 }
 
 .signUp {
+  color: white;
   position: relative;
   line-height: 11px;
   font-weight: 500;
-  display: inline-block;
+  /* display: inline-block; */
   min-width: 61px;
+
 }
 
 .signUpWrapper {
@@ -159,7 +162,9 @@
 .easily {
   color: var(--color-purple-100);
 }
-
+.link{
+  text-decoration: none;
+}
 .findBookAndContainer {
   margin: 0;
   flex: 1;
@@ -671,15 +676,16 @@
 }
 
 .rectangleParent {
-  margin: 0;
-  flex: 1;
-  border-radius: var(--br-3xs);
+  /* margin: 0; */
+  /* flex: 1; */
+  border-radius:10px;
   background-color: var(--color-purple-300);
   flex-direction: column;
+  width: 100%;
   padding: var(--padding-13xl) var(--padding-22xl) var(--padding-14xl);
   box-sizing: border-box;
   gap: var(--gap-3xl-2);
-  z-index: 2;
+  z-index: 3;
 }
 
 .bookingForm,
