@@ -353,7 +353,7 @@
 
 .rectangleParent {
   justify-content: space-around;
-  margin: 0;
+  margin-top: 118px;
   /* width: 1120px; */
   border-radius: var(--br-3xs);
   background-color: var(--color-lavenderblush);
@@ -453,6 +453,7 @@
 }
 
 .filterTabs {
+  margin-bottom: 20px;
   flex-direction: row;
   gap: var(--gap-xl);
   max-width: 100%;

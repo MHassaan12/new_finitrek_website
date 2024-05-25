@@ -42,7 +42,7 @@ const Header: FunctionComponent = () => {
                                 </Link>
                             </div>
                             <div className={styles.signUpWrapper}>
-                                <Link to="/signup">
+                                <Link to="/signup" className={styles.link}>
                                     <div className={styles.signUp}>Sign up</div>
                                 </Link>
                             </div>

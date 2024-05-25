@@ -2,10 +2,10 @@ import { FunctionComponent } from "react";
 import styles from "../../Assets/css/Login.module.css";
 import LoginOptions from "./LoginOptions";
 
-
 const Login: FunctionComponent = () => {
 
     return (
+        <>
         <div className={styles.login}>
             <div className={styles.bgParent}>
                 <div className={styles.bg} />
@@ -24,6 +24,7 @@ const Login: FunctionComponent = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 
