@@ -31,7 +31,7 @@ const Payment: FunctionComponent = () => {
                 };
             }[]; status: any; payer: { payer_id: any; }; create_time: any;
         }) => {
-            const formData: FormData = {
+            const formData = {
                 user_id: '',
                 vendor_id: selectedCar.vendor_id,
                 payment_id: details.id,

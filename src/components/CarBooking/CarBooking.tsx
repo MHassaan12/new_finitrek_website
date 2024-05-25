@@ -16,7 +16,7 @@ const CarBooking: FunctionComponent = () => {
 
     const onSubmit = async (body: any) => {
         const params = new URLSearchParams();
-        const formData: FormData = {
+        const formData = {
             pickup_date: moment(bookingForm?.myDate).format("MM-DD-YYYY"),
             pickup_time: bookingForm.myTime,
             dropoff_date: bookingForm?.hiddenmyDate ? moment(bookingForm.hiddenmyDate).format("MM-DD-YYYY") : '',

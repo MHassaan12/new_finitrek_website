@@ -139,7 +139,7 @@ const CabSearch: FunctionComponent = () => {
               </div>
               <div>
                 <TimePicker
-                  setTime={(time) =>
+                  setTime={(time: any) =>
                     setBookingForm((prev: any) => ({ ...prev, myTime: time }))
                   }
                   time={bookingForm.myTime}
@@ -165,7 +165,7 @@ const CabSearch: FunctionComponent = () => {
               </div>
               <div>
                 <TimePicker
-                  setTime={(time) =>
+                  setTime={(time: any) =>
                     setBookingForm((prev: any) => ({
                       ...prev,
                       retmyTime: time,
