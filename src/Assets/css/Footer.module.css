@@ -46,7 +46,7 @@
 }
 .contactDetails {
   flex-direction: column;
-  padding: var(--padding-6xs) 0 0;
+  /* padding: var(--padding-6xs) 0 0; */
 }
 .contactIcons {
   align-self: stretch;
@@ -68,8 +68,8 @@
 .contactIcons1,
 .wrapper {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 .wrapper {
   flex-direction: column;
@@ -100,7 +100,7 @@
 }
 .infofinitrekcomWrapper {
   flex-direction: column;
-  padding: var(--padding-6xs) 0 0;
+  /* padding: var(--padding-6xs) 0 0; */
 }
 .contactIcons2 {
   flex-direction: row;

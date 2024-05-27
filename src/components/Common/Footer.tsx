@@ -23,7 +23,7 @@ const Footer: FunctionComponent = () => {
                 />
                 <div className={styles.contactDetails}>
                   <div className={styles.a32AlbanyNew}>
-                    A-32, Albany, New York, UK
+                  Green lane RM8 1UU Dagenham London
                   </div>
                 </div>
               </div>
@@ -35,7 +35,8 @@ const Footer: FunctionComponent = () => {
                   src="/vuesaxlinearcall.svg"
                 />
                 <div className={styles.wrapper}>
-                  <div className={styles.div}>800-5-800</div>
+                  <div className={styles.div}>+44 2039831288</div>
+                  <div className={styles.div} style={{marginTop: '12px'}}>+44 7711 572073</div>
                 </div>
               </div>
               <div className={styles.contactIcons2}>
