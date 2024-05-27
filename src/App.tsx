@@ -13,6 +13,7 @@ import PaymentPage from "./pages/Payment";
 import LoginPage from "./pages/Login";
 import RegisterPage from "./pages/Register";
 import BusinessAccountPage from "./pages/BusinessAccount";
+import BusinessRegisterPage from "./pages/BusinessRegister";
 
 function App() {
   const action = useNavigationType();
@@ -54,6 +55,7 @@ function App() {
     <Routes>
       <Route path="/signin" element={<LoginPage />} />
       <Route path="/signup" element={<RegisterPage />} />
+      <Route path="/business-signup" element={<BusinessRegisterPage />} />
       <Route path="/" element={<Layout />}>
         <Route index element={<LandingPage />} />
         <Route path="/car-search" element={<CarSearchPage />} />

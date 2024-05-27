@@ -1,11 +1,912 @@
-.parent{
+.groupIcon {
+    height: 49.4px;
+    width: 52.5px;
+    position: relative;
+}
+
+.groupIcon1 {
+    align-self: stretch;
+    height: 28.6px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.rentalSteps {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 var(--padding-3xs-6);
+}
+
+.uSPItems {
+    width: 151px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: var(--gap-6xs-5);
+}
+
+.businessAccount,
+.operatorSignup,
+.popularDestinations {
+    position: relative;
+    line-height: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.help {
+    position: relative;
+    line-height: 11px;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 45px;
+}
+
+.benefitItems,
+.benefitItemsWrapper {
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.benefitItems {
+    flex-direction: row;
+    gap: var(--gap-21xl);
+    text-align: left;
+    font-size: var(--font-size-base);
+    color: var(--color-darkslategray-100);
+    font-family: var(--font-poppins);
+}
+
+.benefitItemsWrapper {
+    flex-direction: column;
+    /* padding: var(--padding-lgi-2) 0 0; */
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.signIn {
+    color: #484848;
+    height: 11px;
+    position: relative;
+    line-height: 150%;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 54px;
+    white-space: nowrap;
+}
+
+.signInButton {
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; */
+    padding: var(--padding-xs) 0 0;
+}
+
+.signUp {
+    color: white;
+    position: relative;
+    line-height: 11px;
+    font-weight: 500;
+    /* display: inline-block; */
+    min-width: 61px;
+
+}
+
+.signUpWrapper {
+    border-radius: var(--br-5xs);
+    background-color: var(--color-purple-100);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-base) var(--padding-13xl);
+    white-space: nowrap;
+    color: var(--color-white);
+}
+
+.authOptions {
+    flex-direction: row;
+    gap: var(--gap-5xl);
+}
+
+.authOptions,
+.authentication,
+.treeStructure,
+.uSPLayout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.authentication {
+    flex-direction: column;
+    padding: var(--padding-9xs-2) 0 0;
+}
+
+.treeStructure,
+.uSPLayout {
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.treeStructure {
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: var(--gap-59xl-5); */
+    z-index: 1;
+}
+
+.uSPLayout {
+    align-self: stretch;
+    padding: 0 var(--padding-3xs);
+    box-sizing: border-box;
+    top: 0;
+    z-index: 99;
+    position: sticky;
+    text-align: left;
+    font-size: var(--font-size-base);
+    color: var(--color-darkslategray-100);
+    font-family: var(--font-poppins);
+}
+
+.easily {
+    color: var(--color-purple-100);
+}
+
+.link {
+    text-decoration: none;
+}
+
+.findBookAndContainer {
+    margin: 0;
+    flex: 1;
+    position: relative;
+    font-size: inherit;
+    line-height: 100%;
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-block;
+    max-width: 100%;
+    z-index: 2;
+}
+
+.frameParent {
+    width: 50%;
+    z-index: 2;
+}
+
+.frameContainer {
+    width: 50%;
+    /* position: relative; */
+
+}
+
+.findBookAndRentACarEasiWrapper {
+    width: 566px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-5xl);
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+    /* padding: 0 var(--padding-3xs); */
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.formContentIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 803px;
+    height: 866px;
+    overflow: hidden;
+    /* object-fit: contain; */
+
+}
+
+.formContentIcon .bgframe {
+
+    right: -277px;
+    top: -59px;
+    width: 951px;
+    position: absolute;
+
+    /* right: -220px; */
+
+}
+
+.car21 {
+    position: absolute;
+    top: 118px;
+    left: 0px;
+    width: 804px;
+    /* height: 200px; */
+    object-fit: contain;
+    z-index: 1;
+}
+
+.formLayoutChild {
+    position: absolute;
+    left: 578px !important;
+    /* width: 100%; */
+    /* top: 92px; */
+}
+
+.formLayoutChild {
+    top: 304px;
+    /* left: -182px; */
+    /* width: 134.2px; */
+    height: 20px;
+    z-index: 3;
+}
+
+.formLayout {
+    height: 833px;
+    width: 1033.7px;
+    position: absolute;
+    margin: 0 !important;
+    top: -319px;
+    right: -832px;
+}
+
+.frameChild {
+    width: 458px;
+    height: 418px;
+    position: relative;
+    border-radius: var(--br-3xs);
+    background-color: var(--color-purple-300);
+    display: none;
+    max-width: 100%;
+}
+
+.enterPickUp {
+    position: relative;
+    font-size: var(--font-size-xs);
+    line-height: 8px;
+    font-family: var(--font-poppins);
+    color: var(--color-silver);
+    text-align: left;
+}
+
+.inputBox {
+    align-self: stretch;
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-sm) var(--padding-xl);
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.vuesaxboldlocationAddIcon {
+    height: 24px;
+    width: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.parentPara {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+}
+
+.para {
+    padding-right: 132px;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin-top: 28px;
+}
+
+.registerBtn {
+    background-color: var(--color-purple-100);
+    padding: 12px 24px;
+    color: var(--color-white);
+    border: none;
+    border-radius: 8px;
+}
+
+.text {
+    color: var(--color-purple-100);
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+
+}
+
+.via {
+    position: relative;
+    font-size: var(--font-size-sm);
+    line-height: 150%;
+    font-weight: 500;
+    font-family: var(--font-poppins);
+    color: var(--color-purple-100);
+    text-align: left;
+    display: inline-block;
+    min-width: 25px;
+    z-index: 1;
+}
+
+.viaWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-7xs) var(--padding-xl) 0 0;
+    box-sizing: border-box;
+    min-width: 190px;
+}
+
+.vuesaxboldarrangeSquare2Icon {
+    height: 24px;
+    width: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.iconLayout,
+.viaDropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.iconLayout {
+    flex: 1;
+    flex-wrap: wrap;
+    gap: var(--gap-8xs);
+}
+
+.viaDropdown {
+    align-self: stretch;
+    padding: 0 var(--padding-mini) 0 var(--padding-3xs);
+    box-sizing: border-box;
+}
+
+.enterDropLocation {
+    position: relative;
+    font-size: var(--font-size-xs);
+    line-height: 8px;
+    font-family: var(--font-poppins);
+    color: var(--color-silver);
+    text-align: left;
+    display: inline-block;
+    min-width: 117px;
+}
+
+.dropOffLocation,
+.locationIcon,
+.pickUpLocation {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.dropOffLocation {
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    flex-direction: row;
+    padding: var(--padding-sm) var(--padding-xl);
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.locationIcon,
+.pickUpLocation {
+    flex-direction: column;
+    gap: var(--gap-8xs);
+    max-width: 100%;
+}
+
+.pickUpLocation {
+    gap: var(--gap-4xs-5);
+}
+
+.oneWay,
+.return {
+    position: relative;
+    font-size: var(--font-size-base);
+    line-height: 150%;
+    font-weight: 500;
+    font-family: var(--font-poppins);
+    color: var(--color-purple-100);
+    text-align: left;
+    display: inline-block;
+    min-width: 24%;
+    /* z-index: 1; */
+}
+
+.return {
+    min-width: 53px;
+}
+
+.typeButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-15xl-9);
+}
+
+.selectDate {
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    padding: var(--padding-sm);
+    width: 80%;
+
+}
+
+.selectDateWrapper {
+    width: 80%;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+    /* flex-shrink: 0; */
+    /* debug_commit: 1de1738; */
+    /* white-space: nowrap; */
+    /* z-index: 1; */
+}
+
+.selectDate1 {
+    position: relative;
+    font-size: var(--font-size-xs);
+    line-height: 8px;
+    font-family: var(--font-poppins);
+    color: var(--color-silver);
+    text-align: left;
+    display: inline-block;
+    min-width: 69px;
+}
+
+.datePickerLayout,
+.endDatePicker {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+.endDatePicker {
+    align-self: stretch;
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    flex-direction: row;
+    padding: var(--padding-sm) var(--padding-xl);
+    flex-shrink: 0;
+    debug_commit: 1de1738;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.datePickerLayout {
+    flex: 1;
+    flex-direction: row;
+    gap: var(--gap-xs);
+    min-width: 76%;
+    /* min-width: 83px; */
+}
+
+.selectTime {
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    padding: var(--padding-sm);
     width: 100%;
 }
-.carImage{
+
+.selectTimeWrapper {
     width: 50%;
+    /* align-self: stretch;
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-sm) var(--padding-xl);
+    flex-shrink: 0;
+    debug_commit: 1de1738;
+    white-space: nowrap;
+    z-index: 1; */
 }
 
-.auth{
-    width: 50%;
+.selectTime1 {
+    position: relative;
+    font-size: var(--font-size-xs);
+    line-height: 8px;
+    font-family: var(--font-poppins);
+    color: var(--color-silver);
+    text-align: left;
+    display: inline-block;
+    min-width: 69px;
+}
 
+.endTimePicker,
+.timePickerLayout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.endTimePicker {
+    align-self: stretch;
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    flex-direction: row;
+    padding: var(--padding-sm) var(--padding-xl);
+    flex-shrink: 0;
+    debug_commit: 1de1738;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.timePickerLayout {
+    flex: 1;
+    flex-direction: column;
+    gap: var(--gap-2xl-2);
+    min-width: 83px;
+}
+
+.datePickers,
+.tripOptions,
+.tripType {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.datePickers {
+    flex: 1;
+    align-items: flex-start;
+    gap: var(--gap-xs);
+    min-width: 173px;
+}
+
+.tripOptions,
+.tripType {
+    max-width: 100%;
+}
+
+.tripOptions {
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--gap-12xl);
+}
+
+.tripType {
+    align-self: stretch;
+    align-items: flex-start;
+    padding: 0 0 0 var(--padding-8xs);
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.passengers {
+    position: relative;
+    font-size: var(--font-size-xs);
+    line-height: 8px;
+    font-family: var(--font-poppins);
+    color: var(--color-silver);
+    text-align: left;
+    display: inline-block;
+    min-width: 70px;
+    padding: var(--padding-sm) var(--padding-xl);
+    border: inherit;
+    border-radius: inherit;
+    width: 100%;
+}
+
+.travelerOptions {
+    flex: 1;
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    min-width: 158px;
+    z-index: 1;
+}
+
+.luggage {
+    position: relative;
+    font-size: var(--font-size-xs);
+    line-height: 8px;
+    font-family: var(--font-poppins);
+    color: var(--color-silver);
+    text-align: left;
+    display: inline-block;
+    min-width: 53px;
+    padding: var(--padding-sm) var(--padding-xl);
+    border: inherit;
+    border-radius: inherit;
+    width: 100%;
+}
+
+.luggageCount,
+.travelers {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.luggageCount {
+    flex: 1;
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    box-sizing: border-box;
+
+    min-width: 114px;
+    z-index: 1;
+}
+
+.travelers {
+    align-self: stretch;
+    flex-wrap: wrap;
+    gap: var(--gap-8xs);
+}
+
+.bookNow {
+    position: relative;
+    font-size: var(--font-size-base);
+    line-height: 11px;
+    font-weight: 500;
+    font-family: var(--font-poppins);
+    color: var(--color-white);
+    text-align: left;
+    display: inline-block;
+    min-width: 79px;
+}
+
+.bookButton {
+    border-radius: var(--br-5xs);
+    background-color: var(--color-purple-100);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-smi) var(--padding-16xl-5);
+    white-space: nowrap;
+    z-index: 1;
+    border: none;
+    cursor: pointer;
+}
+
+.rectangleParent {
+    /* margin: 0; */
+    /* flex: 1; */
+    border-radius: 10px;
+    background-color: var(--color-purple-300);
+    flex-direction: column;
+    width: 100%;
+    padding: var(--padding-13xl) var(--padding-22xl) var(--padding-14xl);
+    box-sizing: border-box;
+    gap: var(--gap-3xl-2);
+    z-index: 3;
+}
+
+.bookingForm,
+.header,
+.hero,
+.mainContent,
+.rectangleParent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.bookingForm {
+    align-self: stretch;
+    flex-direction: row;
+    position: relative;
+}
+
+.header,
+.hero,
+.mainContent {
+    flex-direction: column;
+}
+
+.mainContent {
+    width: 100%;
+    flex-direction: row;
+    /* gap: var(--gap-18xl); */
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    align-self: stretch;
+    background-color: var(--color-white);
+    padding: var(--padding-21xl) var(--padding-131xl) var(--padding-44xl);
+    box-sizing: border-box;
+    gap: var(--gap-77xl-6);
+    text-align: left;
+    font-size: var(--font-size-29xl);
+    color: var(--color-gray-600);
+    font-family: var(--font-poppins);
+}
+
+.hero {
+    align-self: stretch;
+    background-color: var(--color-white);
+    padding: var(--padding-21xl) var(--padding-131xl) var(--padding-44xl);
+    box-sizing: border-box;
+    gap: var(--gap-77xl-6);
+    text-align: left;
+    font-size: var(--font-size-29xl);
+    color: var(--color-gray-600);
+    font-family: var(--font-poppins);
+    padding-top: 212px;
+}
+
+.oneWayWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    /* justify-content: start; */
+    /* gap: var(--gap-10xl); */
+    /* width: 100%; */
+    /* margin-bottom: 0.5rem; */
+}
+
+.error {
+    font-size: 12px;
+    /* padding: 0px 30px; */
+    color: red;
+
+}
+
+@media screen and (max-width: 1250px) {
+    .treeStructure {
+        gap: var(--gap-20xl);
+    }
+
+    .frameParent {
+        width: 100%;
+    }
+
+    /* .formLayoutChild{
+      top: 288px;
+    } */
+}
+
+@media screen and (max-width: 1050px) {
+    .benefitItemsWrapper {
+        display: none;
+    }
+
+    .header,
+    .hero {
+        padding-top: var(--padding-7xl);
+        padding-bottom: var(--padding-22xl);
+        box-sizing: border-box;
+    }
+
+    .hero {
+        padding-top: 212px;
+
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+
+    .benefitItems,
+    .treeStructure {
+        gap: var(--gap-xl);
+    }
+
+    .findBookAndContainer {
+        font-size: var(--font-size-19xl);
+        line-height: 38px;
+    }
+
+    .header,
+    .hero {
+        gap: var(--gap-29xl);
+        padding-left: var(--padding-44xl);
+        padding-right: var(--padding-44xl);
+        box-sizing: border-box;
+    }
+
+    .formLayoutChild {
+        top: 286px;
+        left: 148px !important;
+        height: 17px;
+
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .findBookAndContainer {
+        font-size: var(--font-size-10xl);
+        line-height: 29px;
+    }
+
+    .datePickers {
+        flex-wrap: wrap;
+    }
+
+    .tripOptions {
+        gap: var(--gap-mini);
+    }
+
+    .rectangleParent {
+        padding-top: var(--padding-2xl);
+        padding-bottom: var(--padding-2xl);
+        box-sizing: border-box;
+    }
+
+    .mainContent {
+        gap: var(--gap-lg);
+    }
+
+    .header,
+    .hero {
+        gap: var(--gap-5xl);
+        padding: var(--padding-xl) var(--padding-xl) var(--padding-8xl);
+        box-sizing: border-box;
+    }
+
+    .hero {
+        padding-top: 212px;
+
+    }
+}
+
+@media screen and (max-width:786px) {
+    .viaDropdown {
+        display: none;
+    }
 }

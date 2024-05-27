@@ -10,6 +10,7 @@ import HowItWork from "../components/LandingPage/HowItWork";
 import WhyChooseUs from "../components/LandingPage/WhyChooseUs";
 import PopularRentalCars from "../components/LandingPage/PopularRentalCars";
 import DownloadApp from "../components/LandingPage/DownloadApp";
+import BusinessAuth from "../components/BusinessAccount/BusinessAuth";
 
 const BusinessAccountPage: FunctionComponent = () => {
     const [loading, setLoading] = useState(false)
@@ -17,7 +18,7 @@ const BusinessAccountPage: FunctionComponent = () => {
     if (loading) return <Loader />
     return (
         <div className={styles.landingPage}>
-            <Header setLoading={setLoading} />
+            <BusinessAuth  />
             <HowItWork />
             <WhyChooseUs />
             <PopularRentalCars />

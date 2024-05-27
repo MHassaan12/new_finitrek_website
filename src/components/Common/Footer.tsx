@@ -23,7 +23,7 @@ const Footer: FunctionComponent = () => {
                 />
                 <div className={styles.contactDetails}>
                   <div className={styles.a32AlbanyNew}>
-                  Green lane RM8 1UU Dagenham London
+                    Green lane RM8 1UU Dagenham London
                   </div>
                 </div>
               </div>
@@ -36,7 +36,7 @@ const Footer: FunctionComponent = () => {
                 />
                 <div className={styles.wrapper}>
                   <div className={styles.div}>+44 2039831288</div>
-                  <div className={styles.div} style={{marginTop: '12px'}}>+44 7711 572073</div>
+                  <div className={styles.div} style={{ marginTop: '12px' }}>+44 7711 572073</div>
                 </div>
               </div>
               <div className={styles.contactIcons2}>
@@ -56,65 +56,65 @@ const Footer: FunctionComponent = () => {
           </div>
         </div>
         <div className={styles.footerNavigation}>
-          {/* <div className={styles.footerNavColumns}>
+          <div className={styles.footerNavColumns}>
             <div className={styles.ourProduct}>Our Product</div>
             <div className={styles.footerNavLinks}>
-              <div className={styles.career}>Career</div>
-              <div className={styles.car}>Car</div>
-              <div className={styles.packages}>Packages</div>
-              <div className={styles.features}>Features</div>
-              <div className={styles.priceline}>Priceline</div>
+              <a href="#" className={styles.career}>Career</a>
+              <a href="#" className={styles.car}>Car</a>
+              <a href="#" className={styles.packages}>Packages</a>
+              <a href="#" className={styles.features}>Features</a>
+              <a href="#" className={styles.priceline}>Priceline</a>
             </div>
           </div>
           <div className={styles.footerResources}>
             <div className={styles.resources}>Resources</div>
             <div className={styles.resourcesLinks}>
-              <div className={styles.download}>Download</div>
-              <div className={styles.helpCentre}>Help Centre</div>
-              <div className={styles.guides}>Guides</div>
-              <div className={styles.partnerNetwork}>Partner Network</div>
-              <div className={styles.cruises}>Cruises</div>
-              <div className={styles.developer}>Developer</div>
+              <a href="#" className={styles.download}>Download</a>
+              <a href="#" className={styles.helpCentre}>Help Centre</a>
+              <a href="#" className={styles.guides}>Guides</a>
+              <a href="#" className={styles.partnerNetwork}>Partner Network</a>
+              <a href="#" className={styles.cruises}>Cruises</a>
+              <a href="#" className={styles.developer}>Developer</a>
             </div>
           </div>
           <div className={styles.footerNavColumns1}>
             <div className={styles.aboutRentcars}>About Rentcars</div>
             <div className={styles.whyChooseUsParent}>
-              <div className={styles.whyChooseUs}>Why choose us</div>
-              <div className={styles.ourStory}>Our Story</div>
-              <div className={styles.investorRelations}>Investor Relations</div>
-              <div className={styles.pressCenter}>Press Center</div>
-              <div className={styles.advertise}>Advertise</div>
+              <a href="#" className={styles.whyChooseUs}>Why choose us</a>
+              <a href="#" className={styles.ourStory}>Our Story</a>
+              <a href="#" className={styles.investorRelations}>Investor Relations</a>
+              <a href="#" className={styles.pressCenter}>Press Center</a>
+              <a href="#" className={styles.advertise}>Advertise</a>
             </div>
-          </div> */}
-        </div>
-        <div className={styles.footerSocial}>
-          <div className={styles.followUs}>Follow Us</div>
-          <div className={styles.socialIcons}>
-            <a href="https://facebook.com" target="_blank">
-              <img
-                className={styles.vuesaxlinearfacebookIcon}
-                loading="lazy"
-                alt=""
-                src="/vuesaxlinearfacebook.svg"
-              />
-            </a>
-            <a href="https://instagram.com" target="_blank">
-              <img
-                className={styles.vuesaxlinearinstagramIcon}
-                loading="lazy"
-                alt=""
-                src="/vuesaxlinearinstagram.svg"
-              />
-            </a>
-            <a href="https://youtube.com" target="_blank">
-              <img
-                className={styles.vuesaxlinearyoutubeIcon}
-                loading="lazy"
-                alt=""
-                src="/vuesaxlinearyoutube.svg"
-              />
-            </a>
+          </div>
+          <div className={styles.footerSocial}>
+            <div className={styles.followUs}>Follow Us</div>
+            <div className={styles.socialIcons}>
+              <a href="https://facebook.com" target="_blank">
+                <img
+                  className={styles.vuesaxlinearfacebookIcon}
+                  loading="lazy"
+                  alt=""
+                  src="/vuesaxlinearfacebook.svg"
+                />
+              </a>
+              <a href="https://instagram.com" target="_blank">
+                <img
+                  className={styles.vuesaxlinearinstagramIcon}
+                  loading="lazy"
+                  alt=""
+                  src="/vuesaxlinearinstagram.svg"
+                />
+              </a>
+              <a href="https://youtube.com" target="_blank">
+                <img
+                  className={styles.vuesaxlinearyoutubeIcon}
+                  loading="lazy"
+                  alt=""
+                  src="/vuesaxlinearyoutube.svg"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
