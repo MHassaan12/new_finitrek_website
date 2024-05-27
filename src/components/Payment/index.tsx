@@ -1,14 +1,17 @@
 import { FunctionComponent } from "react";
 import styles from "../../Assets/css/Payment.module.css";
 import { PayPalButtons, PayPalScriptProvider, usePayPalScriptReducer } from "@paypal/react-paypal-js";
-import { useRecoilValue } from "recoil";
+import { useRecoilValue, useResetRecoilState } from "recoil";
 import { bookingFormSelector, selectedCarSelector } from "../../stores/selectors";
 import { useNavigate } from "react-router-dom";
 import { post } from "../../utils/api";
+import { bookingFormState } from "../../stores/atoms";
 
-const Payment: FunctionComponent = () => {
+const Payment: FunctionComponent = ({ setLoading }) => {
     const bookingForm = useRecoilValue(bookingFormSelector)
     const selectedCar = useRecoilValue(selectedCarSelector)
+    const resetBookingForm = useResetRecoilState(bookingFormState)
+    const resetBookingCars = useResetRecoilState(bookingCarsState)
     const nvigation = useNavigate()
     const onCreateOrder = (data: any, actions: { order: any; }) => {
         return actions.order.create({
@@ -23,6 +26,7 @@ const Payment: FunctionComponent = () => {
     }
 
     const onApproveOrder = (data: any, actions: any) => {
+        setLoading(true)
         const params = new URLSearchParams();
         return actions.order.capture().then(async (details: {
             id: any; purchase_units: {
@@ -31,7 +35,7 @@ const Payment: FunctionComponent = () => {
                 };
             }[]; status: any; payer: { payer_id: any; }; create_time: any;
         }) => {
-            const formData: FormData = {
+            const formData = {
                 user_id: '',
                 vendor_id: selectedCar.vendor_id,
                 payment_id: details.id,
@@ -53,9 +57,13 @@ const Payment: FunctionComponent = () => {
                 const { data } = await post(`/api/userPaymentDetail?${params}`);
                 if (data.message) {
                     // localStorage.setItem('user', JSON.stringify(data.authUser))
+                    resetBookingForm()
+                    resetBookingCars()
+                    setLoading(false)
                     nvigation('/booking-success')
                 }
             } catch (error) {
+                setLoading(false)
                 nvigation('/booking-failed')
                 console.log(error)
             }
@@ -71,7 +79,7 @@ const Payment: FunctionComponent = () => {
                         <div className={styles.frameWrapper}>
                             <div className={styles.rectangleParent}>
                                 <div className={styles.frameChild} />
-                                <div style={{ width: '90%'}}>
+                                <div style={{ width: '90%' }}>
 
                                     <PayPalButtons
                                         // style={style}

@@ -106,7 +106,7 @@
 .contactDetails {
     margin: 0;
     position: relative;
-    font-size:36px;
+    font-size: 36px;
     line-height: 100%;
     font-weight: 600;
     font-family: inherit;
@@ -745,6 +745,8 @@
     align-items: flex-start;
     justify-content: flex-end;
     padding: 0 var(--padding-8xs);
+    border: none;
+    cursor: pointer;
 }
 
 .frameItem,
@@ -1077,8 +1079,9 @@
     line-height: 12px;
     font-weight: 500;
     z-index: 1;
-  }
-  .contactDetailsLabels {
+}
+
+.contactDetailsLabels {
     /* width: 109px; */
     display: flex;
     flex-direction: row;
@@ -1086,20 +1089,23 @@
     justify-content: flex-start;
     padding: 0 var(--padding-xl);
     box-sizing: border-box;
-  }
-  .enterPickUp {
+}
+
+.enterPickUp {
     position: relative;
     line-height: 24px;
     padding: inherit;
-  }
-  .locationInputRepeat,
-  .pickupLocationInput {
+}
+
+.locationInputRepeat,
+.pickupLocationInput {
     align-self: stretch;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-  }
-  .pickupLocationInput {
+}
+
+.pickupLocationInput {
     box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
     border-radius: var(--br-5xs);
     background-color: var(--color-white);
@@ -1110,40 +1116,46 @@
     z-index: 1;
     font-size: var(--font-size-xs);
     color: var(--color-silver);
-  }
-  .locationInputRepeat {
+}
+
+.locationInputRepeat {
     flex-direction: column;
     gap: var(--gap-8xs);
-  }
-  .contactNumber {
+}
+
+.contactNumber {
     position: relative;
     line-height: 12px;
     font-weight: 500;
     display: inline-block;
     min-width: 120px;
     z-index: 1;
-  }
-  .additionalContactDetails {
+}
+
+.additionalContactDetails {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 0 var(--padding-xl);
-  }
-  .enterDropLocation {
+}
+
+.enterDropLocation {
     position: relative;
     line-height: 8px;
     display: inline-block;
     min-width: 117px;
-  }
-  .contactInfoInput,
-  .dropoffLocationRepeat {
+}
+
+.contactInfoInput,
+.dropoffLocationRepeat {
     align-self: stretch;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-  }
-  .dropoffLocationRepeat {
+}
+
+.dropoffLocationRepeat {
     box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
     border-radius: var(--br-5xs);
     background-color: var(--color-white);
@@ -1154,19 +1166,22 @@
     z-index: 1;
     font-size: var(--font-size-xs);
     color: var(--color-silver);
-  }
-  .contactInfoInput {
+}
+
+.contactInfoInput {
     flex-direction: column;
     gap: var(--gap-8xs);
-  }
-  .flightNumber {
+}
+
+.flightNumber {
     flex: 1;
     position: relative;
     line-height: 12px;
     font-weight: 500;
     z-index: 1;
-  }
-  .flightInfoInput {
+}
+
+.flightInfoInput {
     width: 160px;
     display: flex;
     flex-direction: row;
@@ -1174,14 +1189,16 @@
     justify-content: flex-start;
     padding: 0 var(--padding-xl);
     box-sizing: border-box;
-  }
-  .enterDropLocation1 {
+}
+
+.enterDropLocation1 {
     position: relative;
     line-height: 8px;
     display: inline-block;
     min-width: 117px;
-  }
-  .enterDropLocationWrapper {
+}
+
+.enterDropLocationWrapper {
     align-self: stretch;
     box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
     border-radius: var(--br-5xs);
@@ -1196,20 +1213,22 @@
     z-index: 1;
     font-size: var(--font-size-xs);
     color: var(--color-silver);
-  }
-  .flightDetailsInput,
-  .nameEmailInput {
+}
+
+.flightDetailsInput,
+.nameEmailInput {
     display: flex;
     flex-direction: row;
     /* align-items: flex-start;*/
-    justify-content: space-evenly; 
-  }
+    justify-content: space-evenly;
+}
 
-  .flightDetailsInput {
+.flightDetailsInput {
     align-self: stretch;
     gap: var(--gap-8xs);
-  }
-  .nameEmailInput {
+}
+
+.nameEmailInput {
     display: flex;
     flex-wrap: wrap;
     flex: 1;
@@ -1219,5 +1238,11 @@
     font-size: var(--font-size-sm);
     color: var(--color-purple-100);
     font-family: var(--font-poppins);
-  }
+}
+
+.error {
+    font-size: 12px;
+    /* padding: 0px 30px; */
+    color: red;
   
+  }

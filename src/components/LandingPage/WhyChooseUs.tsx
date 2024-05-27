@@ -69,7 +69,7 @@ const WhyChooseUs: FunctionComponent = () => {
       </div>
     </div>
     <div className={styles.vectorParent}>
-      <img className={styles.vectorIcon} alt="" src="/vector.svg" />
+      <img className={styles.vectorIcon} alt="" src="/vector-13.svg" />
       <img
         className={styles.audi1Icon}
         loading="lazy"

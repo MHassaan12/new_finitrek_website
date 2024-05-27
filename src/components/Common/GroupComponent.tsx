@@ -134,7 +134,7 @@ const GroupComponent: FunctionComponent<GroupComponentType> = ({
               </div>
             </div>
             <div className={styles.frameChild} />
-            <div className={styles.rentButtonWrapper}>
+            <button className={styles.rentButtonWrapper} disabled>
               <div className={styles.rentNowWrapper}>
                 <div className={styles.rentNow}>Rent Now</div>
               </div>
@@ -143,7 +143,7 @@ const GroupComponent: FunctionComponent<GroupComponentType> = ({
                 alt=""
                 src="/vuesaxlineararrowright.svg"
               />
-            </div>
+            </button>
           </div>
         </div>
       </div>

@@ -8,15 +8,16 @@ import moment from "moment";
 import { post } from "../../utils/api";
 import { useNavigate } from "react-router-dom";
 
-const CarBooking: FunctionComponent = () => {
+const CarBooking: FunctionComponent = ({ setLoading }) => {
     const bookingForm = useRecoilValue(bookingFormSelector)
     const selectedCar = useRecoilValue(selectedCarSelector)
-    const { register, handleSubmit, } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const nvigation = useNavigate()
 
     const onSubmit = async (body: any) => {
+        setLoading(true)
         const params = new URLSearchParams();
-        const formData: FormData = {
+        const formData = {
             pickup_date: moment(bookingForm?.myDate).format("MM-DD-YYYY"),
             pickup_time: bookingForm.myTime,
             dropoff_date: bookingForm?.hiddenmyDate ? moment(bookingForm.hiddenmyDate).format("MM-DD-YYYY") : '',
@@ -43,11 +44,13 @@ const CarBooking: FunctionComponent = () => {
             }
             const { data } = await post(`/api/userRequest?${params}`, body);
             if (data.message) {
+                setLoading(false)
                 nvigation('/payment')
                 // localStorage.setItem('user', JSON.stringify(data.authUser))
                 // ('/cab/booking/booking-payment')
             }
         } catch (error) {
+            setLoading(false)
             console.log(error)
         }
     }
@@ -78,7 +81,7 @@ const CarBooking: FunctionComponent = () => {
                             </div>
                         </div>
                     </div>
-            <h1 className={styles.contactDetails}>Contact Details</h1>
+                    <h1 className={styles.contactDetails}>Contact Details</h1>
                 </div>
                 <div className={styles.summaryAndActions}>
                     <div className={styles.summary}>
@@ -177,44 +180,49 @@ const CarBooking: FunctionComponent = () => {
                                         <div className={styles.name}>Name</div>
                                     </div>
                                     {/* <div className={styles.pickupLocationInput}> */}
-                                    <input className={styles.pickupLocationInput} placeholder="Enter Pick Up  Location" {...register("name")} />
+                                    <input className={styles.pickupLocationInput} placeholder="Enter Pick Up  Location" {...register("name", { required: "Name is required" })} />
                                     {/* </div> */}
+                                    {errors.name && <span className={styles.error}>{errors.name.message}</span>}
                                 </div>
                                 <div className={styles.locationInputRepeat}>
                                     <div className={styles.contactDetailsLabels}>
                                         <div className={styles.name}>Email</div>
                                     </div>
-                                    <input className={styles.pickupLocationInput} placeholder="Enter Pick Up  Location" {...register("email")} />
+                                    <input className={styles.pickupLocationInput} placeholder="Enter Pick Up  Location" {...register("email", { required: "Email is required" })} />
                                     {/* <div className={styles.pickupLocationInput}>
                                         <div className={styles.enterPickUp}>Enter Pick Up Location</div>
                                     </div> */}
+                                    {errors.email && <span className={styles.error}>{errors.email.message}</span>}
                                 </div>
                                 <div className={styles.locationInputRepeat}>
                                     <div className={styles.contactDetailsLabels}>
                                         <div className={styles.name}>Contact Number</div>
                                     </div>
-                                    <input className={styles.pickupLocationInput} placeholder="Enter Drop Location" {...register("contact_number")} />
+                                    <input className={styles.pickupLocationInput} placeholder="Enter Drop Location" {...register("contact_number", { required: "Contact Number is required" })} />
                                     {/* <div className={styles.pickupLocationInput}>
                                         <div className={styles.enterPickUp}>Enter Pick Up Location</div>  
                                     </div> */}
+                                    {errors.contact_number && <span className={styles.error}>{errors.contact_number.message}</span>}
                                 </div>
                                 <div className={styles.locationInputRepeat}>
                                     <div className={styles.contactDetailsLabels}>
                                         <div className={styles.name}>Door No./Flat No.</div>
                                     </div>
-                                    <input className={styles.pickupLocationInput} placeholder="Door No./Flat No." {...register("flat_no")} />
+                                    <input className={styles.pickupLocationInput} placeholder="Door No./Flat No." {...register("flat_no", { required: "Flat No is required" })} />
                                     {/* <div className={styles.pickupLocationInput}>
                                         <div className={styles.enterPickUp}>Enter Pick Up Location</div>
                                     </div> */}
+                                    {errors.flat_no && <span className={styles.error}>{errors.flat_no.message}</span>}
                                 </div>
                                 <div className={styles.locationInputRepeat}>
                                     <div className={styles.contactDetailsLabels}>
                                         <div className={styles.name}>No. of Passengers</div>
                                     </div>
-                                    <input className={styles.pickupLocationInput} placeholder="No. of Passengers" {...(register("passenger"))} />
+                                    <input className={styles.pickupLocationInput} placeholder="No. of Passengers" {...(register("passenger", { required: "Passenger is required" }))} />
                                     {/* <div className={styles.pickupLocationInput}>
                                         <div className={styles.enterPickUp}>Enter Pick Up Location</div>
                                     </div> */}
+                                    {errors.passenger && <span className={styles.error}>{errors.passenger.message}</span>}
                                 </div>
                                 <div className={styles.locationInputRepeat}>
                                     <div className={styles.contactDetailsLabels}>
@@ -281,13 +289,13 @@ const CarBooking: FunctionComponent = () => {
                             </div> */}
                         </div>
                     </div>
-                    <div className={styles.paymentButtonContainerWrapper}>
-                        <button type="submit">
+                    <button className={styles.paymentButtonContainerWrapper} type="submit">
+                        <div >
                             <div className={styles.paymentButtonContainer}>
                                 <div className={styles.proceedToPay}>Proceed To Pay</div>
                             </div>
-                        </button>
-                    </div>
+                        </div>
+                    </button>
                 </form>
                 <div className={styles.priceBreakdown}>
                     <div className={styles.rectangleGroup}>
