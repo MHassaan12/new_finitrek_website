@@ -141,7 +141,7 @@
 .treeStructure {
   flex: 1;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   /* gap: var(--gap-59xl-5); */
   z-index: 1;
 }
@@ -189,7 +189,7 @@
 }
 
 .findBookAndRentACarEasiWrapper {
-  width: 410px;
+  width:70%;
   display: flex;
   flex-direction: column;
   gap: var(--gap-5xl);
@@ -854,5 +854,10 @@
   .hero{
     padding-top: 212px;
 
+  }
+}
+@media  screen and (max-width:786px) {
+  .viaDropdown{
+   display: none; 
   }
 }
