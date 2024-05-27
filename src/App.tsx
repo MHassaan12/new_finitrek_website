@@ -12,6 +12,7 @@ import CarBookingPage from "./pages/CarBooking";
 import PaymentPage from "./pages/Payment";
 import LoginPage from "./pages/Login";
 import RegisterPage from "./pages/Register";
+import BusinessAccountPage from "./pages/BusinessAccount";
 
 function App() {
   const action = useNavigationType();
@@ -58,6 +59,7 @@ function App() {
         <Route path="/car-search" element={<CarSearchPage />} />
         <Route path="/car-booking" element={<CarBookingPage />} />
         <Route path="/payment" element={<PaymentPage />} />
+        <Route path="/business-account" element={<BusinessAccountPage />} />
       </Route>
     </Routes>
   );

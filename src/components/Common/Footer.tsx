@@ -35,7 +35,7 @@ const Footer: FunctionComponent = () => {
                   src="/vuesaxlinearcall.svg"
                 />
                 <div className={styles.wrapper}>
-                  <div className={styles.div}>02029-8-31288</div>
+                  <div className={styles.div}>800-5-800</div>
                 </div>
               </div>
               <div className={styles.contactIcons2}>
@@ -55,7 +55,7 @@ const Footer: FunctionComponent = () => {
           </div>
         </div>
         <div className={styles.footerNavigation}>
-          <div className={styles.footerNavColumns}>
+          {/* <div className={styles.footerNavColumns}>
             <div className={styles.ourProduct}>Our Product</div>
             <div className={styles.footerNavLinks}>
               <div className={styles.career}>Career</div>
@@ -85,29 +85,35 @@ const Footer: FunctionComponent = () => {
               <div className={styles.pressCenter}>Press Center</div>
               <div className={styles.advertise}>Advertise</div>
             </div>
-          </div>
-          <div className={styles.footerSocial}>
-            <div className={styles.followUs}>Follow Us</div>
-            <div className={styles.socialIcons}>
+          </div> */}
+        </div>
+        <div className={styles.footerSocial}>
+          <div className={styles.followUs}>Follow Us</div>
+          <div className={styles.socialIcons}>
+            <a href="https://facebook.com" target="_blank">
               <img
                 className={styles.vuesaxlinearfacebookIcon}
                 loading="lazy"
                 alt=""
                 src="/vuesaxlinearfacebook.svg"
               />
+            </a>
+            <a href="https://instagram.com" target="_blank">
               <img
                 className={styles.vuesaxlinearinstagramIcon}
                 loading="lazy"
                 alt=""
                 src="/vuesaxlinearinstagram.svg"
               />
+            </a>
+            <a href="https://youtube.com" target="_blank">
               <img
                 className={styles.vuesaxlinearyoutubeIcon}
                 loading="lazy"
                 alt=""
                 src="/vuesaxlinearyoutube.svg"
               />
-            </div>
+            </a>
           </div>
         </div>
       </div>

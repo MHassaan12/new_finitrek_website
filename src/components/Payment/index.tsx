@@ -5,7 +5,7 @@ import { useRecoilValue, useResetRecoilState } from "recoil";
 import { bookingFormSelector, selectedCarSelector } from "../../stores/selectors";
 import { useNavigate } from "react-router-dom";
 import { post } from "../../utils/api";
-import { bookingFormState } from "../../stores/atoms";
+import { bookingCarsState, bookingFormState } from "../../stores/atoms";
 
 const Payment: FunctionComponent = ({ setLoading }) => {
     const bookingForm = useRecoilValue(bookingFormSelector)
