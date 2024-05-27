@@ -4,7 +4,7 @@ import styles from "../../Assets/css/DownloadApp.module.css";
 const DownloadApp: FunctionComponent = () => {
   return (
     <div className={styles.downloadApp}>
-      <img className={styles.appDownloadGraphic} alt="" src="/vector-1.svg" />
+      <img className={styles.appDownloadGraphic} alt="" src="/vector-11.svg" />
       <img className={styles.downloadAppChild} alt="" src="/rectangle-9.svg" />
     
       <div className={styles.appInfoAvailabilityWrapper}>

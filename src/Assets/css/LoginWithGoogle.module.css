@@ -28,14 +28,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* padding: var(--padding-8xs) 0 0; */
-    width: 80%;
+    padding: 0 14px;
+    /* width: 80%; */
     height: 20%;
     
   }
   .loginWithGoogle {
     /* align-self: stretch; */
-    /* width: 100%; */
+    width: 82%;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.11);
     border-radius: 8px;
     background-color: var(--color-white);

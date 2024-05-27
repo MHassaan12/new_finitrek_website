@@ -5,18 +5,21 @@ import { useForm } from "react-hook-form";
 import { post } from "../../utils/api";
 import { useNavigate } from "react-router-dom";
 
-const LoginOptions: FunctionComponent = () => {
-    const { register, handleSubmit, } = useForm();
+const LoginOptions: FunctionComponent = ({setLoading}) => {
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const navigate = useNavigate()
 
     const onSubmit = async (body: any) => {
+        setLoading(true)
         try {
-            const { data } = await post(`/user/login-submit?username${body.username}&password=${body.password}`, body);
+            const { data } = await post(`/user/login-submit?username=${body.username}&password=${body.password}`, body);
             if (data) {
                 localStorage.setItem('user', JSON.stringify(data))
+                setLoading(false)
                 navigate('/')
             }
         } catch (error) {
+            setLoading(false)
             console.log(error)
         }
     }
@@ -31,9 +34,9 @@ const LoginOptions: FunctionComponent = () => {
                 <LoginWithGoogle
                     search1="/vector.svg"
                     loginWithGoogle="Login with Facebook"
-                    // propPadding="var(--padding-6xl) var(--padding-221xl) var(--padding-2xl)"
-                    // propWidth="16px"
-                    // propOverflow="unset"
+                // propPadding="var(--padding-6xl) var(--padding-221xl) var(--padding-2xl)"
+                // propWidth="16px"
+                // propOverflow="unset"
                 />
             </div>
             <div className={styles.loginOptionsInner}>
@@ -49,24 +52,36 @@ const LoginOptions: FunctionComponent = () => {
             </div>
             <div className={styles.credentialsArea}>
                 <div className={styles.inputFields}>
-                         
-                        <div className={styles.emailField}>
-                            <div className={styles.email1}>Username</div>
-                            <input className={styles.examplegmailcom} placeholder="Enter your username" {...(register("username"))} />
-                        </div>
-                   
-                     
                     <div className={styles.emailField}>
-                                <div className={styles.password1}>Password</div>
-                                <input className={styles.examplegmailcom} placeholder="***********" {...(register("password"))} />
+                        <div className={styles.inputContainers}>
+                            <img className={styles.emailIcon} alt="" src="/vector-1.svg" />
+                        </div>
+                        <div className={styles.input}>
+                            <div className={styles.email1}>Username</div>
+                            <input className={styles.examplegmailcom} placeholder="Enter your username" {...register("username", { required: "Username is required" })} />
+                            {errors.username && <span className={styles.error}>{errors.username.message}</span>}
+                        </div>
                     </div>
-                       
+
+
+                    <div className={styles.emailField}>
+
+                        <div className={styles.inputContainers}>
+                            <img className={styles.emailIcon} alt="" src="/group.svg" />
+                        </div>
+                        <div className={styles.input}>
+                            <div className={styles.password1}>Password</div>
+                            <input className={styles.examplegmailcom} placeholder="***********"  {...register("password", { required: "Password is required" })} />
+                            {errors.password && <span className={styles.error}>{errors.password.message}</span>}
+                        </div>
+                    </div>
+
                 </div>
                 <div className={styles.optionsArea}>
                     <div className={styles.rememberMe}>
                         <div className={styles.rememberBox}>
                             <div className={styles.checkbox}>
-                                <div className={styles.check} />
+                                <input type="checkbox" className={styles.check} />
                             </div>
                             <div className={styles.rememberMe1}>Remember me</div>
                         </div>

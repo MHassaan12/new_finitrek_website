@@ -8,12 +8,41 @@ import TimePicker from "../Common/TimePicker";
 import { post } from "../../utils/api";
 import { useNavigate } from "react-router-dom";
 
-const Header: FunctionComponent = () => {
+const Header: FunctionComponent = ({ setLoading }) => {
   const [bookingForm, setBookingForm] = useRecoilState(bookingFormState);
   const [bookingCars, setBookingCars] = useRecoilState(bookingCarsState);
+  const [errors, setErrors] = useState({
+    pickup: '',
+    drop: '',
+    oneWay: '',
+    return: '',
+    passenger: ''
+  })
   const navigation = useNavigate()
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e: any) => {
+    e.preventDefault()
+    if (!bookingForm.pickup) {
+      setErrors((prev) => ({ ...prev, pickup: 'Pickup address is required!' }))
+      return
+    }
+    if (!bookingForm.dropoff) {
+      setErrors((prev) => ({ ...prev, drop: 'Dropoff address is required!' }))
+      return
+    }
+    if (!bookingForm.myDate || !bookingForm.myTime) {
+      setErrors((prev) => ({ ...prev, oneWay: 'Date and Time is required!' }))
+      return
+    }
+    if (!bookingForm.hiddenmyDate || !bookingForm.retmyTime) {
+      setErrors((prev) => ({ ...prev, return: 'Date and Time is required!' }))
+      return
+    }
+    if (!bookingForm.passengers || (bookingForm.passengers == 0)) {
+      setErrors((prev) => ({ ...prev, passenger: 'Passenger is required!' }))
+      return
+    }
+    setLoading(true)
     try {
       let params = new URLSearchParams();
       for (const key in bookingForm) {
@@ -23,12 +52,17 @@ const Header: FunctionComponent = () => {
         }
       }
       const { data } = await post(`/api/price?${params}`, {})
-      if (data.cars.length > 0) {
+      if (data?.cars?.length > 0) {
         setBookingCars(data.cars)
+        setLoading(false)
         navigation('/car-search')
+      } else {
+        setLoading(false)
+        alert(data.message)
       }
-      console.log('FFFFFFFFFFFFFFFFFFFFFFFFF', data)
+
     } catch (error) {
+      setLoading(false)
       console.log('FFFFFFFFFFFFFFFFFFFFFFFF EEEErrrrrF', error)
 
     }
@@ -36,7 +70,7 @@ const Header: FunctionComponent = () => {
 
   return (
     <section className={styles.hero}>
-     
+
       <div className={styles.mainContent}>
         <div className={styles.frameParent}>
 
@@ -52,14 +86,20 @@ const Header: FunctionComponent = () => {
                 <ReactGoogleAutocomplete
                   apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
                   onPlaceSelected={(place) => {
+                    setErrors((prev) => ({ ...prev, pickup: '' }))
                     if (place?.formatted_address) {
                       setBookingForm((prev: any) => ({ ...prev, pickup: place.formatted_address }))
                     }
+                  }}
+                  options={{
+                    types: ['(regions)'],
+                    componentRestrictions: { country: 'UK' },
                   }}
 
                   className={styles.inputBox}
 
                 />
+                {errors.pickup && <span className={styles.error}>{errors.pickup}</span>}
                 {/* <div className={styles.enterPickUp}>Enter Pick Up Location</div> */}
                 {/* </div> */}
                 <div className={styles.locationIcon}>
@@ -85,14 +125,20 @@ const Header: FunctionComponent = () => {
                   <ReactGoogleAutocomplete
                     apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
                     onPlaceSelected={(place) => {
+                      setErrors((prev) => ({ ...prev, drop: '' }))
                       if (place.formatted_address) {
                         setBookingForm((prev: any) => ({ ...prev, dropoff: place.formatted_address }))
                         // setTo(place.formatted_address)
                       }
                     }}
+                    options={{
+                      types: ['(regions)'],
+                      componentRestrictions: { country: 'UK' },
+                    }}
                     className={styles.dropOffLocation}
 
                   />
+                  {errors.drop && <span className={styles.error}>{errors.drop}</span>}
                   {/* <div className={styles.dropOffLocation}>
                     <div className={styles.enterDropLocation}>
                       Enter Drop Location
@@ -104,45 +150,52 @@ const Header: FunctionComponent = () => {
                 <div className={styles.tripOptions}>
                   <div className={styles.oneWayWrapper}>
                     <div className={styles.oneWay}>One Way</div>
-                    <div className={styles.datePickerLayout}>
-                      <div className={styles.selectDateWrapper}>
-                        <DatePickerComponent setStart={(date: any) => setBookingForm((prev: any) => ({ ...prev, myDate: date }))} start={bookingForm.myDate} disabled={false} />
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                      <div className={styles.datePickerLayout}>
+                        <div className={styles.selectDateWrapper}>
+                          <DatePickerComponent setStart={(date: any) => { setBookingForm((prev: any) => ({ ...prev, myDate: date })); setErrors((prev) => ({ ...prev, oneWay: '' })) }} start={bookingForm.myDate} disabled={false} />
+                        </div>
+                        <div>
+                          <TimePicker setTime={(time: any) => { setBookingForm((prev: any) => ({ ...prev, myTime: time })); setErrors((prev) => ({ ...prev, oneWay: '' })) }} time={bookingForm.myTime} disabled={false} />
+                        </div>
                       </div>
-                      <div>
-                        <TimePicker setTime={(time: any) => setBookingForm((prev: any) => ({ ...prev, myTime: time }))} time={bookingForm.myTime} disabled={false} />
-                      </div>
-
+                      {errors.oneWay && <span className={styles.error}>{errors.oneWay}</span>}
                     </div>
+
                   </div>
                   <div className={styles.oneWayWrapper}>
                     <div className={styles.oneWay}>Return</div>
-                    <div className={styles.datePickerLayout}>
-                      <div className={styles.selectDateWrapper}>
-                        <DatePickerComponent setStart={(date: any) => setBookingForm((prev: any) => ({ ...prev, hiddenmyDate: date }))} start={bookingForm.hiddenmyDate} disabled={false} />
-                      </div>
-                      <div>
-                        <TimePicker setTime={(time: any) => setBookingForm((prev: any) => ({ ...prev, retmyTime: time }))} time={bookingForm.retmyTime} disabled={false} />
-                      </div>
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                      <div className={styles.datePickerLayout}>
+                        <div className={styles.selectDateWrapper}>
+                          <DatePickerComponent setStart={(date: any) => { setBookingForm((prev: any) => ({ ...prev, hiddenmyDate: date })); setErrors((prev) => ({ ...prev, return: '' })) }} start={bookingForm.hiddenmyDate} disabled={false} />
+                        </div>
+                        <div>
+                          <TimePicker setTime={(time: any) => { setBookingForm((prev: any) => ({ ...prev, retmyTime: time })); setErrors((prev) => ({ ...prev, return: '' })) }} time={bookingForm.retmyTime} disabled={false} />
+                        </div>
 
+                      </div>
+                      {errors.return && <span className={styles.error}>{errors.return}</span>}
                     </div>
-                  </div>
 
+                  </div>
 
                 </div>
               </div>
               <div className={styles.travelers}>
-                <div className={styles.travelerOptions}>
-
-                  <input className={styles.passengers} type="number" placeholder="Passengers" onChange={(e) => setBookingForm((prev: any) => ({ ...prev, passengers: e.target.value }))} />
-
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <div className={styles.travelerOptions}>
+                    <input className={styles.passengers} type="number" min="16" max="1" placeholder="Passengers" onChange={(e) => { setBookingForm((prev: any) => ({ ...prev, passengers: e.target.value })); setErrors((prev) => ({ ...prev, passenger: '' })) }} />
+                  </div>
+                  {errors.passenger && <span className={styles.error}>{errors.passenger}</span>}
                 </div>
                 <div className={styles.luggageCount}>
-                  <input className={styles.luggage} type="number" placeholder="Luggage" onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))} />
+                  <input className={styles.luggage} type="number" min="16" max="1" placeholder="Luggage" onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))} />
                 </div>
               </div>
-              <div className={styles.bookButton}>
+              <button className={styles.bookButton}>
                 <div className={styles.bookNow} onClick={handleSubmit}>Book Now</div>
-              </div>
+              </button>
             </form>
             <img
               className={styles.formLayoutChild}

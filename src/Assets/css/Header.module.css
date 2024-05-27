@@ -141,7 +141,7 @@
 .treeStructure {
   flex: 1;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   /* gap: var(--gap-59xl-5); */
   z-index: 1;
 }
@@ -422,8 +422,8 @@
   border-radius: var(--br-5xs);
   background-color: var(--color-white);
   border: 0.3px solid var(--color-purple-200);
-  padding: var(--padding-sm) 0px;
-  width: 100%;
+  padding: var(--padding-sm) ;
+  width: 80%;
 
 }
 
@@ -475,7 +475,7 @@
 .datePickerLayout {
   flex: 1;
   flex-direction: row;
-  gap: var(--gap-2xl-2);
+  gap: var(--gap-xs);
   min-width: 76%;
   /* min-width: 83px; */
 }
@@ -485,8 +485,8 @@
   border-radius: var(--br-5xs);
   background-color: var(--color-white);
   border: 0.3px solid var(--color-purple-200);
-  padding: var(--padding-sm) 0px;
-  width: auto;
+  padding: var(--padding-sm);
+  width: 100%;
 }
 
 .selectTimeWrapper {
@@ -593,6 +593,7 @@
   padding: var(--padding-sm) var(--padding-xl);
   border: inherit;
   border-radius: inherit;
+  width: 100%;
 }
 
 .travelerOptions {
@@ -607,7 +608,7 @@
   align-items: flex-start;
   justify-content: flex-start;
  
-  min-width: 117px;
+  min-width: 158px;
   z-index: 1;
 }
 
@@ -623,6 +624,7 @@
   padding: var(--padding-sm) var(--padding-xl);
   border: inherit;
   border-radius: inherit;
+  width: 100%;
 }
 
 .luggageCount,
@@ -648,7 +650,7 @@
 .travelers {
   align-self: stretch;
   flex-wrap: wrap;
-  gap: var(--gap-xl);
+  gap: var(--gap-8xs);
 }
 
 .bookNow {
@@ -673,6 +675,8 @@
   padding: var(--padding-smi) var(--padding-16xl-5);
   white-space: nowrap;
   z-index: 1;
+  border: none;
+  cursor: pointer;
 }
 
 .rectangleParent {
@@ -748,12 +752,19 @@
 .oneWayWrapper {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
  
   /* justify-content: start; */
   /* gap: var(--gap-10xl); */
   /* width: 100%; */
   /* margin-bottom: 0.5rem; */
+}
+
+.error {
+  font-size: 12px;
+  /* padding: 0px 30px; */
+  color: red;
+
 }
 
 @media screen and (max-width: 1250px) {

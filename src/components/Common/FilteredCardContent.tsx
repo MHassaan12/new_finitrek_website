@@ -10,13 +10,15 @@ export type FilteredCardContentType = {
   propMinWidth?: CSSProperties["minWidth"];
   propWidth?: CSSProperties["width"];
   data?: any;
+  setLoading: Function
 };
 
 const FilteredCardContent: FunctionComponent<FilteredCardContentType> = ({
   propFlex,
   propMinWidth,
   propWidth,
-  data
+  data,
+  setLoading
 }) => {
   const [selectedCar, setSelectedCar] = useRecoilState(selectedCarState)
   const filteredCardContentStyle: CSSProperties = useMemo(() => {
@@ -29,8 +31,10 @@ const FilteredCardContent: FunctionComponent<FilteredCardContentType> = ({
   const naviagate = useNavigate()
 
   const handleBooking = () => {
+    setLoading(true)
     setSelectedCar(data);
     naviagate('/car-booking')
+    setLoading(false)
   }
 
   return (
@@ -111,16 +115,16 @@ const FilteredCardContent: FunctionComponent<FilteredCardContentType> = ({
             </div>
           </div>
           <div className={styles.filteredSeparator} />
-          <div className={styles.filteredBookingArea}>
+          <button className={styles.filteredBookingArea} onClick={handleBooking}>
             <div className={styles.rentNowWrapper}>
-              <div className={styles.rentNow} onClick={handleBooking}>Rent Now</div>
+              <div className={styles.rentNow} >Rent Now</div>
             </div>
             <img
               className={styles.vuesaxlineararrowRightIcon}
               alt=""
               src="/vuesaxlineararrowright.svg"
             />
-          </div>
+          </button>
         </div>
       </div>
     </div>

@@ -370,7 +370,7 @@
   line-height: 10px;
   font-weight: 500;
   font-family: var(--font-poppins);
-  color: var(--color-white);
+  /* color: var(--color-white); */
   text-align: left;
   display: inline-block;
   min-width: 18px;
@@ -378,7 +378,6 @@
 
 .tabList {
   border-radius: var(--br-5xs);
-  background-color: var(--color-purple-100);
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -392,7 +391,7 @@
   line-height: 10px;
   font-weight: 500;
   font-family: var(--font-poppins);
-  color: var(--color-purple-100);
+  /* color: var(--color-purple-100); */
   text-align: left;
   display: inline-block;
   min-width: 55px;
@@ -414,7 +413,7 @@
   line-height: 10px;
   font-weight: 500;
   font-family: var(--font-poppins);
-  color: var(--color-purple-100);
+  /* color: var(--color-purple-100); */
   text-align: left;
   display: inline-block;
   min-width: 43px;
@@ -436,7 +435,7 @@
   line-height: 10px;
   font-weight: 500;
   font-family: var(--font-poppins);
-  color: var(--color-purple-100);
+  /* color: var(--color-purple-100); */
   text-align: left;
   display: inline-block;
   min-width: 63px;

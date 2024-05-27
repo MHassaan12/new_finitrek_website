@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -7,6 +7,7 @@ import "./global.css";
 import { RecoilRoot } from "recoil";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+import Loader from "./components/Common/Loader";
 
 const queryClient = new QueryClient();
 const container = document.getElementById("root");
@@ -14,7 +15,7 @@ const root = createRoot(container!);
 
 
 root.render(
-  // <PayPalScriptProvider options={{ clientId: "AZ14k0vPCKHE5Ho2Rnprj0BM5ap081VPvnA5AAK880mlnmFPYpeh3y37GFxtfAbgSeQWJpF9WGdArvMB", components: "buttons", currency: "USD", intent: "capture", }}>
+  <Suspense fallback={<Loader />}>
     <RecoilRoot>
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
@@ -22,7 +23,8 @@ root.render(
         </BrowserRouter>
       </QueryClientProvider>
     </RecoilRoot>
-  // </PayPalScriptProvider>
+  </Suspense>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

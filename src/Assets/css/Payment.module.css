@@ -342,6 +342,7 @@
     display: flex;
     align-items: flex-start;
     max-width: 100%;
+    padding: 12px
   }
   .frameGroup {
     width: 448px;
@@ -361,7 +362,7 @@
     font-family: var(--font-poppins);
   }
   .poweredBy {
-    height: 14px;
+    /* height: 14px; */
     position: relative;
     line-height: 150%;
     display: inline-block;
@@ -388,8 +389,9 @@
     align-items: flex-start;
   }
   .frameParent4 {
-    justify-content: flex-start;
+    justify-content: center;
     gap: 2px;
+    align-items: center;
   }
   .payment,
   .paymentInner {

@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react"
 import styles from "../../Assets/css/Header.module.css"
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 
 
@@ -15,7 +16,7 @@ const Header: FunctionComponent = () => {
                                 className={styles.groupIcon}
                                 loading="lazy"
                                 alt=""
-                                src="/group.svg"
+                                src="/group-12.svg"
                             />
                             <div className={styles.rentalSteps}>
                                 <img className={styles.groupIcon1} alt="" src="/group-1.svg" />
@@ -23,14 +24,15 @@ const Header: FunctionComponent = () => {
                         </div>
                     </Link>
                     <nav className={styles.benefitItemsWrapper}>
-                        <nav className={styles.benefitItems}>
+                    <Navbar />
+                        {/* <nav className={styles.benefitItems}>
                             <div className={styles.popularDestinations}>
                                 Popular Destinations
                             </div>
                             <div className={styles.businessAccount}>Business Account</div>
                             <div className={styles.operatorSignup}>Operator Signup</div>
                             <div className={styles.help}>Help?</div>
-                        </nav>
+                        </nav> */}
                     </nav>
                     <div className={styles.authentication}>
                         <div className={styles.authOptions}>

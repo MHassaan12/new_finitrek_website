@@ -1,11 +1,15 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState } from "react";
 import styles from "../../Assets/css/Login.module.css";
 import LoginOptions from "./LoginOptions";
 import RegisterOptions from "./RegisterOptions";
+import { Link } from "react-router-dom";
+import Loader from "../Common/Loader";
 
 
 const Register: FunctionComponent = () => {
+    const [loading, setLoading]=useState(false)
 
+    if(loading) return <Loader/>
     return (
         <div className={styles.login}>
             <div className={styles.bgParent}>
@@ -16,13 +20,13 @@ const Register: FunctionComponent = () => {
                         <p className={styles.finitrek}>FiniTrek</p>
                     </div>
                 </div>
-                <RegisterOptions />
-                <div className={styles.registerArea}>
+                <RegisterOptions setLoading={setLoading} />
+                {/* <div className={styles.registerArea}>
                     <div className={styles.dontHaveAnContainer}>
                         <span>{`Don’t have an account? `}</span>
-                        <span className={styles.register}>Register</span>
+                        <Link to="/signin" className={styles.register}>Login</Link>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

@@ -1,420 +1,478 @@
 .socialLogin {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* gap: var(--gap-9xl); */
-    max-width: 100%;
-  }
-  .frameChild {
-    /* align-self: stretch; */
-    height: 1px;
-    position: relative;
-    border-top: 1px solid var(--color-silver-100);
-    box-sizing: border-box;
-    z-index: 1;
-    
-  }
-  .lineWrapper {
-    /* flex: 1; */
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-    justify-content: center;
-    /* padding: var(--padding-2xs) 0 0; */
-    box-sizing: border-box;
-    min-width: 190px;
-  }
-  /* .frameItem,
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: var(--gap-9xl); */
+  max-width: 100%;
+}
+
+.frameChild {
+  /* align-self: stretch; */
+  height: 1px;
+  position: relative;
+  border-top: 1px solid var(--color-silver-100);
+  box-sizing: border-box;
+  z-index: 1;
+
+}
+
+.lineWrapper {
+  flex: 1;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  /* padding: var(--padding-2xs) 0 0; */
+  box-sizing: border-box;
+  min-width: 190px;
+}
+
+/* .frameItem,
   .or {
     position: relative;
     z-index: 1;
   } */
-  .or {
-    font-size: var(--font-size-base);
-    /* line-height: 22px; */
-    font-family: var(--font-poppins);
-    color: var(--black);
-    text-align: center;
-    display: inline-block;
-    /* min-width: 23px; */
-  }
-  .frameItem {
-    /* align-self: stretch; */
-    height: 1px;
-    border-top: 1px solid var(--color-silver-100);
-    box-sizing: border-box;
-  }
-  .lineContainer {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    /* align-items: flex-start;
+.or {
+  font-size: var(--font-size-base);
+  /* line-height: 22px; */
+  font-family: var(--font-poppins);
+  color: var(--black);
+  text-align: center;
+  display: inline-block;
+  /* min-width: 23px; */
+}
+
+.frameItem {
+  /* align-self: stretch; */
+  height: 1px;
+  border-top: 1px solid var(--color-silver-100);
+  box-sizing: border-box;
+}
+
+.lineContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start;
     justify-content: flex-start; */
-    /* padding: var(--padding-2xs) 0 0; */
-    box-sizing: border-box;
-    min-width: 187px;
-  }
-  .frameParent,
-  .loginOptionsInner {
-    display: flex;
-    flex-direction: row;
-    /* align-items: flex-start; */
-    max-width: 100%;
-  }
-  .frameParent {
-    flex: 1;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: var(--gap-16xl);
-  }
-  .loginOptionsInner {
-    /* align-self: stretch; */
-    justify-content: center;
-    padding: 0 var(--padding-8xs) 0 var(--padding-10xs);
-    box-sizing: border-box;
-  }
-  .emailChild {
-    height: 77px;
-    width: 671px;
-    position: relative;
-    border-radius: var(--br-5xs);
-    background-color: var(--color-thistle);
-    display: none;
-    max-width: 100%;
-  }
-  .emailIcon {
-    width: 30px;
-    height: 24px;
-    position: relative;
-    z-index: 1;
-    display: none;
-  }
-  .inputContainers {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding: 0 0 var(--padding-7xs);
-    box-sizing: border-box;
-    width: 30px;
-    height: 30px;
-    display: none;
-  }
-  .email1,
-  .examplegmailcom {
-    
-    /* position: relative; */
-    font-family: var(--font-poppins);
-    color: var(--black);
-    text-align: left;
-    /* z-index: 1; */
-    background-color: rgb(228, 201, 227);
-    text-decoration: none;
+  /* padding: var(--padding-2xs) 0 0; */
+  box-sizing: border-box;
+  min-width: 187px;
+}
 
-  }
-  .email1 {
-    border-radius: 8px;
-    font-size: var(--font-size-xs);
-    padding: 6px 35px;
-    /* line-height: 135.5%; */
-    display: inline-block;
-    min-width: 33px;
-    
-  }
-  .examplegmailcom {
-    outline: none;
-    border: none;
-    font-size: var(--font-size-base);
-    /* line-height: 22px; */
-    white-space: nowrap;
-    padding: 8px 30px;
-    border-radius: 8px;
-    
-  }
-  .emailField {
-    border-radius: 8px;
+.frameParent,
+.loginOptionsInner {
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-start; */
+  max-width: 100%;
+}
 
-    background-color: rgb(228, 201, 227);
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    height: 20%;
-    /* align-items: flex-start;
+.frameParent {
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: var(--gap-16xl);
+}
+
+.loginOptionsInner {
+  /* align-self: stretch; */
+  justify-content: center;
+  padding: 0 var(--padding-8xs) 0 var(--padding-10xs);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.emailChild {
+  height: 77px;
+  width: 671px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-thistle);
+  display: none;
+  max-width: 100%;
+}
+
+.emailIcon {
+  width: 30px;
+  height: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.inputContainers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 var(--padding-7xs);
+  box-sizing: border-box;
+  /* width: 30px;
+  height: 30px; */
+}
+
+.email1,
+.examplegmailcom {
+
+  /* position: relative; */
+  font-family: var(--font-poppins);
+  color: var(--black);
+  text-align: left;
+  /* z-index: 1; */
+  background-color: rgb(228, 201, 227);
+  text-decoration: none;
+
+}
+
+.email1 {
+  border-radius: 8px;
+  font-size: var(--font-size-xs);
+  padding: 4px 30px;
+  /* line-height: 135.5%; */
+  display: inline-block;
+  min-width: 33px;
+
+}
+
+.examplegmailcom {
+  outline: none;
+  border: none;
+  font-size: var(--font-size-base);
+  /* line-height: 22px; */
+  white-space: nowrap;
+  padding: 0px 30px;
+  border-radius: 8px;
+
+}
+
+.emailField {
+  border-radius: 8px;
+
+  background-color: rgb(228, 201, 227);
+  display: flex;
+  /* flex-direction: column; */
+  width: 95%;
+  height: 20%;
+  /* align-items: flex-start;
     justify-content: flex-start; */
-    /* gap: var(--gap-7xs); */
-    margin-bottom: 20px;
-  }
-  .email,
-  .passwordChild {
-    border-radius: var(--br-5xs);
-    background-color: var(--color-thistle);
-    max-width: 100%;
-    
-  }
-  .email {
-    padding-top: 20px;
-    /* align-self: stretch; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    /* padding: var(--padding-mini) var(--padding-4xl) var(--padding-lg); */
-    box-sizing: border-box;
-    /* gap: var(--gap-10xl); */
-    /* z-index: 1; */
-  }
-  .passwordChild {
-    height: 77px;
-    width: 671px;
-    position: relative;
-    display: none;
-  }
-  .groupIcon {
-    display: none;
-    width: 27px;
-    height: 27px;
-    position: relative;
-    z-index: 1;
-  }
-  .groupWrapper {
-    display: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding: 0 0 var(--padding-2xs);
-  }
-  .empty,
-  .password1 {
-    padding: 6px 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* position: relative; */
-    font-size: var(--font-size-xs);
-    /* line-height: 135.5%; */
-    font-family: var(--font-poppins);
-    color: var(--black);
-    text-align: left;
-    display: inline-block;
-    /* min-width: 58px; */
-    /* z-index: 1; */
+  /* gap: var(--gap-7xs); */
+  margin-bottom: 20px;
+  padding: 6px 12px;
+}
+.input{
+  display: flex;
+  flex-direction: column;
+}
 
-  }
-  .empty {
-    background-color: rgb(228, 201, 227);
-    border: none;
-    outline: none;
-    font-size: var(--font-size-base);
-    /* line-height: 22px; */
-    min-width: 95px;
-    padding: 8px 30px;
+.email,
+.passwordChild {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-thistle);
+  max-width: 100%;
 
-    
-  }
-  .frameGroup,
-  .passwordField {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
 
-  }
-  .passwordField {
-    border-radius: 8px;
-    width: 671px;
-    height: 77px;
-    /* flex: 1; */
-    background-color: rgb(228, 201, 227);
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    /* gap: var(--gap-xs); */
-  }
-  .frameGroup {
-    /* width: 151px; */
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    /* gap: var(--gap-10xl); */
-  }
-  .bieyeFillIcon {
-    border: 2px solid;
-display: none;
-    width: 22px;
-    height: 22px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-    z-index: 1;
-  }
-  .bieyeFillWrapper {
-    display: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding: 0 0 var(--padding-2xs);
-  }
-  .inputFields,
-  .password {
-    /* align-self: stretch; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* gap: var(--gap-xl); */
-    /* max-width: 100%; */
-  }
-  .password {
-    border-radius: var(--br-5xs);
-    background-color: var(--color-thistle);
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: var(--padding-mini) var(--padding-2xl) var(--padding-xs)
-      var(--padding-7xl);
-    box-sizing: border-box;
-    /* z-index: 1; */
-  }
-  .inputFields {
-    
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 120%;
+.email {
+  padding-top: 20px;
+  /* align-self: stretch; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* padding: var(--padding-mini) var(--padding-4xl) var(--padding-lg); */
+  box-sizing: border-box;
+  /* gap: var(--gap-10xl); */
+  /* z-index: 1; */
+}
 
-  }
-  .check {
-display: none;
-    width: 18px;
-    height: 18px;
-    position: relative;
-    border-radius: var(--br-9xs);
-    background-color: var(--color-thistle);
-    border: 1px solid var(--color-thistle-100);
-    box-sizing: border-box;
-    z-index: 1;
-  }
-  .checkbox {
-    display: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: var(--padding-11xs) 0 0;
-  }
-  .rememberMe1 {
-    
-    position: relative;
-    font-size: var(--font-size-base);
-    line-height: 22px;
-    font-family: var(--font-poppins);
-    color: var(--black);
-    text-align: left;
-    display: inline-block;
-    min-width: 120px;
-    z-index: 1;
-  }
-  .rememberBox {
-    
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: var(--gap-mini);
-  }
-  .forgotPassword {
-    position: relative;
-    font-size: var(--font-size-base);
-    line-height: 22px;
-    font-family: var(--font-poppins);
-    color: var(--color-purple-100);
-    text-align: left;
-    z-index: 1;
-  }
-  .optionsArea,
-  .rememberMe {
-    
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    max-width: 100%;
-  }
-  .rememberMe {
-    flex: 1;
-    justify-content: space-between;
-    gap: var(--gap-xl);
-  }
-  .optionsArea {
-    
-    align-self: stretch;
-    
-    /* justify-content: space-between; */
-    /* padding: 0 var(--padding-8xs) 0 var(--padding-11xs); */
-    box-sizing: border-box;
-  }
-  .buttonChild {
+.passwordChild {
+  height: 77px;
+  width: 671px;
+  position: relative;
+  display: none;
+}
 
-    height: 77px;
-    width: 671px;
-    position: relative;
-    border-radius: var(--br-5xs);
-    background-color: var(--color-purple-100);
-    display: none;
-    max-width: 100%;
-  }
-  .login {
+.groupIcon {
+  display: none;
+  width: 27px;
+  height: 27px;
+  position: relative;
+  z-index: 1;
+}
 
-    /* position: relative; */
-    font-size: var(--font-size-base);
-    /* line-height: 22px; */
-    font-weight: 600;
-    font-family: var(--font-poppins);
-    color: var(--color-white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* text-align: left; */
-    /* display: inline-block; */
-    /* min-width: 44px; */
-    /* z-index: 1; */
-  }
-  .button,
-  .credentialsArea,
-  .loginOptions {
-    /* align-self: stretch; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-  }
-  .button {
-    border-radius: var(--br-5xs);
-    background-color: var(--color-purple-100);
-    flex-direction: row;
-    justify-content: center;
-    padding: 25px 300px;
-    /* padding: var(--padding-8xl) var(--padding-xl) var(--padding-9xl);
+.groupWrapper {
+  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-2xs);
+}
+
+.empty,
+.password1 {
+  padding: 4px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+  font-size: var(--font-size-xs);
+  /* line-height: 135.5%; */
+  font-family: var(--font-poppins);
+  color: var(--black);
+  text-align: left;
+  display: inline-block;
+  /* min-width: 58px; */
+  /* z-index: 1; */
+
+}
+
+.empty {
+  background-color: rgb(228, 201, 227);
+  border: none;
+  outline: none;
+  font-size: var(--font-size-base);
+  /* line-height: 22px; */
+  min-width: 95px;
+  padding: 8px 30px;
+
+
+}
+
+.frameGroup,
+.passwordField {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.passwordField {
+  border-radius: 8px;
+  width: 671px;
+  height: 77px;
+  /* flex: 1; */
+  background-color: rgb(228, 201, 227);
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  /* gap: var(--gap-xs); */
+}
+
+.frameGroup {
+  /* width: 151px; */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* gap: var(--gap-10xl); */
+}
+
+.bieyeFillIcon {
+  border: 2px solid;
+  display: none;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.bieyeFillWrapper {
+  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-2xs);
+}
+
+.inputFields,
+.password {
+  /* align-self: stretch; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: var(--gap-xl); */
+  /* max-width: 100%; */
+}
+
+.password {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-thistle);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-mini) var(--padding-2xl) var(--padding-xs) var(--padding-7xl);
+  box-sizing: border-box;
+  /* z-index: 1; */
+}
+
+.inputFields {
+
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}
+
+.check {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  border-radius: var(--br-9xs);
+  background-color: var(--color-thistle);
+  border: 1px solid var(--color-thistle-100);
+  box-sizing: border-box;
+  z-index: 1;
+}
+.check:checked{
+  background: rgba(230, 187, 229, 1);
+  color: red; 
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) 0 0;
+}
+
+.rememberMe1 {
+
+  position: relative;
+  font-size: var(--font-size-base);
+  line-height: 22px;
+  font-family: var(--font-poppins);
+  color: var(--black);
+  text-align: left;
+  display: inline-block;
+  min-width: 120px;
+  z-index: 1;
+}
+
+.rememberBox {
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+
+.forgotPassword {
+  position: relative;
+  font-size: var(--font-size-base);
+  line-height: 22px;
+  font-family: var(--font-poppins);
+  color: var(--color-purple-100);
+  text-align: left;
+  z-index: 1;
+}
+
+.optionsArea,
+.rememberMe {
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+
+.rememberMe {
+  flex: 1;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+
+.optionsArea {
+
+  align-self: stretch;
+
+  /* justify-content: space-between; */
+  /* padding: 0 var(--padding-8xs) 0 var(--padding-11xs); */
+  box-sizing: border-box;
+}
+
+.buttonChild {
+
+  height: 77px;
+  width: 671px;
+  position: relative;
+  border-radius: var(--br-5xs);
+  background-color: var(--color-purple-100);
+  display: none;
+  max-width: 100%;
+}
+
+.login {
+
+  /* position: relative; */
+  font-size: var(--font-size-base);
+  /* line-height: 22px; */
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: left; */
+  /* display: inline-block; */
+  /* min-width: 44px; */
+  /* z-index: 1; */
+}
+
+.button,
+.credentialsArea,
+.loginOptions {
+  /* align-self: stretch; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  width: 80%;
+}
+
+.button {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-purple-100);
+  flex-direction: row;
+  justify-content: center;
+  padding: 18px 0px;
+  border: none;
+  /* padding: var(--padding-8xl) var(--padding-xl) var(--padding-9xl);
     box-sizing: border-box; */
-    /* z-index: 1; */
-  }
-  .credentialsArea,
-  .loginOptions {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: var(--gap-5xl);
-  }
-  .loginOptions {
-    /* margin: 0; */
-    align-items: center;
-    justify-content: center;
-    /* gap: var(--gap-16xl-5); */
-  }
-  /* @media screen and (max-width: 700px) {
+  /* z-index: 1; */
+}
+
+.credentialsArea,
+.loginOptions {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap-5xl);
+  
+}
+
+.loginOptions {
+  gap: var(--gap-16xl-5);
+  width: 100%;
+}
+
+.error {
+  font-size: 12px;
+  padding: 0px 30px;
+  color: red;
+
+}
+
+/* @media screen and (max-width: 700px) {
     .frameParent {
       gap: var(--gap-mid);
     }
@@ -428,4 +486,3 @@ display: none;
       flex-wrap: wrap;
     }
   } */
-  
