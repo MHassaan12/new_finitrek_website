@@ -189,7 +189,7 @@
 }
 
 .findBookAndRentACarEasiWrapper {
-  width:70%;
+  width:410px;
   display: flex;
   flex-direction: column;
   gap: var(--gap-5xl);
