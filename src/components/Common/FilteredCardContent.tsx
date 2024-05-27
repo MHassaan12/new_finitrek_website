@@ -117,7 +117,7 @@ const FilteredCardContent: FunctionComponent<FilteredCardContentType> = ({
           <div className={styles.filteredSeparator} />
           <button className={styles.filteredBookingArea} onClick={handleBooking}>
             <div className={styles.rentNowWrapper}>
-              <div className={styles.rentNow} >Rent Now</div>
+              <div className={styles.rentNow} >Book Now</div>
             </div>
             <img
               className={styles.vuesaxlineararrowRightIcon}
