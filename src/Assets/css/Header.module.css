@@ -141,7 +141,7 @@
 .treeStructure {
   flex: 1;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   /* gap: var(--gap-59xl-5); */
   z-index: 1;
 }
