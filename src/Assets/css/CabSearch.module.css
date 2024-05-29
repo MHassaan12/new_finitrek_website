@@ -353,7 +353,7 @@
 
 .rectangleParent {
   justify-content: space-around;
-  margin-top: 118px;
+  /* margin-top: 118px; */
   /* width: 1120px; */
   border-radius: var(--br-3xs);
   background-color: var(--color-lavenderblush);
