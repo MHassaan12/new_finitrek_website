@@ -8,7 +8,12 @@ import TimePicker from "../Common/TimePicker";
 import { post } from "../../utils/api";
 import { useNavigate } from "react-router-dom";
 
-const Header: FunctionComponent = ({ setLoading }) => {
+interface HeaderProps {
+  setLoading: Function;
+}
+
+
+const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
   const [bookingForm, setBookingForm] = useRecoilState(bookingFormState);
   const [bookingCars, setBookingCars] = useRecoilState(bookingCarsState);
   const [errors, setErrors] = useState({
@@ -153,7 +158,7 @@ const Header: FunctionComponent = ({ setLoading }) => {
                     <div style={{ display: "flex", flexDirection: "column" }}>
                       <div className={styles.datePickerLayout}>
                         <div className={styles.selectDateWrapper}>
-                          <DatePickerComponent setStart={(date: any) => { setBookingForm((prev: any) => ({ ...prev, myDate: date })); setErrors((prev) => ({ ...prev, oneWay: '' })) }} start={bookingForm.myDate} disabled={false} />
+                          <DatePickerComponent setStart={(date: any) => { setBookingForm((prev: any) => ({ ...prev, myDate: date })); setErrors((prev) => ({ ...prev, oneWay: '' })) }} start={bookingForm.myDate} disabled={false} minDate={new Date} />
                         </div>
                         <div>
                           <TimePicker setTime={(time: any) => { setBookingForm((prev: any) => ({ ...prev, myTime: time })); setErrors((prev) => ({ ...prev, oneWay: '' })) }} time={bookingForm.myTime} disabled={false} />
@@ -168,7 +173,7 @@ const Header: FunctionComponent = ({ setLoading }) => {
                     <div style={{ display: "flex", flexDirection: "column" }}>
                       <div className={styles.datePickerLayout}>
                         <div className={styles.selectDateWrapper}>
-                          <DatePickerComponent setStart={(date: any) => { setBookingForm((prev: any) => ({ ...prev, hiddenmyDate: date })); setErrors((prev) => ({ ...prev, return: '' })) }} start={bookingForm.hiddenmyDate} disabled={false} />
+                          <DatePickerComponent setStart={(date: any) => { setBookingForm((prev: any) => ({ ...prev, hiddenmyDate: date })); setErrors((prev) => ({ ...prev, return: '' })) }} start={bookingForm.hiddenmyDate} disabled={false} minDate={bookingForm.myDate} />
                         </div>
                         <div>
                           <TimePicker setTime={(time: any) => { setBookingForm((prev: any) => ({ ...prev, retmyTime: time })); setErrors((prev) => ({ ...prev, return: '' })) }} time={bookingForm.retmyTime} disabled={false} />

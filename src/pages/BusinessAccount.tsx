@@ -18,7 +18,7 @@ const BusinessAccountPage: FunctionComponent = () => {
     if (loading) return <Loader />
     return (
         <div className={styles.landingPage}>
-            <BusinessAuth  />
+            <BusinessAuth setLoading={setLoading}  />
             <HowItWork />
             <WhyChooseUs />
             <PopularRentalCars />

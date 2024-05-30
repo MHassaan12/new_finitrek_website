@@ -1,7 +1,5 @@
 import { FunctionComponent, useState } from "react";
 import styles from "../../Assets/css/BusinessRegister.module.css";
-import LoginOptions from "./LoginOptions";
-import RegisterOptions from "./RegisterOptions";
 import { Link, useNavigate } from "react-router-dom";
 import Loader from "../Common/Loader";
 import { useForm } from "react-hook-form";
@@ -9,9 +7,16 @@ import { post } from "../../utils/api";
 import LoginWithGoogle from "../Auth/LoginWithGoogle";
 
 
+interface FormData{
+    username: string
+    email: string
+    password: string
+    password_confirmation: string
+}
+
 const BusinessSignup: FunctionComponent = () => {
     const [loading, setLoading] = useState(false)
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
     const navigate = useNavigate()
 
     const onSubmit = async (body: any) => {

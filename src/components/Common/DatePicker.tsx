@@ -6,11 +6,12 @@ import styles from "../../Assets/css/Header.module.css"
 interface IDatePickerProps {
   setStart: Function;
   start: Date;
-  disabled: boolean
+  disabled: boolean;
+  minDate: Date
 }
 
-const DatePickerComponent: FC<IDatePickerProps> = ({ setStart, start, disabled }) => {
-  return <ReactDatePicker minDate={new Date()} selected={start} onChange={(date: Date) => setStart(date)} className={styles.selectDate} dateFormat="dd MMMM" disabled={disabled} />;
+const DatePickerComponent: FC<IDatePickerProps> = ({ setStart, start, disabled, minDate }) => {
+  return <ReactDatePicker minDate={minDate} selected={start} onChange={(date: Date) => setStart(date)} className={styles.selectDate} dateFormat="dd MMMM" disabled={disabled} />;
 };
 
 export default DatePickerComponent;

@@ -5,8 +5,17 @@ import { useForm } from "react-hook-form";
 import { post } from "../../utils/api";
 import { useNavigate } from "react-router-dom";
 
-const LoginOptions: FunctionComponent = ({setLoading}) => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+interface LoginOptionsProps {
+    setLoading: Function;
+}
+
+interface FormData{
+    username: string
+    password: string
+}
+
+const LoginOptions: FunctionComponent<LoginOptionsProps> = ({ setLoading }) => {
+    const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
     const navigate = useNavigate()
 
     const onSubmit = async (body: any) => {

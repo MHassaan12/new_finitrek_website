@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Loader from "../Common/Loader";
 
 const Login: FunctionComponent = () => {
-    const [loading, setLoading]=useState(false)
+    const [loading, setLoading]=useState<boolean>(false)
 
     if(loading) return <Loader/>
     return (

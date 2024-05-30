@@ -8,7 +8,12 @@ import TimePicker from "../Common/TimePicker";
 import { post } from "../../utils/api";
 import { useNavigate } from "react-router-dom";
 
-const BusinessAuth: FunctionComponent = ({ setLoading }) => {
+interface BusinessAuthProps {
+    setLoading: Function;
+}
+
+
+const BusinessAuth: FunctionComponent<BusinessAuthProps> = ({ setLoading }) => {
     const [bookingForm, setBookingForm] = useRecoilState(bookingFormState);
     const [bookingCars, setBookingCars] = useRecoilState(bookingCarsState);
     const [errors, setErrors] = useState({

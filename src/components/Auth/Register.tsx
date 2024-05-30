@@ -7,7 +7,7 @@ import Loader from "../Common/Loader";
 
 
 const Register: FunctionComponent = () => {
-    const [loading, setLoading]=useState(false)
+    const [loading, setLoading]=useState<boolean>(false)
 
     if(loading) return <Loader/>
     return (

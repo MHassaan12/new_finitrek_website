@@ -1,11 +1,11 @@
 
-import { ComponentElement, useEffect, useState } from 'react';
+import {  FunctionComponent, useEffect, useState } from 'react';
 import styles from '../../Assets/css/Navbar.module.css';
 import { get } from '../../utils/api';
 import { createMenu } from '../../utils';
 import { Link } from 'react-router-dom';
 
-const Navbar: ComponentElement = () => {
+const Navbar: FunctionComponent = () => {
     const [isDropdownVisible, setDropdownVisible] = useState(false);
     const [blogMenu, setBlogMenu] = useState([]);
     const handleMouseEnter = () => {
@@ -18,7 +18,7 @@ const Navbar: ComponentElement = () => {
     useEffect(() => {
         get('/blog').then((result) => {
             if (result.data?.blogs?.data.length > 0) {
-                const menu = createMenu(result.data.blogs.data);
+                const menu: any = createMenu(result.data.blogs.data);
                 setBlogMenu(menu)
             }
         }).catch((error) => {
@@ -47,11 +47,11 @@ const Navbar: ComponentElement = () => {
             {isDropdownVisible && <div className={`${styles.megamenu__content} `} onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}>
                 {
-                    blogMenu.map((item) => (
+                    blogMenu.map((item: any) => (
                         <div className={styles.megamenu__column}>
                             <h3>{item.title}</h3>
                             {
-                                item.children.length > 0 && item.children.map((child) => (
+                                item.children.length > 0 && item.children.map((child: any) => (
                                     <Link to={child.path}>{child.title}</Link>
                                 ))
                             }

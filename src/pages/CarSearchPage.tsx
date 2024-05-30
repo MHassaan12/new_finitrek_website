@@ -11,9 +11,8 @@ const CarSearchPage: FunctionComponent = () => {
   if(loading) return <Loader/>
   return (
     <div className={styles.carSearch}>
-      <Breadcrum/>
+      <Breadcrum title="Booking List"/>
       <CabSearch />
-
       <DateArea setLoading={setLoading} />
     </div>
   );

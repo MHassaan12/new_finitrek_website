@@ -14,6 +14,8 @@ import LoginPage from "./pages/Login";
 import RegisterPage from "./pages/Register";
 import BusinessAccountPage from "./pages/BusinessAccount";
 import BusinessRegisterPage from "./pages/BusinessRegister";
+import PaymentSuccessPage from "./pages/PaymentSuccess";
+import PaymentFailPage from "./pages/PaymentFail";
 
 function App() {
   const action = useNavigationType();
@@ -62,6 +64,8 @@ function App() {
         <Route path="/car-booking" element={<CarBookingPage />} />
         <Route path="/payment" element={<PaymentPage />} />
         <Route path="/business-account" element={<BusinessAccountPage />} />
+        <Route path="/booking-success" element={<PaymentSuccessPage />} />
+        <Route path="/booking-failed" element={<PaymentFailPage />} />
       </Route>
     </Routes>
   );

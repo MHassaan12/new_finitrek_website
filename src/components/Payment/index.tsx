@@ -7,7 +7,13 @@ import { useNavigate } from "react-router-dom";
 import { post } from "../../utils/api";
 import { bookingCarsState, bookingFormState } from "../../stores/atoms";
 
-const Payment: FunctionComponent = ({ setLoading }) => {
+
+interface PaymentProps {
+    setLoading: Function;
+  }
+  
+  
+const Payment: FunctionComponent<PaymentProps> = ({ setLoading }) => {
     const bookingForm = useRecoilValue(bookingFormSelector)
     const selectedCar = useRecoilValue(selectedCarSelector)
     const resetBookingForm = useResetRecoilState(bookingFormState)

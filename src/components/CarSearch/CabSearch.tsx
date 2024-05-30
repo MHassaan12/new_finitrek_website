@@ -133,6 +133,7 @@ const CabSearch: FunctionComponent = () => {
                   setStart={(date: any) =>
                     setBookingForm((prev: any) => ({ ...prev, myDate: date }))
                   }
+                  minDate={new Date}
                   start={bookingForm.myDate}
                   disabled={false}
                 />
@@ -159,6 +160,7 @@ const CabSearch: FunctionComponent = () => {
                       hiddenmyDate: date,
                     }))
                   }
+                  minDate={bookingForm.myDate}
                   start={bookingForm.hiddenmyDate}
                   disabled={false}
                 />

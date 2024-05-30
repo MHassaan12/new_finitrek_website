@@ -8,10 +8,25 @@ import moment from "moment";
 import { post } from "../../utils/api";
 import { useNavigate } from "react-router-dom";
 
-const CarBooking: FunctionComponent = ({ setLoading }) => {
+interface CarBookingProps {
+    setLoading: Function;
+}
+
+interface FormData{
+    name: string
+    email: string
+    flat_no: string
+    passenger: string
+    luggage: string
+    hand_luggage: string
+    contact_number: string
+    instruction: string
+}
+
+const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
     const bookingForm = useRecoilValue(bookingFormSelector)
     const selectedCar = useRecoilValue(selectedCarSelector)
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
     const nvigation = useNavigate()
 
     const onSubmit = async (body: any) => {

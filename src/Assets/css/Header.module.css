@@ -570,7 +570,7 @@
   flex: 1;
   flex-wrap: wrap;
   align-items: flex-end;
-  gap: var(--gap-12xl);
+  /* gap: var(--gap-12xl); */
 }
 
 .tripType {
