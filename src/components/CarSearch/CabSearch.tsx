@@ -13,7 +13,8 @@ const CabSearch: FunctionComponent = () => {
   const [bookingForm, setBookingForm] = useRecoilState(bookingFormState);
   const [bookingCars, setBookingCars] = useRecoilState(bookingCarsState);
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e: any) => {
+    e.preventDefault()
     try {
       let params = new URLSearchParams();
       for (const key in bookingForm) {
@@ -39,6 +40,7 @@ const CabSearch: FunctionComponent = () => {
           {/* <div className={styles.enterPickUpLocationWrapper}> */}
           <ReactGoogleAutocomplete
             apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
+            defaultValue={bookingForm.pickup}
             onPlaceSelected={(place) => {
               if (place?.formatted_address) {
                 setBookingForm((prev: any) => ({
@@ -46,6 +48,27 @@ const CabSearch: FunctionComponent = () => {
                   pickup: place.formatted_address,
                 }));
               }
+            }}
+            options={{
+              types: [
+                'address',
+                // '(regions)',
+                // '(cities)',
+                // '(countries)',
+                // '(streets)',
+                // '(routes)',
+                // '(airports)',
+                // '(postal_code)',
+              ],// You can customize this array
+              componentRestrictions: { country: 'uk' },
+              fields: ['formatted_address', 'geometry', 'name'],
+              bounds: {
+                north: 55.0,
+                south: 50.0,
+                east: 1.5,
+                west: -3.0
+              },
+              strictBounds: false
             }}
             className={styles.enterPickUpLocationWrapper}
           />
@@ -72,6 +95,7 @@ const CabSearch: FunctionComponent = () => {
             </div>
             <ReactGoogleAutocomplete
               apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
+              defaultValue={bookingForm.dropoff}
               onPlaceSelected={(place) => {
                 if (place.formatted_address) {
                   setBookingForm((prev: any) => ({
@@ -80,6 +104,27 @@ const CabSearch: FunctionComponent = () => {
                   }));
                   // setTo(place.formatted_address)
                 }
+              }}
+              options={{
+                types: [
+                  'address',
+                  // '(regions)',
+                  // '(cities)',
+                  // '(countries)',
+                  // '(streets)',
+                  // '(routes)',
+                  // '(airports)',
+                  // '(postal_code)',
+                ],// You can customize this array
+                componentRestrictions: { country: 'uk' },
+                fields: ['formatted_address', 'geometry', 'name'],
+                bounds: {
+                  north: 55.0,
+                  south: 50.0,
+                  east: 1.5,
+                  west: -3.0
+                },
+                strictBounds: false
               }}
               className={styles.enterDropLocationWrapper}
             />
@@ -177,11 +222,11 @@ const CabSearch: FunctionComponent = () => {
                   disabled={false}
                 />
               </div>
-            </div>    
-          </div>
-          <div className={styles.searchWrapper}>
-              <div className={styles.search}>Search</div>
             </div>
+          </div>
+          <button onClick={handleSubmit} className={styles.searchWrapper}>
+            <div className={styles.search}>Search</div>
+          </button>
         </div>
       </div>
     </form>

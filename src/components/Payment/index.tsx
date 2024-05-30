@@ -77,7 +77,7 @@ const Payment: FunctionComponent<PaymentProps> = ({ setLoading }) => {
         }).catch(() => nvigation('/booking-failed'))
     }
     return (
-        <PayPalScriptProvider options={{ clientId: "AZ14k0vPCKHE5Ho2Rnprj0BM5ap081VPvnA5AAK880mlnmFPYpeh3y37GFxtfAbgSeQWJpF9WGdArvMB", components: "buttons", currency: "USD", intent: "capture", }}>
+        <PayPalScriptProvider  options={{ clientId: "AZ14k0vPCKHE5Ho2Rnprj0BM5ap081VPvnA5AAK880mlnmFPYpeh3y37GFxtfAbgSeQWJpF9WGdArvMB", components: "buttons", currency: "GBP", intent: "capture", }}>
             <div className={styles.payment}>
                 <section className={styles.frameParent}>
                     <div className={styles.paymentParent}>
@@ -116,11 +116,11 @@ const Payment: FunctionComponent<PaymentProps> = ({ setLoading }) => {
                                     </div>
                                     <div className={styles.frameParent3}>
                                         <div className={styles.wrapper}>
-                                            <div className={styles.div}>${selectedCar.vehiclePrice}</div>
+                                            <div className={styles.div}>£{selectedCar.vehiclePrice}</div>
                                         </div>
-                                        <div className={styles.div1}>$0</div>
+                                        <div className={styles.div1}>£0</div>
                                         <div className={styles.container}>
-                                            <div className={styles.div2}>$0</div>
+                                            <div className={styles.div2}>£0</div>
                                         </div>
                                     </div>
                                 </div>
@@ -128,7 +128,7 @@ const Payment: FunctionComponent<PaymentProps> = ({ setLoading }) => {
                             <div className={styles.rectangleContainer}>
                                 <div className={styles.rectangleDiv} />
                                 <div className={styles.grandTotal}>Grand Total</div>
-                                <div className={styles.div3}>${selectedCar.vehiclePrice}</div>
+                                <div className={styles.div3}>£{selectedCar.vehiclePrice}</div>
                             </div>
                         </div>
                     </div>

@@ -323,16 +323,16 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
                                     <h3 className={styles.insurance}>Insurance</h3>
                                 </div>
                                 <div className={styles.costBreakdownLabels1}>
-                                    <div className={styles.div}>${selectedCar.vehiclePrice}</div>
-                                    <div className={styles.div1}>$0</div>
-                                    <div className={styles.div2}>$0</div>
+                                    <div className={styles.div}>£{selectedCar.vehiclePrice}</div>
+                                    <div className={styles.div1}>£0</div>
+                                    <div className={styles.div2}>£0</div>
                                 </div>
                             </div>
                         </div>
                         <div className={styles.totalCost}>
                             <div className={styles.totalCostChild} />
                             <h3 className={styles.grandTotal}>Grand Total</h3>
-                            <div className={styles.totalCostLabel}>${selectedCar.vehiclePrice}</div>
+                            <div className={styles.totalCostLabel}>£{selectedCar.vehiclePrice}</div>
                         </div>
                     </div>
                 </div>

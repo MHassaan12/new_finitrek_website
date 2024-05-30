@@ -787,6 +787,7 @@
 .detail01 {
     width: 144.3px;
     display: inline-block;
+    font-family: Poppins;
 }
 
 .insurance,
@@ -932,6 +933,7 @@
     padding: var(--padding-38xl) 38.6px var(--padding-36xl) 41.7px;
     gap: var(--gap-6xl);
     max-width: 100%;
+    font-family: Poppins;
 }
 
 .priceBreakdown {
@@ -970,6 +972,7 @@
     gap: var(--gap-lg);
     line-height: normal;
     letter-spacing: normal;
+    font-family: Poppins;
 }
 
 @media screen and (max-width: 1125px) {

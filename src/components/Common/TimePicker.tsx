@@ -43,7 +43,7 @@ const TimePicker: FC<ITimePickerProps> = ({ setTime, time, disabled }) => {
 
   return (
     <div ref={tmRef}>
-      <input type="text" className={styles.selectTime} defaultValue={time} disabled={disabled} />
+      <input type="text" className={styles.selectTime} defaultValue={time} disabled={disabled} placeholder="Select Time" />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { FunctionComponent, useState } from "react";
 import styles from "../../Assets/css/Header.module.css";
 import ReactGoogleAutocomplete from "react-google-autocomplete";
 import DatePickerComponent from "../Common/DatePicker";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue, useResetRecoilState } from "recoil";
 import { bookingCarsState, bookingFormState } from "../../stores/atoms";
 import TimePicker from "../Common/TimePicker";
 import { post } from "../../utils/api";
@@ -16,6 +16,7 @@ interface HeaderProps {
 const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
   const [bookingForm, setBookingForm] = useRecoilState(bookingFormState);
   const [bookingCars, setBookingCars] = useRecoilState(bookingCarsState);
+  const resetBookingForm = useResetRecoilState(bookingFormState)
   const [errors, setErrors] = useState({
     pickup: '',
     drop: '',
@@ -62,6 +63,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
         setLoading(false)
         navigation('/car-search')
       } else {
+        resetBookingForm()
         setLoading(false)
         alert(data.message)
       }
@@ -97,8 +99,25 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
                     }
                   }}
                   options={{
-                    types: ['(regions)'],
-                    componentRestrictions: { country: 'UK' },
+                    types: [
+                      'address',
+                      // '(regions)',
+                      // '(cities)',
+                      // '(countries)',
+                      // '(streets)',
+                      // '(routes)',
+                      // '(airports)',
+                      // '(postal_code)',
+                    ],// You can customize this array
+                    componentRestrictions: { country: 'uk' },
+                    fields: ['formatted_address', 'geometry', 'name'],
+                    bounds: {
+                      north: 55.0,
+                      south: 50.0,
+                      east: 1.5,
+                      west: -3.0
+                    },
+                    strictBounds: false
                   }}
 
                   className={styles.inputBox}
@@ -137,8 +156,25 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
                       }
                     }}
                     options={{
-                      types: ['(regions)'],
-                      componentRestrictions: { country: 'UK' },
+                      types: [
+                        'address',
+                        // '(regions)',
+                        // '(cities)',
+                        // '(countries)',
+                        // '(streets)',
+                        // '(routes)',
+                        // '(airports)',
+                        // '(postal_code)',
+                      ],// You can customize this array
+                      componentRestrictions: { country: 'uk' },
+                      fields: ['formatted_address', 'geometry', 'name'],
+                      bounds: {
+                        north: 55.0,
+                        south: 50.0,
+                        east: 1.5,
+                        west: -3.0
+                      },
+                      strictBounds: false
                     }}
                     className={styles.dropOffLocation}
 
