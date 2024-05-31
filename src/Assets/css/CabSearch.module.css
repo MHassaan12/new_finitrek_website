@@ -147,7 +147,7 @@
 }
 
 .passengersWrapper {
-  flex: 1;
+  /* flex: 1; */
   box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
   border-radius: var(--br-5xs);
   background-color: var(--color-white);
@@ -177,7 +177,7 @@
 }
 
 .luggageWrapper {
-  flex: 1;
+  /* flex: 1; */
   box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
   border-radius: var(--br-5xs);
   background-color: var(--color-white);
@@ -465,7 +465,8 @@
 .listingFilterArea {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .filteredCarCard {
@@ -476,7 +477,7 @@
 }
 
 .listingFilterArea {
-  width: 544px;
+  /* width: 544px; */
   flex-shrink: 0;
   flex-direction: column;
   gap: var(--gap-11xl);
