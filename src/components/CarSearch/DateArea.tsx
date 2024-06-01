@@ -36,7 +36,7 @@ const DateArea: FunctionComponent<DateAreaType> = ({
   return (
     <div className={styles.timeArea}>
       <section className={styles.carListingArea}>
-        <div className={styles.listingFilterArea}>
+        {/* <div className={styles.listingFilterArea}>
           <div className={styles.filterTabs}>
             <div className={styles.tabList} style={{backgroundColor: tabs == 'all'? "var(--color-purple-100)": 'var(--color-lavenderblush)'}} onClick={()=>setTabs('all')}>
               <div className={styles.all} style={{color: tabs == 'all'? "var(--color-white)": 'var(--color-purple-100)'}}>All</div>
@@ -51,7 +51,7 @@ const DateArea: FunctionComponent<DateAreaType> = ({
               <div className={styles.trending} style={{color: tabs == 'tranding'? "var(--color-white)": 'var(--color-purple-100)'}}>Trending</div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className={styles.filteredCarCard}>
           {
             bookingCars.map((item: any) => (

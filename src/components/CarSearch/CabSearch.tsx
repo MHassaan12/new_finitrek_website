@@ -26,6 +26,8 @@ const CabSearch: FunctionComponent = () => {
       const { data } = await post(`/api/price?${params}`, {});
       if (data.cars.length > 0) {
         setBookingCars(data.cars);
+      }else{
+        setBookingCars([])
       }
       console.log("FFFFFFFFFFFFFFFFFFFFFFFFF", data);
     } catch (error) {
@@ -137,7 +139,19 @@ const CabSearch: FunctionComponent = () => {
         </div>
         <div className={styles.passengerArea}>
           <div className={styles.passengersWrapper}>
-            <input
+            <select className={styles.passengers} onChange={(e) => { setBookingForm((prev: any) => ({ ...prev, passengers: e.target.value })) }}>
+              <option value="">Passengers</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+
+            {/* <input
               className={styles.passengers}
               type="number"
               placeholder="Passengers"
@@ -148,11 +162,22 @@ const CabSearch: FunctionComponent = () => {
                   passengers: e.target.value,
                 }))
               }
-            />
+            /> */}
             {/* <div className={styles.passengers}>Passengers</div> */}
           </div>
           <div className={styles.luggageWrapper}>
-            <input
+            <select className={styles.luggage} onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))}>
+              <option value="">Luggage</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+            {/* <input
               className={styles.luggage}
               type="number"
               placeholder="Luggage"
@@ -163,7 +188,7 @@ const CabSearch: FunctionComponent = () => {
                   luggage: e.target.value,
                 }))
               }
-            />
+            /> */}
             {/* <div className={styles.luggage}>Luggage</div> */}
           </div>
         </div>

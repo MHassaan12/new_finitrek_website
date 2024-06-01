@@ -48,7 +48,7 @@ const Footer: FunctionComponent = () => {
                 />
                 <div className={styles.infofinitrekcomWrapper}>
                   <div className={styles.infofinitrekcom}>
-                    info@finitrek.com
+                    info@finitrek.co.uk
                   </div>
                 </div>
               </div>

@@ -226,12 +226,34 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
               <div className={styles.travelers}>
                 <div style={{ display: "flex", flexDirection: "column" }}>
                   <div className={styles.travelerOptions}>
-                    <input className={styles.passengers} type="number" min="16" max="1" placeholder="Passengers" onChange={(e) => { setBookingForm((prev: any) => ({ ...prev, passengers: e.target.value })); setErrors((prev) => ({ ...prev, passenger: '' })) }} />
+                    <select className={styles.passengers} onChange={(e) => { setBookingForm((prev: any) => ({ ...prev, passengers: e.target.value })); setErrors((prev) => ({ ...prev, passenger: '' })) }}>
+                      <option value="">Passengers</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                    </select>
+                    {/* <input className={styles.passengers} type="number" min="16" max="1" placeholder="Passengers" onChange={(e) => { setBookingForm((prev: any) => ({ ...prev, passengers: e.target.value })); setErrors((prev) => ({ ...prev, passenger: '' })) }} /> */}
                   </div>
                   {errors.passenger && <span className={styles.error}>{errors.passenger}</span>}
                 </div>
                 <div className={styles.luggageCount}>
-                  <input className={styles.luggage} type="number" min="16" max="1" placeholder="Luggage" onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))} />
+                  <select className={styles.luggage} onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))}>
+                    <option value="">Luggage</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                  </select>
+                  {/* <input className={styles.luggage} type="number" min="16" max="1" placeholder="Luggage" onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))} /> */}
                 </div>
               </div>
               <button className={styles.bookButton}>

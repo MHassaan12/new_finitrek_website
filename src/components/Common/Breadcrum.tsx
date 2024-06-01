@@ -11,7 +11,7 @@ const Breadcrum: FunctionComponent<BreadcrumProps> = ({title}) => {
       <div className={styles.Breadcrum}>
         <div className={styles.parent}>
         <div className={styles.text}>{title}</div>
-        <div className={styles.text_2}> Home <img src="/Vector.png" alt="" />{title}</div>
+        {/* <div className={styles.text_2}> Home <img src="/Vector.png" alt="" />{title}</div> */}
         </div>
       </div>
     </div>

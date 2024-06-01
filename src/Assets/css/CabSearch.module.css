@@ -140,7 +140,7 @@
   color: var(--color-silver);
   text-align: left;
   display: inline-block;
-  min-width: 70px;
+  min-width: 100%;
   padding: var(--padding-sm) var(--padding-xl);
   border: inherit;
   border-radius: inherit;
@@ -170,7 +170,7 @@
   color: var(--color-silver);
   text-align: left;
   display: inline-block;
-  min-width: 53px;
+  min-width: 100%;
   padding: var(--padding-sm) var(--padding-xl);
   border: inherit;
   border-radius: inherit;
