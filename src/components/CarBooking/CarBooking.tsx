@@ -1,18 +1,19 @@
 import { FunctionComponent, useState } from "react";
 import NameEmailInput from "./NameEmailInput";
 import styles from "../../Assets/css/CarBooking.module.css";
-import { useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { bookingFormSelector, selectedCarSelector } from "../../stores/selectors";
 import { useForm } from "react-hook-form";
 import moment from "moment";
 import { post } from "../../utils/api";
 import { useNavigate } from "react-router-dom";
+import { bookingFormState } from "../../stores/atoms";
 
 interface CarBookingProps {
     setLoading: Function;
 }
 
-interface FormData{
+interface FormData {
     name: string
     email: string
     flat_no: string
@@ -21,9 +22,11 @@ interface FormData{
     hand_luggage: string
     contact_number: string
     instruction: string
+    flight_number: string
 }
 
 const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
+    const [_, setBookingForm] = useRecoilState(bookingFormState);
     const bookingForm = useRecoilValue(bookingFormSelector)
     const selectedCar = useRecoilValue(selectedCarSelector)
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
@@ -59,6 +62,7 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
             }
             const { data } = await post(`/api/userRequest?${params}`, body);
             if (data.message) {
+                setBookingForm((prev: any) => ({ ...prev, ...body }))
                 setLoading(false)
                 nvigation('/payment')
                 // localStorage.setItem('user', JSON.stringify(data.authUser))
@@ -106,9 +110,10 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
                         <div className={styles.rectangleParent}>
                             <div className={styles.frameChild} />
                             <div className={styles.vehicleType}>
-                                <div className={styles.saloonCar}>{selectedCar.brand_name}</div>
+                                <div className={styles.saloonCar}>{selectedCar.vehicleTypeName}</div>
                                 <div className={styles.vehicleRating}>
-                                    <img
+                                    £{selectedCar.vehiclePrice}
+                                    {/* <img
                                         className={styles.starIcon}
                                         loading="lazy"
                                         alt=""
@@ -124,7 +129,7 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
                                                 <span>(2.436 reviews)</span>
                                             </span>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                             <div className={styles.vehicleFeatures}>
@@ -144,20 +149,20 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
                                         className={styles.frameIcon}
                                         loading="lazy"
                                         alt=""
-                                        src="/frame-1.svg"
+                                        src="/briefcase.svg"
                                     />
-                                    <div className={styles.auto}>Auto</div>
+                                    <div className={styles.auto}>{selectedCar.luggage_count} Luggage</div>
                                 </div>
                                 <div className={styles.featureIcons2}>
-                                    <img
+                                    {/* <img
                                         className={styles.frameIcon1}
                                         loading="lazy"
                                         alt=""
                                         src="/frame-3.svg"
-                                    />
-                                    <div className={styles.doors}>4 Doors</div>
+                                    /> */}
+                                    <div className={styles.doors}>Vender Name: {selectedCar.name || ''}</div>
                                 </div>
-                                <div className={styles.featureIcons3}>
+                                {/* <div className={styles.featureIcons3}>
                                     <div className={styles.frameParent}>
                                         <img
                                             className={styles.frameIcon2}
@@ -169,7 +174,7 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
                                             Air Conditioning
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                                 <img
                                     className={styles.image12Icon}
                                     loading="lazy"
@@ -228,6 +233,16 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
                                         <div className={styles.enterPickUp}>Enter Pick Up Location</div>
                                     </div> */}
                                     {errors.flat_no && <span className={styles.error}>{errors.flat_no.message}</span>}
+                                </div>
+                                <div className={styles.locationInputRepeat}>
+                                    <div className={styles.contactDetailsLabels}>
+                                        <div className={styles.name}>Flight number</div>
+                                    </div>
+                                    <input className={styles.pickupLocationInput} placeholder="Flight Number" {...register("flight_number")} />
+                                    {/* <div className={styles.pickupLocationInput}>
+                                        <div className={styles.enterPickUp}>Enter Pick Up Location</div>
+                                    </div> */}
+                                    {/* {errors.flight_number && <span className={styles.error}>{errors.flight_number.message}</span>} */}
                                 </div>
                                 <div className={styles.locationInputRepeat}>
                                     <div className={styles.contactDetailsLabels}>

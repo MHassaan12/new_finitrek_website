@@ -6,13 +6,14 @@ import { bookingFormSelector, selectedCarSelector } from "../../stores/selectors
 import { useNavigate } from "react-router-dom";
 import { post } from "../../utils/api";
 import { bookingCarsState, bookingFormState } from "../../stores/atoms";
+import moment from "moment";
 
 
 interface PaymentProps {
     setLoading: Function;
-  }
-  
-  
+}
+
+
 const Payment: FunctionComponent<PaymentProps> = ({ setLoading }) => {
     const bookingForm = useRecoilValue(bookingFormSelector)
     const selectedCar = useRecoilValue(selectedCarSelector)
@@ -77,7 +78,7 @@ const Payment: FunctionComponent<PaymentProps> = ({ setLoading }) => {
         }).catch(() => nvigation('/booking-failed'))
     }
     return (
-        <PayPalScriptProvider  options={{ clientId: "AZ14k0vPCKHE5Ho2Rnprj0BM5ap081VPvnA5AAK880mlnmFPYpeh3y37GFxtfAbgSeQWJpF9WGdArvMB", components: "buttons", currency: "GBP", intent: "capture", }}>
+        <PayPalScriptProvider options={{ clientId: "AZ14k0vPCKHE5Ho2Rnprj0BM5ap081VPvnA5AAK880mlnmFPYpeh3y37GFxtfAbgSeQWJpF9WGdArvMB", components: "buttons", currency: "GBP", intent: "capture", }}>
             <div className={styles.payment}>
                 <section className={styles.frameParent}>
                     <div className={styles.paymentParent}>
@@ -99,36 +100,81 @@ const Payment: FunctionComponent<PaymentProps> = ({ setLoading }) => {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.frameGroup}>
-                        <div className={styles.bookingSummaryWrapper}>
-                            <h1 className={styles.bookingSummary}>Booking Summary</h1>
-                        </div>
-                        <div className={styles.rectangleGroup}>
-                            <div className={styles.frameInner} />
-                            <div className={styles.frameDiv}>
-                                <div className={styles.frameParent1}>
-                                    <div className={styles.frameParent2}>
-                                        <div className={styles.detail01Wrapper}>
-                                            <div className={styles.detail01}>Detail 01</div>
+                    <div style={{ display: 'flex', flexDirection: "column" }}>
+                        <div className={styles.frameGroup}>
+                            <div className={styles.bookingSummaryWrapper}>
+                                <h1 className={styles.bookingSummary}>Booking Summary</h1>
+                            </div>
+                            <div className={styles.rectangleGroup}>
+                                <div className={styles.frameInner} />
+                                <div className={styles.frameDiv}>
+                                    <div className={styles.frameParent1}>
+                                        <div className={styles.frameParent2}>
+                                            {selectedCar.name && <div className={styles.totalTax}>Provider</div>}
+                                            <div className={styles.insurance}>Date</div>
+                                            <div className={styles.insurance}>Time</div>
+                                            <div className={styles.insurance}>Desired Vehicle</div>
+                                            <div className={styles.insurance}>Pickup Address</div>
+                                            <div className={styles.insurance}>Drop-off Address</div>
+                                            <div className={styles.insurance}>Price</div>
+                                            <div className={styles.insurance}>Persons</div>
+                                            <div className={styles.insurance}>Luggage</div>
+                                            <div className={styles.insurance}>Main Passenger Name</div>
+                                            <div className={styles.insurance}>Phone Number</div>
+                                            {bookingForm.flight_number && <div className={styles.insurance}>Flight</div>}
+                                            {bookingForm.instruction && <div className={styles.insurance}>Notes</div>}
                                         </div>
-                                        <div className={styles.totalTax}>Total Tax</div>
-                                        <div className={styles.insurance}>Insurance</div>
-                                    </div>
-                                    <div className={styles.frameParent3}>
-                                        <div className={styles.wrapper}>
-                                            <div className={styles.div}>£{selectedCar.vehiclePrice}</div>
-                                        </div>
-                                        <div className={styles.div1}>£0</div>
-                                        <div className={styles.container}>
-                                            <div className={styles.div2}>£0</div>
+                                        <div className={styles.frameParent3}>
+                                            {selectedCar.name && <div className={styles.div1}>{selectedCar.name}</div>}
+                                            <div className={styles.div1}> {moment(bookingForm.myDate).format('DD/MM/YYYY')}</div>
+                                            <div className={styles.div1}>{bookingForm.myTime}</div>
+                                            <div className={styles.div1}>{selectedCar.vehicleTypeName}</div>
+                                            <div className={styles.div1}>{bookingForm.pickup}</div>
+                                            <div className={styles.div1}>{bookingForm.dropoff}</div>
+                                            <div className={styles.div1}>£{selectedCar.vehiclePrice}</div>
+                                            <div className={styles.div1}>{selectedCar.car_seats}</div>
+                                            <div className={styles.div1}>{selectedCar.luggage_count}</div>
+                                            <div className={styles.div1}>{selectedCar.name}</div>
+                                            <div className={styles.div1}>{selectedCar.contact_number}</div>
+                                            {bookingForm.flight_number && <div className={styles.div1}>{selectedCar.flight_number}</div>}
+                                            {bookingForm.instruction && <div className={styles.div1}>{selectedCar.instruction}</div>}
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
-                            <div className={styles.rectangleContainer}>
-                                <div className={styles.rectangleDiv} />
-                                <div className={styles.grandTotal}>Grand Total</div>
-                                <div className={styles.div3}>£{selectedCar.vehiclePrice}</div>
+                        </div>
+                        <div className={styles.frameGroup}>
+                            <div className={styles.bookingSummaryWrapper}>
+                                <h1 className={styles.bookingSummary}>Payment Summary</h1>
+                            </div>
+                            <div className={styles.rectangleGroup}>
+                                <div className={styles.frameInner} />
+                                <div className={styles.frameDiv}>
+                                    <div className={styles.frameParent1}>
+                                        <div className={styles.frameParent2}>
+                                            <div className={styles.detail01Wrapper}>
+                                                <div className={styles.detail01}>Detail 01</div>
+                                            </div>
+                                            <div className={styles.totalTax}>Total Tax</div>
+                                            <div className={styles.insurance}>Insurance</div>
+                                        </div>
+                                        <div className={styles.frameParent3}>
+                                            <div className={styles.wrapper}>
+                                                <div className={styles.div}>£{selectedCar.vehiclePrice}</div>
+                                            </div>
+                                            <div className={styles.div1}>£0</div>
+                                            <div className={styles.container}>
+                                                <div className={styles.div2}>£0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={styles.rectangleContainer}>
+                                    <div className={styles.rectangleDiv} />
+                                    <div className={styles.grandTotal}>Grand Total</div>
+                                    <div className={styles.div3}>£{selectedCar.vehiclePrice}</div>
+                                </div>
                             </div>
                         </div>
                     </div>

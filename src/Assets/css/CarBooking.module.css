@@ -224,8 +224,8 @@
 
 .vehicleRating {
     flex-direction: row;
-    font-size: var(--font-size-xs);
-    color: var(--color-black);
+    font-size: var(--font-poppins);
+    color: var(--color-purple-100)
 }
 
 .vehicleType {

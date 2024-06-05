@@ -17,7 +17,7 @@ const LandingPage: FunctionComponent = () => {
       <Header setLoading={setLoading} />
       <HowItWork />
       <WhyChooseUs />
-      <PopularRentalCars />
+      {/* <PopularRentalCars /> */}
       {/* <WhatPeopleSay /> */}
       <DownloadApp />
     </div>

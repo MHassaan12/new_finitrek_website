@@ -12,36 +12,36 @@ const HowItWork: FunctionComponent = () => {
               <div className={styles.howItWork1}>HOW IT WORK</div>
             </div>
             <h1 className={styles.rentWithFollowing}>
-              Rent with following 3 working steps
+              Book you taxi in 3 simple steps
             </h1>
           </div>
           <div className={styles.instanceParent}>
             <FrameComponent
-              vuesaxboldlocationTick="/vuesaxboldlocationtick.svg"
-              bookYourCar="Choose location"
+              vuesaxboldlocationTick="/vuesaxboldcalendar.svg"
+              bookYourCar="Enter you journey details"
               chooseYourAndFind="Choose your and find"
               yourBestCar="your best car"
             />
             <FrameComponent
-              vuesaxboldlocationTick="/vuesaxboldcalendar.svg"
-              bookYourCar="Pick-up date"
+              vuesaxboldlocationTick="/vuesaxboldlocationtick.svg"
+              bookYourCar="Choose your suitable provider and car"
               chooseYourAndFind="Select your pick up date and"
               yourBestCar="time to book your car"
             />
             <FrameComponent
               vuesaxboldlocationTick="/vuesaxboldcar.svg"
-              bookYourCar="Book your car"
+              bookYourCar="Pay for the journey and all set!"
               chooseYourAndFind="Book your car and we will deliver"
               yourBestCar="it directly to you"
             />
           </div>
         </div>
-        <img
+        {/* <img
           className={styles.images1Icon}
           loading="lazy"
           alt=""
           src="/images-1@2x.png"
-        />
+        /> */}
       </div>
     </section>
   );

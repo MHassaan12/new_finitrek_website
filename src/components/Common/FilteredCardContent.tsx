@@ -36,6 +36,7 @@ const FilteredCardContent: FunctionComponent<FilteredCardContentType> = ({
     naviagate('/car-booking')
     setLoading(false)
   }
+  console.log('DDDDDDDDDDDDDDDDDDDDD', data)
 
   return (
     <div
@@ -55,9 +56,10 @@ const FilteredCardContent: FunctionComponent<FilteredCardContentType> = ({
         <div className={styles.filteredCarInfoArea}>
           <div className={styles.filteredCarNameArea}>
             <div className={styles.saloonCarParent}>
-              <div className={styles.saloonCar}>{data.brand_name}</div>
+              <div className={styles.saloonCar}>{data.vehicleTypeName}</div>
               <div className={styles.filteredRatingArea}>
-                <img
+              £{data.vehiclePrice}
+                {/* <img
                   className={styles.filteredStarIcon}
                   alt=""
                   src="/rating-stars.svg"
@@ -70,7 +72,7 @@ const FilteredCardContent: FunctionComponent<FilteredCardContentType> = ({
                     <span>{` `}</span>
                     <span>(2.436 reviews)</span>
                   </span>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className={styles.filteredCarSpecsArea}>
@@ -89,27 +91,27 @@ const FilteredCardContent: FunctionComponent<FilteredCardContentType> = ({
                     className={styles.frameIcon}
                     loading="lazy"
                     alt=""
-                    src="/frame-1.svg"
+                    src="/briefcase.svg"
                   />
-                  <div className={styles.auto}>Auto</div>
+                  <div className={styles.auto}>{data.luggage_count} Luggage</div>
                 </div>
               </div>
               <div className={styles.filteredAcSpecArea}>
                 <div className={styles.filteredAcIconParent}>
-                  <img
+                  {/* <img
                     className={styles.filteredAcIcon}
                     alt=""
                     src="/frame-2.svg"
-                  />
-                  <div className={styles.airConditioning}>Air Conditioning</div>
+                  /> */}
+                  <div className={styles.airConditioning}>Vendor Name</div>
                 </div>
                 <div className={styles.filteredDoorSpecArea}>
-                  <img
+                  {/* <img
                     className={styles.frameIcon1}
                     alt=""
                     src="/frame-3.svg"
-                  />
-                  <div className={styles.doors}>4 Doors</div>
+                  /> */}
+                  <div className={styles.doors}>{data.name || ''}</div>
                 </div>
               </div>
             </div>

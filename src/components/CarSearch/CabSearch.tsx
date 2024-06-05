@@ -26,7 +26,7 @@ const CabSearch: FunctionComponent = () => {
       const { data } = await post(`/api/price?${params}`, {});
       if (data.cars.length > 0) {
         setBookingCars(data.cars);
-      }else{
+      } else {
         setBookingCars([])
       }
       console.log("FFFFFFFFFFFFFFFFFFFFFFFFF", data);
@@ -168,14 +168,8 @@ const CabSearch: FunctionComponent = () => {
           <div className={styles.luggageWrapper}>
             <select className={styles.luggage} onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))}>
               <option value="">Luggage</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
+              <option value="suitcase">Suitcase (Approx 78x50x32 cm) </option>
+              <option value="hand">Hand Luggage</option>
             </select>
             {/* <input
               className={styles.luggage}

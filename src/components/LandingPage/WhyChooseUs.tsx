@@ -5,18 +5,18 @@ import styles from "../../Assets/css/WhyChooseUs.module.css";
 const WhyChooseUs: FunctionComponent = () => {
   return (
     <section className={styles.whyChooseUs}>
-    
-    <div className={styles.frameParent}>
-      <div className={styles.frameGroup}>
-        <div className={styles.whyChooseUsWrapper}>
-          <div className={styles.whyChooseUs1}>WHY CHOOSE US</div>
+
+      <div className={styles.frameParent}>
+        <div className={styles.frameGroup}>
+          <div className={styles.whyChooseUsWrapper}>
+            <div className={styles.whyChooseUs1}>Why choose Finitrek</div>
+          </div>
+          <h1 className={styles.weOfferThe}>
+            We offer the best experience with our drive
+          </h1>
         </div>
-        <h1 className={styles.weOfferThe}>
-          We offer the best experience with our rental deals
-        </h1>
-      </div>
-      <div className={styles.bestPriceParent}>
-        <div className={styles.bestPrice}>
+        <div className={styles.bestPriceParent}>
+          {/* <div className={styles.bestPrice}>
           <div className={styles.iconCarParent}>
             <div className={styles.iconCar}>
               <img
@@ -47,38 +47,74 @@ const WhyChooseUs: FunctionComponent = () => {
               <p className={styles.ofTheDifference}>of the difference.</p>
             </div>
           </div>
+        </div> */}
+          <Experience
+            vuesaxbolduserTick="/vuesaxboldwallet.svg"
+            experienceDriver="Save Money"
+            dontHaveDriverDontWorryWe="By comparing multiple providers, you can"
+            experiencedDriverForYou="find the most cost-effective option for your journey."
+          />
+          <Experience
+            vuesaxbolduserTick="/vuesaxboldusertick.svg"
+            experienceDriver="Save Time"
+            dontHaveDriverDontWorryWe="Our quick and easy comparison tool saves"
+            experiencedDriverForYou="you the hassle of checking multiple websites."
+          />
+          <Experience
+            vuesaxbolduserTick="/vuesaxboldusertick.svg"
+            experienceDriver="Book with Confidence"
+            dontHaveDriverDontWorryWe="With real customer reviews and ratings, "
+            experiencedDriverForYou="you can trust that you're making the best choice."
+          />
+          <Experience
+            vuesaxbolduserTick="/vuesaxbold24support.svg"
+            experienceDriver="Wide Selection"
+            dontHaveDriverDontWorryWe="Access a vast network of taxi providers, offering a variety "
+            experiencedDriverForYou="of vehicle types and services to suit all your travel needs."
+          />
+          <Experience
+            vuesaxbolduserTick="/vuesaxbold24support.svg"
+            experienceDriver="Reliable Service"
+            dontHaveDriverDontWorryWe="Our platform partners only with reputable taxi companies, "
+            experiencedDriverForYou="ensuring you receive a reliable and professional service every time."
+          />
+          <Experience
+            vuesaxbolduserTick="/vuesaxbold24support.svg"
+            experienceDriver="Transparent Pricing"
+            dontHaveDriverDontWorryWe="No hidden fees or surprises."
+            experiencedDriverForYou="See the full cost upfront before you book."
+          />
+          <Experience
+            vuesaxbolduserTick="/vuesaxboldmessages2.svg"
+            experienceDriver="24/7 Support"
+            dontHaveDriverDontWorryWe="Need assistance? Our customer support team is"
+            experiencedDriverForYou=" available around the clock to help with any queries or issues."
+          />
+          <Experience
+            vuesaxbolduserTick="/vuesaxboldmessages2.svg"
+            experienceDriver="Convenient Booking"
+            dontHaveDriverDontWorryWe="Book your ride in advance or on-demand with just a few clicks,"
+            experiencedDriverForYou="all from the comfort of your home or on the go."
+          />
+          <Experience
+            vuesaxbolduserTick="/vuesaxboldmessages2.svg"
+            experienceDriver="Eco-Friendly Options"
+            dontHaveDriverDontWorryWe="Choose from a range of eco-friendly vehicles to reduce"
+            experiencedDriverForYou="your carbon footprint and travel sustainably."
+          />
         </div>
-        <Experience
-          vuesaxbolduserTick="/vuesaxboldusertick.svg"
-          experienceDriver="Experience driver"
-          dontHaveDriverDontWorryWe="Don’t have driver? Don’t worry, we have many"
-          experiencedDriverForYou="experienced driver for you."
-        />
-        <Experience
-          vuesaxbolduserTick="/vuesaxbold24support.svg"
-          experienceDriver="24 hour car delivery"
-          dontHaveDriverDontWorryWe="Book your car anytime and we will deliver it"
-          experiencedDriverForYou="directly to you."
-        />
-        <Experience
-          vuesaxbolduserTick="/vuesaxboldmessages2.svg"
-          experienceDriver="24/7 technical support"
-          dontHaveDriverDontWorryWe="Have a question? Contact Rentcars support"
-          experiencedDriverForYou="any time when you have problem."
+      </div>
+      <div className={styles.vectorParent}>
+        <img className={styles.vectorIcon} alt="" src="/vector-13.svg" />
+        <img
+          className={styles.audi1Icon}
+          loading="lazy"
+          alt=""
+          src="/audi-1@2x.png"
         />
       </div>
-    </div>
-    <div className={styles.vectorParent}>
-      <img className={styles.vectorIcon} alt="" src="/vector-13.svg" />
-      <img
-        className={styles.audi1Icon}
-        loading="lazy"
-        alt=""
-        src="/audi-1@2x.png"
-      />
-    </div>
-  </section>
-);
+    </section>
+  );
 };
 
 

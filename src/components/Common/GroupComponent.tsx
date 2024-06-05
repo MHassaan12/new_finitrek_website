@@ -106,12 +106,12 @@ const GroupComponent: FunctionComponent<GroupComponentType> = ({
                     <img
                       className={styles.transmissionIcon}
                       alt=""
-                      src="/frame-1.svg"
+                      src="/briefcase.svg"
                     />
-                    <div className={styles.auto}>Auto</div>
+                    <div className={styles.auto}>2 luggage</div>
                   </div>
                 </div>
-                <div className={styles.airConditioningWrapper}>
+                {/* <div className={styles.airConditioningWrapper}>
                   <div className={styles.airConditioningIconParent}>
                     <img
                       className={styles.airConditioningIcon}
@@ -130,7 +130,7 @@ const GroupComponent: FunctionComponent<GroupComponentType> = ({
                     />
                     <div className={styles.doors}>{doors}</div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className={styles.frameChild} />

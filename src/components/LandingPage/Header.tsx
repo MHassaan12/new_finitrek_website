@@ -40,10 +40,10 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
       setErrors((prev) => ({ ...prev, oneWay: 'Date and Time is required!' }))
       return
     }
-    if (!bookingForm.hiddenmyDate || !bookingForm.retmyTime) {
-      setErrors((prev) => ({ ...prev, return: 'Date and Time is required!' }))
-      return
-    }
+    // if (!bookingForm.hiddenmyDate || !bookingForm.retmyTime) {
+    //   setErrors((prev) => ({ ...prev, return: 'Date and Time is required!' }))
+    //   return
+    // }
     if (!bookingForm.passengers || (bookingForm.passengers == 0)) {
       setErrors((prev) => ({ ...prev, passenger: 'Passenger is required!' }))
       return
@@ -83,8 +83,8 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
 
           <div className={styles.findBookAndRentACarEasiWrapper}>
             <h1 className={styles.findBookAndContainer}>
-              <span>Find, book and rent a car</span>
-              <span className={styles.easily}> Easily</span>
+              <span>Ride Smart, Pay Less Compare and Book with</span>
+              <span className={styles.easily}> Finitrek</span>
             </h1>
             <form className={styles.rectangleParent}>
               <div className={styles.frameChild} />
@@ -244,14 +244,8 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
                 <div className={styles.luggageCount}>
                   <select className={styles.luggage} onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))}>
                     <option value="">Luggage</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
+                    <option value="suitcase">Suitcase (Approx 78x50x32 cm) </option>
+                    <option value="hand">Hand Luggage</option>
                   </select>
                   {/* <input className={styles.luggage} type="number" min="16" max="1" placeholder="Luggage" onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))} /> */}
                 </div>
@@ -260,11 +254,11 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
                 <div className={styles.bookNow} onClick={handleSubmit}>Book Now</div>
               </button>
             </form>
-            <img
+            {/* <img
               className={styles.formLayoutChild}
               alt=""
               src="/easily-line.svg"
-            />
+            /> */}
           </div>
         </div>
 
