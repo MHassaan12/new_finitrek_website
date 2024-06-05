@@ -25,7 +25,7 @@ const PrivecyPolicy = () => {
 
   return (
     <div className={styles.page}>
-      <Breadcrum title="Privecy policy" />
+      <Breadcrum title="Privecy Policy" />
       <div className={styles.main}>
         {data.map((item: any) => (
           <div className={styles.popular}>
