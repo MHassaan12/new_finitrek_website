@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import styles from "../../Assets/css/Footer.module.css";
+import { Link } from "react-router-dom";
 
 const Footer: FunctionComponent = () => {
   return (
@@ -70,7 +71,7 @@ const Footer: FunctionComponent = () => {
             <div className={styles.resources}>Resources</div>
             <div className={styles.resourcesLinks}>
               <a href="#" className={styles.download}>Download</a>
-              <a href="#" className={styles.helpCentre}>Help Centre</a>
+              <Link to="/help" className={styles.helpCentre}>Help Centre</Link>
               <a href="#" className={styles.guides}>Guides</a>
               <a href="#" className={styles.partnerNetwork}>Partner Network</a>
               <a href="#" className={styles.cruises}>Cruises</a>

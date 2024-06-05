@@ -38,10 +38,14 @@ const Navbar: FunctionComponent = () => {
                     </Link>
                 </li>
                 <li>
+                    <a href='https://admin.finitrek.com/admin'>
                     Operator Signup
+                    </a> 
                 </li>
                 <li>
+                    <Link to="/help">
                     Help?
+                    </Link>
                 </li>
             </ul>
             {isDropdownVisible && <div className={`${styles.megamenu__content} `} onMouseEnter={handleMouseEnter}

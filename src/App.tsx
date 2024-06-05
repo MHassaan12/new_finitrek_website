@@ -16,6 +16,7 @@ import BusinessAccountPage from "./pages/BusinessAccount";
 import BusinessRegisterPage from "./pages/BusinessRegister";
 import PaymentSuccessPage from "./pages/PaymentSuccess";
 import PaymentFailPage from "./pages/PaymentFail";
+import HelpPage from "./pages/Help";
 
 function App() {
   const action = useNavigationType();
@@ -66,6 +67,7 @@ function App() {
         <Route path="/business-account" element={<BusinessAccountPage />} />
         <Route path="/booking-success" element={<PaymentSuccessPage />} />
         <Route path="/booking-failed" element={<PaymentFailPage />} />
+        <Route path="/help" element={<HelpPage />} />
       </Route>
     </Routes>
   );

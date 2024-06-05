@@ -1,0 +1,19 @@
+.page {
+    padding: var(--padding-21xl) var(--padding-131xl) var(--padding-44xl);
+    margin-bottom: 10px;
+
+}
+
+.main {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: var(--font-poppins);
+}
+
+h2 {
+    color: var(--color-purple-100);
+}
