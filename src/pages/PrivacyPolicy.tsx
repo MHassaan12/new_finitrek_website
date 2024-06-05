@@ -6,14 +6,15 @@ import Loader from "../components/Common/Loader";
 
 const PrivecyPolicy = () => {
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
-    get("/faq")
+    get("/privacy-policy")
       .then((result) => {
-        setData(result.data.faqs);
+        console.log('FFFFFFFFFFFFFFFFFFFFFFFFF', result)
+        setData(result.data.pageInfo);
         setLoading(false);
       })
       .catch((error) => {
@@ -27,14 +28,14 @@ const PrivecyPolicy = () => {
     <div className={styles.page}>
       <Breadcrum title="Privecy policy" />
       <div className={styles.main}>
-        {data.map((item: any) => (
-          <div className={styles.popular}>
+      {data?.content && <div className={styles.popular} dangerouslySetInnerHTML={{ __html: data.content }} />}
+          {/* <div className={styles.popular}>
             <h2>{item.question}</h2>
             <div className={styles.content}>
               <p>{item.answer}</p>
             </div>
-          </div>
-        ))}
+          </div> */}
+   
       </div>
     </div>
   );

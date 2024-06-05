@@ -11,8 +11,8 @@ const TermConditions = () => {
 
     useEffect(() => {
         setLoading(true)
-        get('/faq').then((result) => {
-            setData(result.data.faqs)
+        get('/terms-&-condition').then((result) => {
+            setData(result.data.pageInfo)
             setLoading(false)
         }).catch((error) => {
             setLoading(false)
@@ -26,7 +26,8 @@ const TermConditions = () => {
         <div className={styles.page}>
             <Breadcrum title="Term and Conditions" />
             <div className={styles.main}>
-                {
+                {data?.content && <div className={styles.popular} dangerouslySetInnerHTML={{ __html: data.content }} />}
+                {/* {
                     data.map((item: any) => (
 
                         <div className={styles.popular}>
@@ -39,7 +40,7 @@ const TermConditions = () => {
                             </div>
                         </div>
                     ))
-                }
+                } */}
             </div>
         </div>
     );
