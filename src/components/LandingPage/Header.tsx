@@ -17,7 +17,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
   const [bookingForm, setBookingForm] = useRecoilState(bookingFormState);
   const [bookingCars, setBookingCars] = useRecoilState(bookingCarsState);
   const resetBookingForm = useResetRecoilState(bookingFormState)
-  const [via, setVia] = useState([])
+  const [via, setVia] = useState<any>([])
   const [errors, setErrors] = useState({
     pickup: '',
     drop: '',
@@ -77,13 +77,13 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
     }
   }
 
-  const handleVia = (type) => {
+  const handleVia = (type: string) => {
     if (type == 'add') {
       if (via.length < 3) {
-        setVia((prev) => [...prev, { [`via${prev.length + 1}`]: '' }])
+        setVia((prev: any) => [...prev, { [`via${prev.length + 1}`]: '' }])
       }
     } else {
-      setVia((prev) => prev.slice(0, -1));
+      setVia((prev:any) => prev.slice(0, -1));
     }
   }
 
@@ -159,7 +159,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
                     </div>
                   </div>
                   {
-                    via.map((_, i) => (
+                    via.map((_: any, i: number) => (
                       <div className={styles.viaDiv}>
                         <div style={{ margin: "0px 12px" }}>
                           <ReactGoogleAutocomplete

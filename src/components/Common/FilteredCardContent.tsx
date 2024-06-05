@@ -37,10 +37,10 @@ const FilteredCardContent: FunctionComponent<FilteredCardContentType> = ({
     setLoading(false)
   }
 
-  function getRandomInt(min, max) {
+  function getRandomInt(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  function getRandomRating(min, max) {
+  function getRandomRating(min: number, max: number) {
     return (Math.random() * (max - min) + min).toFixed(1);
 }
   return (

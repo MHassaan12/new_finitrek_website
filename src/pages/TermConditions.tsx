@@ -5,7 +5,7 @@ import { get } from "../utils/api";
 import Loader from "../components/Common/Loader";
 
 const TermConditions = () => {
-    const [data, setData] = useState([])
+    const [data, setData] = useState<any>([])
     const [loading, setLoading] = useState(false)
 
 

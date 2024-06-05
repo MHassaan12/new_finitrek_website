@@ -12,18 +12,18 @@ import TimePicker from "../Common/TimePicker";
 const CabSearch: FunctionComponent = () => {
   const [bookingForm, setBookingForm] = useRecoilState(bookingFormState);
   const [bookingCars, setBookingCars] = useRecoilState(bookingCarsState);
-  const [via, setVia] = useState([])
+  const [via, setVia] = useState<any>([])
 
   useEffect(() => {
 
     if (bookingForm.via1) {
-      setVia((prev) => [...prev, { via1: bookingForm.via1 }])
+      setVia((prev: any) => [...prev, { via1: bookingForm.via1 }])
     }
     if (bookingForm.via2) {
-      setVia((prev) => [...prev, { via2: bookingForm.via2 }])
+      setVia((prev: any) => [...prev, { via2: bookingForm.via2 }])
     }
     if (bookingForm.via3) {
-      setVia((prev) => [...prev, { via3: bookingForm.via3 }])
+      setVia((prev:any) => [...prev, { via3: bookingForm.via3 }])
     }
 
   }, [])
@@ -50,13 +50,13 @@ const CabSearch: FunctionComponent = () => {
     }
   };
 
-  const handleVia = (type) => {
+  const handleVia = (type: string) => {
     if (type == 'add') {
       if (via.length < 3) {
-        setVia((prev) => [...prev, { [`via${prev.length + 1}`]: '' }])
+        setVia((prev: any) => [...prev, { [`via${prev.length + 1}`]: '' }])
       }
     } else {
-      setVia((prev) => prev.slice(0, -1));
+      setVia((prev: any) => prev.slice(0, -1));
     }
   }
 
@@ -122,7 +122,7 @@ const CabSearch: FunctionComponent = () => {
               </div>
             </div>
             {
-              via.map((item, i) => (
+              via.map((item: any, i: number) => (
                 <div className={styles.viaDiv}>
                   <div style={{ margin: "0px 12px" }}>
                     <ReactGoogleAutocomplete

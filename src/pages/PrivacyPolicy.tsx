@@ -6,7 +6,7 @@ import Loader from "../components/Common/Loader";
 
 const PrivecyPolicy = () => {
 
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
