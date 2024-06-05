@@ -15,7 +15,6 @@
   border-top: 1px solid var(--color-silver-100);
   box-sizing: border-box;
   z-index: 1;
-
 }
 
 .lineWrapper {
@@ -115,7 +114,6 @@
 
 .email1,
 .examplegmailcom {
-
   /* position: relative; */
   font-family: var(--font-poppins);
   color: var(--black);
@@ -123,7 +121,6 @@
   /* z-index: 1; */
   background-color: rgb(228, 201, 227);
   text-decoration: none;
-
 }
 
 .email1 {
@@ -133,7 +130,6 @@
   /* line-height: 135.5%; */
   display: inline-block;
   min-width: 33px;
-
 }
 
 .examplegmailcom {
@@ -144,7 +140,6 @@
   white-space: nowrap;
   padding: 0px 30px;
   border-radius: 8px;
-
 }
 
 .emailField {
@@ -161,7 +156,7 @@
   margin-bottom: 20px;
   padding: 6px 12px;
 }
-.input{
+.input {
   display: flex;
   flex-direction: column;
 }
@@ -171,7 +166,6 @@
   border-radius: var(--br-5xs);
   background-color: var(--color-thistle);
   max-width: 100%;
-
 }
 
 .email {
@@ -226,7 +220,6 @@
   display: inline-block;
   /* min-width: 58px; */
   /* z-index: 1; */
-
 }
 
 .empty {
@@ -237,8 +230,6 @@
   /* line-height: 22px; */
   min-width: 95px;
   padding: 8px 30px;
-
-
 }
 
 .frameGroup,
@@ -246,7 +237,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .passwordField {
@@ -305,19 +295,18 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-mini) var(--padding-2xl) var(--padding-xs) var(--padding-7xl);
+  padding: var(--padding-mini) var(--padding-2xl) var(--padding-xs)
+    var(--padding-7xl);
   box-sizing: border-box;
   /* z-index: 1; */
 }
 
 .inputFields {
-
   flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-
 }
 
 .check {
@@ -330,9 +319,9 @@
   box-sizing: border-box;
   z-index: 1;
 }
-.check:checked{
+.check:checked {
   background: rgba(230, 187, 229, 1);
-  color: red; 
+  color: red;
 }
 
 .checkbox {
@@ -344,7 +333,6 @@
 }
 
 .rememberMe1 {
-
   position: relative;
   font-size: var(--font-size-base);
   line-height: 22px;
@@ -357,7 +345,6 @@
 }
 
 .rememberBox {
-
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -377,7 +364,6 @@
 
 .optionsArea,
 .rememberMe {
-
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -391,7 +377,6 @@
 }
 
 .optionsArea {
-
   align-self: stretch;
 
   /* justify-content: space-between; */
@@ -400,7 +385,6 @@
 }
 
 .buttonChild {
-
   height: 77px;
   width: 671px;
   position: relative;
@@ -411,7 +395,6 @@
 }
 
 .login {
-
   /* position: relative; */
   font-size: var(--font-size-base);
   /* line-height: 22px; */
@@ -457,7 +440,6 @@
   flex-direction: column;
   justify-content: center;
   gap: var(--gap-5xl);
-  
 }
 
 .loginOptions {
@@ -469,7 +451,11 @@
   font-size: 12px;
   padding: 0px 30px;
   color: red;
-
+}
+@media screen and (max-width: 375px) {
+  .examplegmailcom {
+    padding: 0px 12px;
+  }
 }
 
 /* @media screen and (max-width: 700px) {

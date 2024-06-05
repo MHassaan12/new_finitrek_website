@@ -126,7 +126,7 @@
 @media screen and (max-width: 950px) {
     .welcomeToFinitrekContainer {
         font-size: var(--font-size-10xl);
-        line-height: 50px;
+        /* line-height: 50px; */
     }
 
     .bgParent {
@@ -148,7 +148,7 @@
 @media screen and (max-width: 450px) {
     .welcomeToFinitrekContainer {
         font-size: var(--font-size-3xl);
-        line-height: 37px;
+        /* line-height: 37px; */
     }
 
     .bgParent {

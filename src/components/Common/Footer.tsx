@@ -72,10 +72,9 @@ const Footer: FunctionComponent = () => {
             <div className={styles.resourcesLinks}>
               <a href="#" className={styles.download}>Download</a>
               <Link to="/help" className={styles.helpCentre}>Help Centre</Link>
-              <a href="#" className={styles.guides}>Guides</a>
-              <a href="#" className={styles.partnerNetwork}>Partner Network</a>
-              <a href="#" className={styles.cruises}>Cruises</a>
-              <a href="#" className={styles.developer}>Developer</a>
+              <Link to="/privacy" className={styles.guides}>privacy policy</Link>
+              <Link to="/terms" className={styles.partnerNetwork}>term and conditions</Link>
+            
             </div>
           </div>
           <div className={styles.footerNavColumns1}>

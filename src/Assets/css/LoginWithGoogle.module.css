@@ -52,9 +52,10 @@
     color: var(--black);
     font-family: var(--font-poppins);
   }
-  /* @media screen and (max-width: 450px) {
-    .loginWithGoogle {
-      flex-wrap: wrap;
+  @media screen  and (max-width : 768px){
+    .loginWithGoogle{
+      width: 90%;
     }
-  } */
+
+  }
   
