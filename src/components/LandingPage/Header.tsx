@@ -17,6 +17,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
   const [bookingForm, setBookingForm] = useRecoilState(bookingFormState);
   const [bookingCars, setBookingCars] = useRecoilState(bookingCarsState);
   const resetBookingForm = useResetRecoilState(bookingFormState)
+  const [via, setVia] = useState([])
   const [errors, setErrors] = useState({
     pickup: '',
     drop: '',
@@ -57,6 +58,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
           params.set(key, element)
         }
       }
+
       const { data } = await post(`/api/price?${params}`, {})
       if (data?.cars?.length > 0) {
         setBookingCars(data.cars)
@@ -72,6 +74,16 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
       setLoading(false)
       console.log('FFFFFFFFFFFFFFFFFFFFFFFF EEEErrrrrF', error)
 
+    }
+  }
+
+  const handleVia = (type) => {
+    if (type == 'add') {
+      if (via.length < 3) {
+        setVia((prev) => [...prev, { [`via${prev.length + 1}`]: '' }])
+      }
+    } else {
+      setVia((prev) => prev.slice(0, -1));
     }
   }
 
@@ -129,13 +141,13 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
                 <div className={styles.locationIcon}>
                   <div className={styles.viaDropdown}>
                     <div className={styles.iconLayout}>
-                      <img
-                        className={styles.vuesaxboldlocationAddIcon}
-                        loading="lazy"
-                        alt=""
-                        src="/vuesaxboldlocationadd.svg"
-                      />
-                      <div className={styles.viaWrapper}>
+                      <div className={styles.viaWrapper} onClick={() => handleVia('add')}>
+                        <img
+                          className={styles.vuesaxboldlocationAddIcon}
+                          loading="lazy"
+                          alt=""
+                          src="/vuesaxboldlocationadd.svg"
+                        />
                         <div className={styles.via}>Via</div>
                       </div>
                       <img
@@ -146,6 +158,53 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
                       />
                     </div>
                   </div>
+                  {
+                    via.map((_, i) => (
+                      <div className={styles.viaDiv}>
+                        <div style={{ margin: "0px 12px" }}>
+                          <ReactGoogleAutocomplete
+                            apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
+                            onPlaceSelected={(place) => {
+                              if (place?.formatted_address) {
+                                setBookingForm((prev: any) => ({ ...prev, [`via${i + 1}`]: place.formatted_address }))
+                              }
+                            }}
+                            options={{
+                              types: [
+                                'address',
+                                // '(regions)',
+                                // '(cities)',
+                                // '(countries)',
+                                // '(streets)',
+                                // '(routes)',
+                                // '(airports)',
+                                // '(postal_code)',
+                              ],// You can customize this array
+                              componentRestrictions: { country: 'uk' },
+                              fields: ['formatted_address', 'geometry', 'name'],
+                              bounds: {
+                                north: 55.0,
+                                south: 50.0,
+                                east: 1.5,
+                                west: -3.0
+                              },
+                              strictBounds: false
+                            }}
+
+                            className={styles.inputBox}
+                          />
+                        </div>
+                        <div onClick={() => handleVia('subtract')}>
+                          <img
+                            className={styles.vuesaxboldarrangeSquare2Icon}
+                            loading="lazy"
+                            alt=""
+                            src="/shield-cross.svg"
+                          />
+                        </div>
+                      </div>
+                    ))
+                  }
                   <ReactGoogleAutocomplete
                     apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
                     onPlaceSelected={(place) => {
@@ -281,7 +340,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
           </div>
 
         </div> */}
-      </div>
+      </div >
       <div className={styles.formContentIcon}>
         <img
           className={styles.bgframe}
@@ -291,7 +350,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
         <img className={styles.car21} alt="" src="/car-2-1@2x.png" />
 
       </div>
-    </section>
+    </section >
   );
 };
 

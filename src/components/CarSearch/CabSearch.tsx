@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
 import DateArea from "./DateArea";
 import FilteredCardContent from "../Common/FilteredCardContent";
 import styles from "../../Assets/css/CabSearch.module.css";
@@ -12,6 +12,21 @@ import TimePicker from "../Common/TimePicker";
 const CabSearch: FunctionComponent = () => {
   const [bookingForm, setBookingForm] = useRecoilState(bookingFormState);
   const [bookingCars, setBookingCars] = useRecoilState(bookingCarsState);
+  const [via, setVia] = useState([])
+
+  useEffect(() => {
+
+    if (bookingForm.via1) {
+      setVia((prev) => [...prev, { via1: bookingForm.via1 }])
+    }
+    if (bookingForm.via2) {
+      setVia((prev) => [...prev, { via2: bookingForm.via2 }])
+    }
+    if (bookingForm.via3) {
+      setVia((prev) => [...prev, { via3: bookingForm.via3 }])
+    }
+
+  }, [])
 
   const handleSubmit = async (e: any) => {
     e.preventDefault()
@@ -34,6 +49,17 @@ const CabSearch: FunctionComponent = () => {
       console.log("FFFFFFFFFFFFFFFFFFFFFFFF EEEErrrrrF", error);
     }
   };
+
+  const handleVia = (type) => {
+    if (type == 'add') {
+      if (via.length < 3) {
+        setVia((prev) => [...prev, { [`via${prev.length + 1}`]: '' }])
+      }
+    } else {
+      setVia((prev) => prev.slice(0, -1));
+    }
+  }
+
   return (
     <form className={styles.rectangleParent}>
       <div className={styles.frameChild} />
@@ -78,13 +104,13 @@ const CabSearch: FunctionComponent = () => {
           <div className={styles.dropoffArea}>
             <div className={styles.dropoffLocationOptionsWrapper}>
               <div className={styles.dropoffLocationOptions}>
-                <img
-                  className={styles.vuesaxboldlocationAddIcon}
-                  loading="lazy"
-                  alt=""
-                  src="/vuesaxboldlocationadd.svg"
-                />
-                <div className={styles.viaWrapper}>
+                <div className={styles.viaWrapper} onClick={() => handleVia('add')}>
+                  <img
+                    className={styles.vuesaxboldlocationAddIcon}
+                    loading="lazy"
+                    alt=""
+                    src="/vuesaxboldlocationadd.svg"
+                  />
                   <div className={styles.via}>Via</div>
                 </div>
                 <img
@@ -95,6 +121,54 @@ const CabSearch: FunctionComponent = () => {
                 />
               </div>
             </div>
+            {
+              via.map((item, i) => (
+                <div className={styles.viaDiv}>
+                  <div style={{ margin: "0px 12px" }}>
+                    <ReactGoogleAutocomplete
+                      apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
+                      defaultValue={item[`via${i + 1}`]}
+                      onPlaceSelected={(place) => {
+                        if (place?.formatted_address) {
+                          setBookingForm((prev: any) => ({ ...prev, [`via${i + 1}`]: place.formatted_address }))
+                        }
+                      }}
+                      options={{
+                        types: [
+                          'address',
+                          // '(regions)',
+                          // '(cities)',
+                          // '(countries)',
+                          // '(streets)',
+                          // '(routes)',
+                          // '(airports)',
+                          // '(postal_code)',
+                        ],// You can customize this array
+                        componentRestrictions: { country: 'uk' },
+                        fields: ['formatted_address', 'geometry', 'name'],
+                        bounds: {
+                          north: 55.0,
+                          south: 50.0,
+                          east: 1.5,
+                          west: -3.0
+                        },
+                        strictBounds: false
+                      }}
+
+                      className={styles.enterDropLocationWrapper}
+                    />
+                  </div>
+                  <div onClick={() => handleVia('subtract')}>
+                    <img
+                      className={styles.vuesaxboldarrangeSquare2Icon}
+                      loading="lazy"
+                      alt=""
+                      src="/shield-cross.svg"
+                    />
+                  </div>
+                </div>
+              ))
+            }
             <ReactGoogleAutocomplete
               apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
               defaultValue={bookingForm.dropoff}

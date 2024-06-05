@@ -7,10 +7,10 @@ const WhyChooseUs: FunctionComponent = () => {
     <section className={styles.whyChooseUs}>
 
       <div className={styles.frameParent}>
-        <div className={styles.frameGroup}>
           <div className={styles.whyChooseUsWrapper}>
             <div className={styles.whyChooseUs1}>Why choose Finitrek</div>
           </div>
+        <div className={styles.frameGroup}>
           <h1 className={styles.weOfferThe}>
             We offer the best experience with our drive
           </h1>

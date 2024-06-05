@@ -12,27 +12,27 @@ const HowItWork: FunctionComponent = () => {
               <div className={styles.howItWork1}>HOW IT WORK</div>
             </div>
             <h1 className={styles.rentWithFollowing}>
-              Book you taxi in 3 simple steps
+              Rent with following 3 working steps
             </h1>
           </div>
           <div className={styles.instanceParent}>
             <FrameComponent
-              vuesaxboldlocationTick="/vuesaxboldcalendar.svg"
-              bookYourCar="Enter you journey details"
-              chooseYourAndFind="Choose your and find"
-              yourBestCar="your best car"
+              vuesaxboldlocationTick="/vuesaxboldlocationtick.svg"
+              bookYourCar="Choose location"
+              chooseYourAndFind="Enter you journey details"
+              yourBestCar=""
             />
             <FrameComponent
-              vuesaxboldlocationTick="/vuesaxboldlocationtick.svg"
-              bookYourCar="Choose your suitable provider and car"
-              chooseYourAndFind="Select your pick up date and"
-              yourBestCar="time to book your car"
+              vuesaxboldlocationTick="/vuesaxboldcalendar.svg"
+              bookYourCar="Pick-up car"
+              chooseYourAndFind="Choose your suitable provider and car."
+              yourBestCar=""
             />
             <FrameComponent
               vuesaxboldlocationTick="/vuesaxboldcar.svg"
-              bookYourCar="Pay for the journey and all set!"
-              chooseYourAndFind="Book your car and we will deliver"
-              yourBestCar="it directly to you"
+              bookYourCar="Payment"
+              chooseYourAndFind="Pay for the journey and all set!"
+              yourBestCar=""
             />
           </div>
         </div>

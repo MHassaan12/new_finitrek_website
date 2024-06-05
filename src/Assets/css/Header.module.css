@@ -162,9 +162,11 @@
 .easily {
   color: var(--color-purple-100);
 }
-.link{
+
+.link {
   text-decoration: none;
 }
+
 .findBookAndContainer {
   margin: 0;
   flex: 1;
@@ -189,7 +191,7 @@
 }
 
 .findBookAndRentACarEasiWrapper {
-  width:410px;
+  width: 410px;
   display: flex;
   flex-direction: column;
   gap: var(--gap-5xl);
@@ -313,12 +315,14 @@
 .viaWrapper {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  /* flex-direction: column; */
+  align-items: center;
   justify-content: flex-start;
   padding: var(--padding-7xs) var(--padding-xl) 0 0;
   box-sizing: border-box;
   min-width: 190px;
+  cursor: pointer;
+
 }
 
 .vuesaxboldarrangeSquare2Icon {
@@ -422,7 +426,7 @@
   border-radius: var(--br-5xs);
   background-color: var(--color-white);
   border: 0.3px solid var(--color-purple-200);
-  padding: var(--padding-sm) ;
+  padding: var(--padding-sm);
   width: 80%;
 
 }
@@ -581,6 +585,13 @@
   z-index: 3;
 }
 
+.viaDiv {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 .passengers {
   position: relative;
   font-size: var(--font-size-xs);
@@ -607,7 +618,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
- 
+
   min-width: 158px;
   z-index: 1;
 }
@@ -642,7 +653,7 @@
   background-color: var(--color-white);
   border: 0.3px solid var(--color-purple-200);
   box-sizing: border-box;
- 
+
   min-width: 114px;
   z-index: 1;
 }
@@ -682,7 +693,7 @@
 .rectangleParent {
   /* margin: 0; */
   /* flex: 1; */
-  border-radius:10px;
+  border-radius: 10px;
   background-color: var(--color-purple-300);
   flex-direction: column;
   width: 100%;
@@ -736,7 +747,7 @@
   font-family: var(--font-poppins);
 }
 
-.hero{
+.hero {
   align-self: stretch;
   background-color: var(--color-white);
   padding: var(--padding-21xl) var(--padding-131xl) var(--padding-44xl);
@@ -753,7 +764,7 @@
   display: flex;
   flex-direction: row;
   align-items: baseline;
- 
+
   /* justify-content: start; */
   /* gap: var(--gap-10xl); */
   /* width: 100%; */
@@ -771,9 +782,11 @@
   .treeStructure {
     gap: var(--gap-20xl);
   }
-  .frameParent{
-    width: 100% ;
+
+  .frameParent {
+    width: 100%;
   }
+
   /* .formLayoutChild{
     top: 288px;
   } */
@@ -784,12 +797,14 @@
     display: none;
   }
 
-  .header, .hero {
+  .header,
+  .hero {
     padding-top: var(--padding-7xl);
     padding-bottom: var(--padding-22xl);
     box-sizing: border-box;
   }
-  .hero{
+
+  .hero {
     padding-top: 212px;
 
   }
@@ -808,13 +823,15 @@
     line-height: 38px;
   }
 
-  .header, .hero {
+  .header,
+  .hero {
     gap: var(--gap-29xl);
     padding-left: var(--padding-44xl);
     padding-right: var(--padding-44xl);
     box-sizing: border-box;
   }
-  .formLayoutChild{
+
+  .formLayoutChild {
     top: 286px;
     left: 148px !important;
     height: 17px;
@@ -846,18 +863,21 @@
     gap: var(--gap-lg);
   }
 
-  .header, .hero {
+  .header,
+  .hero {
     gap: var(--gap-5xl);
     padding: var(--padding-xl) var(--padding-xl) var(--padding-8xl);
     box-sizing: border-box;
   }
-  .hero{
+
+  .hero {
     padding-top: 212px;
 
   }
 }
-@media  screen and (max-width:786px) {
-  .viaDropdown{
-   display: none; 
+
+@media screen and (max-width:786px) {
+  .viaDropdown {
+    display: none;
   }
 }

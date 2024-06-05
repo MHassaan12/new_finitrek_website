@@ -194,8 +194,9 @@
 .rentNow {
   /* height: 10px; */
   position: relative;
-  line-height: 17px;
-  font-weight: 500;
+  line-height: 16px;
+  font-weight: 600;
+  font-size: 18px;
   display: inline-block;
   min-width: 66px;
 }
@@ -204,7 +205,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-8xs) 0 0;
+  /* padding: var(--padding-8xs) 0 0; */
 }
 .vuesaxlineararrowRightIcon {
   height: 20px;
