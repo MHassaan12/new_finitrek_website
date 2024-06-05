@@ -26,7 +26,7 @@ const PrivecyPolicy = () => {
 
   return (
     <div className={styles.page}>
-      <Breadcrum title="Privecy policy" />
+      <Breadcrum title="Privecy Policy" />
       <div className={styles.main}>
       {data?.content && <div className={styles.popular} dangerouslySetInnerHTML={{ __html: data.content }} />}
           {/* <div className={styles.popular}>

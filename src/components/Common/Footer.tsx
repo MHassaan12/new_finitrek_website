@@ -72,8 +72,8 @@ const Footer: FunctionComponent = () => {
             <div className={styles.resourcesLinks}>
               <a href="#" className={styles.download}>Download</a>
               <Link to="/help" className={styles.helpCentre}>Help Centre</Link>
-              <Link to="/privacy" className={styles.guides}>privacy policy</Link>
-              <Link to="/terms" className={styles.partnerNetwork}>term and conditions</Link>
+              <Link to="/privacy" className={styles.guides}>Privacy Policy</Link>
+              <Link to="/terms" className={styles.partnerNetwork}>Term and Conditions</Link>
             
             </div>
           </div>
