@@ -36,6 +36,11 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
         setLoading(true)
         const params = new URLSearchParams();
         const formData = {
+            pickup: bookingForm.pickup,
+            dropoff: bookingForm.dropoff,
+            via1: bookingForm.via1,
+            via2: bookingForm.via2,
+            via3: bookingForm.via3,
             pickup_date: moment(bookingForm?.myDate).format("MM-DD-YYYY"),
             pickup_time: bookingForm.myTime,
             dropoff_date: bookingForm?.hiddenmyDate ? moment(bookingForm.hiddenmyDate).format("MM-DD-YYYY") : '',
