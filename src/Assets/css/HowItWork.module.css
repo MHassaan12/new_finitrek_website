@@ -43,11 +43,11 @@
   max-width: 100%;
 }
 .instanceParent {
-  width: 736px;
+  width: 700px;
   /* overflow-x: auto; */
   flex-direction: row;
   justify-content: space-between;
-  gap: var(--gap-xl);
+  gap: var(--gap-59xl);
   font-size: var(--font-size-xl);
   color: var(--color-black);
 }
@@ -101,6 +101,7 @@
 @media screen and (max-width: 750px) {
   .instanceParent{
     flex-direction: column;
+    margin-top: 30px;
   }
   .rentWithFollowing {
     font-size: var(--font-size-11xl);

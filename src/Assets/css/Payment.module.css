@@ -199,6 +199,7 @@
   }
   .insurance {
     width: 173.5px;
+    text-wrap: nowrap;
   }
   .frameParent2 {
     flex: 1;
@@ -228,17 +229,17 @@
   }
   .div1,
   .div2 {
-    height: 35px;
+    /* height: 35px; */
     position: relative;
     font-weight: 300;
     display: inline-block;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     z-index: 1;
   }
-  .div1 {
+  /* .div1 {
     width: 144.3px;
     flex-shrink: 0;
-  }
+  } */
   .div2 {
     flex: 1;
   }
@@ -257,13 +258,13 @@
     justify-content: flex-start;
   }
   .frameParent3 {
-    width: 147.7px;
+    /* width: 147.7px; */
     flex-direction: column;
-    align-items: flex-end;
+    /* align-items: center; */
     gap: var(--gap-3xs);
     min-width: 147.6999999999989px;
-    margin-left: -10.3px;
-    text-align: right;
+    /* margin-left: -10.3px; */
+    /* text-align: center; */
   }
   .frameDiv,
   .frameParent1 {
@@ -340,7 +341,7 @@
   .frameParent,
   .rectangleGroup {
     display: flex;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     max-width: 100%;
     padding: 12px
   }
@@ -435,9 +436,9 @@
       line-height: 29px;
     }
     .rectangleParent {
-      padding-left: var(--padding-4xl);
-      padding-right: var(--padding-4xl);
-      box-sizing: border-box;
+      /* padding-left: var(--padding-4xl);
+      padding-right: var(--padding-4xl); */
+      box-sizing: border-box; 
     }
     .bookingSummary {
       font-size: var(--font-size-10xl);

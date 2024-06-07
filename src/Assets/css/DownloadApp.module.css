@@ -247,4 +247,13 @@
     /* height: auto; */
     gap: var(--gap-6xl);
   }
+
+}
+@media screen and (max-width:600px){
+  .appInfoAvailabilityWrapper{
+    flex: auto;
+ }
+ .forFasterEasier{
+  margin-top: 20px;
+ }
 }

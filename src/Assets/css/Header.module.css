@@ -777,7 +777,13 @@
   color: red;
 
 }
-
+@media screen and (max-width: 440px) {
+  .oneWayWrapper{
+    flex-wrap: wrap;
+    
+  }
+ 
+}
 @media screen and (max-width: 1250px) {
   .treeStructure {
     gap: var(--gap-20xl);

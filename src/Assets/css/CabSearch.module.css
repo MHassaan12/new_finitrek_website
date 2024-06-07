@@ -64,7 +64,6 @@
   cursor: pointer;
 }
 
-
 .vuesaxboldarrangeSquare2Icon {
   height: 24px;
   width: 24px;
@@ -159,7 +158,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
- 
+
   min-width: 117px;
   z-index: 1;
 }
@@ -192,11 +191,9 @@
   background-color: var(--color-white);
   border: 0.3px solid var(--color-purple-200);
   box-sizing: border-box;
- 
+
   min-width: 114px;
   z-index: 1;
-  
- 
 }
 
 .luggageWrapper,
@@ -280,7 +277,6 @@
   max-width: 100%;
 }
 
-
 .search {
   float: right;
   position: relative;
@@ -313,7 +309,6 @@
   z-index: 1;
   border: none;
   cursor: pointer;
-
 }
 
 .datePickerLayout,
@@ -329,7 +324,7 @@
   gap: var(--gap-2xl-2);
   min-width: 76%;
   display: flex;
-    gap: var(--gap-xl);
+  gap: var(--gap-xl);
   /* min-width: 83px; */
 }
 
@@ -345,11 +340,8 @@
   /* z-index: 1; */
 }
 
-
-
 .rectangleParent,
 .timeArea {
-
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -535,12 +527,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
- 
+
   /* justify-content: start; */
   /* gap: var(--gap-10xl); */
   /* width: 100%; */
   /* margin-bottom: 0.5rem; */
 }
+
 
 @media screen and (max-width: 1050px) {
   .rectangleParent {
@@ -555,7 +548,6 @@
 }
 
 @media screen and (max-width: 450px) {
-
   .dropoffLocationOptions,
   .passengerArea {
     flex-wrap: wrap;
