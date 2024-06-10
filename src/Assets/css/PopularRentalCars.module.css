@@ -100,6 +100,7 @@
   color: var(--color-gray-400);
 }
 .popularRentalCars {
+  display: none;
   align-self: stretch;
   background-color: var(--color-white);
   overflow: hidden;

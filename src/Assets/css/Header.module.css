@@ -479,8 +479,8 @@
 .datePickerLayout {
   flex: 1;
   flex-direction: row;
-  gap: var(--gap-xs);
-  min-width: 76%;
+  gap: calc(var(--gap-xs) * 1.5);
+    min-width: 76%;
   /* min-width: 83px; */
 }
 
@@ -600,7 +600,8 @@
   color: var(--color-silver);
   text-align: left;
   display: inline-block;
-  min-width: 70px;
+  /* min-width: 70px; */
+  min-width: 53px;
   padding: var(--padding-sm) var(--padding-xl);
   border: inherit;
   border-radius: inherit;
@@ -843,6 +844,13 @@
     height: 17px;
 
   }
+  .authOptions,
+.authentication,
+.treeStructure,
+  .uSPLayout {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -887,3 +895,4 @@
     display: none;
   }
 }
+

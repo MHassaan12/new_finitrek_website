@@ -8,12 +8,18 @@
     padding: 40px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: self-start;
     flex-direction: column;
-    text-align: center;
+    text-align: start;
     font-family: var(--font-poppins);
 }
 
 h2 {
     color: var(--color-purple-100);
+}
+@media screen and (max-width:650px) {
+    .page{
+        padding: var(--padding-xl) var(--padding-xl) var(--padding-8xl);
+        overflow: hidden;
+    }
 }

@@ -57,7 +57,7 @@
 
 .megamenu__link:hover {
   background-color: #111;
-}
+}._uSPLayout_rwe30_247
 
 .megamenu__dropdown {
   cursor: pointer;
@@ -65,7 +65,7 @@
 
 .megamenu__content {
   /* display: none; */
-  /* position: absolute; */
+  position: absolute;
   background-color: white;
   min-width: 100%;
   width: 100%;

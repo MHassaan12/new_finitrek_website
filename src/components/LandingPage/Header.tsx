@@ -279,7 +279,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
                     </div>
 
                   </div>
-
+ 
                 </div>
               </div>
               <div className={styles.travelers}>

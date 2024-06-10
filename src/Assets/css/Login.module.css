@@ -87,20 +87,28 @@
  .bgParent {
     
     width: 40%;
-    height: 60%;
+    height: 100%;
     background-color: var(--color-lavenderblush);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
     border-radius: var(--br-5xs);
-    /* padding: 40px;
+    padding: var(--padding-25xl) var(--padding-24xl) 79px var(--padding-45xl);
+     /*
     height: 900px;
     flex-direction: column;
     justify-content: flex-start;
-    padding: var(--padding-25xl) var(--padding-24xl) 79px var(--padding-45xl);
     gap: 47px;
     max-width: 100%; */
 } 
+.login {
+   
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+  
 
 .login {
+    
     padding-top: 4%;
     padding-bottom: 4%;
     width: 100%;

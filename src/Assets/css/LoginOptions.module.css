@@ -63,13 +63,14 @@
 
 .frameParent,
 .loginOptionsInner {
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
   /* align-items: flex-start; */
   max-width: 100%;
 }
 
 .frameParent {
+  text-align: center;
   flex: 1;
   flex-wrap: wrap;
   justify-content: flex-start;

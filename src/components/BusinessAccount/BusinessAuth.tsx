@@ -12,122 +12,110 @@ interface BusinessAuthProps {
     setLoading: Function;
 }
 
-
 const BusinessAuth: FunctionComponent<BusinessAuthProps> = ({ setLoading }) => {
     const [bookingForm, setBookingForm] = useRecoilState(bookingFormState);
     const [bookingCars, setBookingCars] = useRecoilState(bookingCarsState);
     const [errors, setErrors] = useState({
-        pickup: '',
-        drop: '',
-        oneWay: '',
-        return: '',
-        passenger: ''
-    })
-    const navigation = useNavigate()
+        pickup: "",
+        drop: "",
+        oneWay: "",
+        return: "",
+        passenger: "",
+    });
+    const navigation = useNavigate();
 
     const handleSubmit = async (e: any) => {
-        e.preventDefault()
+        e.preventDefault();
         if (!bookingForm.pickup) {
-            setErrors((prev) => ({ ...prev, pickup: 'Pickup address is required!' }))
-            return
+            setErrors((prev) => ({ ...prev, pickup: "Pickup address is required!" }));
+            return;
         }
         if (!bookingForm.dropoff) {
-            setErrors((prev) => ({ ...prev, drop: 'Dropoff address is required!' }))
-            return
+            setErrors((prev) => ({ ...prev, drop: "Dropoff address is required!" }));
+            return;
         }
         if (!bookingForm.myDate || !bookingForm.myTime) {
-            setErrors((prev) => ({ ...prev, oneWay: 'Date and Time is required!' }))
-            return
+            setErrors((prev) => ({ ...prev, oneWay: "Date and Time is required!" }));
+            return;
         }
         if (!bookingForm.hiddenmyDate || !bookingForm.retmyTime) {
-            setErrors((prev) => ({ ...prev, return: 'Date and Time is required!' }))
-            return
+            setErrors((prev) => ({ ...prev, return: "Date and Time is required!" }));
+            return;
         }
-        if (!bookingForm.passengers || (bookingForm.passengers == 0)) {
-            setErrors((prev) => ({ ...prev, passenger: 'Passenger is required!' }))
-            return
+        if (!bookingForm.passengers || bookingForm.passengers == 0) {
+            setErrors((prev) => ({ ...prev, passenger: "Passenger is required!" }));
+            return;
         }
-        setLoading(true)
+        setLoading(true);
         try {
             let params = new URLSearchParams();
             for (const key in bookingForm) {
                 if (Object.prototype.hasOwnProperty.call(bookingForm, key)) {
                     const element = (bookingForm as { [key: string]: any })[key];
-                    params.set(key, element)
+                    params.set(key, element);
                 }
             }
-            const { data } = await post(`/api/price?${params}`, {})
+            const { data } = await post(`/api/price?${params}`, {});
             if (data?.cars?.length > 0) {
-                setBookingCars(data.cars)
-                setLoading(false)
-                navigation('/car-search')
+                setBookingCars(data.cars);
+                setLoading(false);
+                navigation("/car-search");
             } else {
-                setLoading(false)
-                alert(data.message)
+                setLoading(false);
+                alert(data.message);
             }
-
         } catch (error) {
-            setLoading(false)
-            console.log('FFFFFFFFFFFFFFFFFFFFFFFF EEEErrrrrF', error)
-
+            setLoading(false);
+            console.log("FFFFFFFFFFFFFFFFFFFFFFFF EEEErrrrrF", error);
         }
-    }
+    };
 
     return (
         <section className={styles.hero}>
-
             <div className={styles.mainContent}>
                 <div className={styles.frameParent}>
-
                     <div className={styles.findBookAndRentACarEasiWrapper}>
                         <h1 className={styles.findBookAndContainer}>
                             <span>Save Cost & Hassle On Cabs For Your</span>
                             <span className={styles.easily}> Business</span>
                         </h1>
-                        <div className={styles.parentPara}>
-                            <p className={styles.para}>
-                                Finitrek Enables You And Your Team To Compare Cab Prices And Book Online Easily
-                            </p>
-                        </div>
-                        <div className={styles.register}>
-                            <button onClick={()=>navigation('#') } className={styles.registerBtn}>
-                                Register your Business
-                            </button>
-                            <p className={styles.text}>
-                                Already a Business Account Member?
-                            </p>
-                        </div>
-                        <div className={styles.register}>
-                            <button className={styles.registerBtn}>
-                                Login
-                            </button>
-                            <p className={styles.text}>
-                                Want to join an existing business account.
-                                Ask your account admin to invite you.
-                            </p>
-                        </div>
-
                         <img
                             className={styles.formLayoutChild}
                             alt=""
                             src="/easily-line.svg"
                         />
+                        <div className={styles.parentPara}>
+                            <p className={styles.para}>
+                                Finitrek Enables You And Your Team To Compare Cab Prices And
+                                Book Online Easily
+                            </p>
+                        </div>
+                        <div className={styles.register}>
+                            <button
+                                onClick={() => navigation("#")}
+                                className={styles.registerBtn}
+                            >
+                                Register your Business
+                            </button>
+                            <p className={styles.text}>Already a Business Account Member?</p>
+                        </div>
+                        <div className={styles.register}>
+                            <button className={styles.registerBtn}>Login</button>
+                            <p className={styles.text}>
+                                Want to join an existing business account. Ask your account
+                                admin to invite you.
+                            </p>
+                        </div>
                     </div>
                 </div>
-
-
-
-
-
             </div>
             <div className={styles.formContentIcon}>
                 {/* <img
                     className={styles.bgframe}
                     alt=""
                     src="/form-content.svg"
-                /> */}
+                    /> */}
                 <img className={styles.car21} alt="" src="/Group 47.png" />
-
             </div>
         </section>
     );
