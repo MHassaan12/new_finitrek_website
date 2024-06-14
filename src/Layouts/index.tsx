@@ -1,14 +1,15 @@
 import { FunctionComponent } from "react"
-// import Header from "../components/Common/Header"
+import Header from "../components/Common/Header"
 import Footer from "../components/Common/Footer"
 import { Outlet } from "react-router-dom"
-import Header from "../components/LandingPage/Header"
+import Navv from "../components/Navv"
 
 
 const Layout: FunctionComponent = () => {
     return (
         <>
-            <Header />
+        <Navv/>
+            {/* <Header /> */}
             <Outlet />
             <Footer />
         </>
