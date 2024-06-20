@@ -5,6 +5,7 @@ class Navv extends Component {
   state = { clicked: false };
 
   handleClick = () => {
+    console.log("KKKKKKKKKKKKKKKKKKKKKKKK");
     this.setState({ clicked: !this.state.clicked });
   };
 
@@ -40,7 +41,13 @@ class Navv extends Component {
               </li>
             </ul>
           </div>
-          <div  className={this.state.clicked ? `${style.navbar} ${style.active}` : style.navbar}>
+          <div
+            className={
+              this.state.clicked
+                ? `${style.navbar} ${style.active}`
+                : style.navbar
+            }
+          >
             <div className={style.login}>
               <div className={style.singin}>
                 <a href="">Sign In</a>
