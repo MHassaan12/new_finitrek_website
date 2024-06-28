@@ -62,9 +62,7 @@ class Navv extends Component {
               } ${style.faBars}`}
             />
           </div>
-          {/* <div className={style.mobile} onClick={this.handleClick}>
-            <i className={`${style.faBars} fas`} />
-          </div> */}
+  
         </nav>
       </>
     );
