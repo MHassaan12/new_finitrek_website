@@ -6,7 +6,7 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { bookingCarsState, bookingFormState } from "../../stores/atoms";
 import TimePicker from "../Common/TimePicker";
 import { post } from "../../utils/api";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface BusinessAuthProps {
     setLoading: Function;
@@ -91,16 +91,19 @@ const BusinessAuth: FunctionComponent<BusinessAuthProps> = ({ setLoading }) => {
                             </p>
                         </div>
                         <div className={styles.register}>
+                            <Link to="/register-business">
                             <button
                                 onClick={() => navigation("#")}
                                 className={styles.registerBtn}
                             >
                                 Register your Business
                             </button>
+                            </Link>
+                            
                             <p className={styles.text}>Already a Business Account Member?</p>
                         </div>
-                        <div className={styles.register}>
-                            <button className={styles.registerBtn}>Login</button>
+                        <div className={styles.register}> 
+                            <Link to="/signin"> <button className={styles.registerBtn}>Login</button></Link>
                             <p className={styles.text}>
                                 Want to join an existing business account. Ask your account
                                 admin to invite you.

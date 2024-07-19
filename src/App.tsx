@@ -19,6 +19,7 @@ import PaymentFailPage from "./pages/PaymentFail";
 import HelpPage from "./pages/Help";
 import TermConditions from "./pages/TermConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import RegisterBusiness from "./pages/RegisterBusiness";
 
 function App() {
   const action = useNavigationType();
@@ -66,6 +67,9 @@ function App() {
         <Route path="/car-search" element={<CarSearchPage />} />
         <Route path="/car-booking" element={<CarBookingPage />} />
         <Route path="/payment" element={<PaymentPage />} />
+
+        <Route path="/register-business" element={<RegisterBusiness/>} />
+
         <Route path="/business-account" element={<BusinessAccountPage />} />
         <Route path="/booking-success" element={<PaymentSuccessPage />} />
         <Route path="/booking-failed" element={<PaymentFailPage />} />

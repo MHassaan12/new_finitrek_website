@@ -12,7 +12,7 @@ const HowItWork: FunctionComponent = () => {
               <div className={styles.howItWork1}>HOW IT WORK</div>
             </div>
             <h1 className={styles.rentWithFollowing}>
-              Rent with following 3 working steps
+            Ride Smart with following 3 working steps
             </h1>
           </div>
           <div className={styles.instanceParent}>

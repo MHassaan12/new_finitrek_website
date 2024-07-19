@@ -321,6 +321,8 @@
 }
 
 .registerBtn {
+    width: 100%;
+    cursor: pointer;
     background-color: var(--color-purple-100);
     padding: 12px 24px;
     color: var(--color-white);
