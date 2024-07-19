@@ -1,11 +1,12 @@
-import { FunctionComponent } from "react"
-import styles from "../../Assets/css/Header.module.css"
-import { Link } from "react-router-dom";
+import React, { useState, FunctionComponent } from 'react';
+import { Link } from 'react-router-dom';
+import styles from "../../Assets/css/Header.module.css";
 import Navbar from "./Navbar";
-
-
+import { Sling as Hamburger } from 'hamburger-react';
 
 const Header: FunctionComponent = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <div className={styles.header}>
             <header className={styles.uSPLayout}>
@@ -15,32 +16,44 @@ const Header: FunctionComponent = () => {
                             <img
                                 className={styles.groupIcon}
                                 loading="lazy"
-                                alt=""
+                                alt="Group Icon"
                                 src="/group-12.svg"
                             />
                             <div className={styles.rentalSteps}>
-                                <img className={styles.groupIcon1} alt="" src="/group-1.svg" />
+                                <img className={styles.groupIcon1} alt="Group Icon 1" src="/group-1.svg" />
                             </div>
                         </div>
                     </Link>
-                    <nav className={styles.benefitItemsWrapper}>
-                    <Navbar />
-                        {/* <nav className={styles.benefitItems}>
-                            <div className={styles.popularDestinations}>
-                                Popular Destinations
+                    <div className={styles.hamburger_menu}>
+                        <Hamburger toggled={isOpen} toggle={setIsOpen} />
+                        {isOpen && (
+                            <div className={`menu ${isOpen ? 'open' : ''}`}>
+                                <Navbar />
+                                <div className={styles.authentication}>
+                                    <div className={styles.authOptions}>
+                                        <div className={styles.signInButton}>
+                                            <Link to="/signin">
+                                                <div className={styles.signIn}>Sign in</div>
+                                            </Link>
+                                        </div>
+                                        <div className={styles.signUpWrapper}>
+                                            <Link to="/signup" className={styles.link}>
+                                                <div className={styles.signUp}>Sign up</div>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className={styles.businessAccount}>Business Account</div>
-                            <div className={styles.operatorSignup}>Operator Signup</div>
-                            <div className={styles.help}>Help?</div>
-                        </nav> */}
+                        )}
+                    </div>
+                    <nav className={styles.benefitItemsWrapper}>
+                        <Navbar />
                     </nav>
                     <div className={styles.authentication}>
                         <div className={styles.authOptions}>
                             <div className={styles.signInButton}>
                                 <Link to="/signin">
-                                    <div className={styles.signIn}>
-                                        Sign in
-                                    </div>
+                                    <div className={styles.signIn}>Sign in</div>
                                 </Link>
                             </div>
                             <div className={styles.signUpWrapper}>
@@ -53,7 +66,7 @@ const Header: FunctionComponent = () => {
                 </div>
             </header>
         </div>
-    )
-}
+    );
+};
 
 export default Header;

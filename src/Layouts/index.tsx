@@ -8,8 +8,8 @@ import Navv from "../components/Navv"
 const Layout: FunctionComponent = () => {
     return (
         <>
-        <Navv/>
-            {/* <Header /> */}
+        {/* <Navv/> */}
+            <Header />
             <Outlet />
             <Footer />
         </>
