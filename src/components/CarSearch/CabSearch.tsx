@@ -8,6 +8,8 @@ import { bookingCarsState, bookingFormState } from "../../stores/atoms";
 import { post } from "../../utils/api";
 import DatePickerComponent from "../Common/DatePicker";
 import TimePicker from "../Common/TimePicker";
+import AutocompleteInput from "../Common/AutocompleteInput";
+import SelectTree from "../Common/TreeSelector";
 
 const CabSearch: FunctionComponent = () => {
   const [bookingForm, setBookingForm] = useRecoilState(bookingFormState);
@@ -23,7 +25,7 @@ const CabSearch: FunctionComponent = () => {
       setVia((prev: any) => [...prev, { via2: bookingForm.via2 }])
     }
     if (bookingForm.via3) {
-      setVia((prev:any) => [...prev, { via3: bookingForm.via3 }])
+      setVia((prev: any) => [...prev, { via3: bookingForm.via3 }])
     }
 
   }, [])
@@ -66,7 +68,8 @@ const CabSearch: FunctionComponent = () => {
       <div className={styles.pickupArea}>
         <div className={styles.frameParent}>
           {/* <div className={styles.enterPickUpLocationWrapper}> */}
-          <ReactGoogleAutocomplete
+          <AutocompleteInput style={styles.enterPickUpLocationWrapper} address={bookingForm.pickup} setAddress={(value: string) => setBookingForm((prev: any) => ({ ...prev, pickup: value }))} />
+          {/* <ReactGoogleAutocomplete
             apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
             defaultValue={bookingForm.pickup}
             onPlaceSelected={(place) => {
@@ -99,7 +102,7 @@ const CabSearch: FunctionComponent = () => {
               strictBounds: false
             }}
             className={styles.enterPickUpLocationWrapper}
-          />
+          /> */}
           {/* </div> */}
           <div className={styles.dropoffArea}>
             <div className={styles.dropoffLocationOptionsWrapper}>
@@ -125,38 +128,7 @@ const CabSearch: FunctionComponent = () => {
               via.map((item: any, i: number) => (
                 <div className={styles.viaDiv}>
                   <div style={{ margin: "0px 12px" }}>
-                    <ReactGoogleAutocomplete
-                      apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
-                      defaultValue={item[`via${i + 1}`]}
-                      onPlaceSelected={(place) => {
-                        if (place?.formatted_address) {
-                          setBookingForm((prev: any) => ({ ...prev, [`via${i + 1}`]: place.formatted_address }))
-                        }
-                      }}
-                      options={{
-                        types: [
-                          'address',
-                          // '(regions)',
-                          // '(cities)',
-                          // '(countries)',
-                          // '(streets)',
-                          // '(routes)',
-                          // '(airports)',
-                          // '(postal_code)',
-                        ],// You can customize this array
-                        componentRestrictions: { country: 'uk' },
-                        fields: ['formatted_address', 'geometry', 'name'],
-                        bounds: {
-                          north: 55.0,
-                          south: 50.0,
-                          east: 1.5,
-                          west: -3.0
-                        },
-                        strictBounds: false
-                      }}
-
-                      className={styles.enterDropLocationWrapper}
-                    />
+                    <AutocompleteInput style={styles.enterDropLocationWrapper} address={bookingForm[`via${i + 1}`]} setAddress={(value: string) => setBookingForm((prev: any) => ({ ...prev, [`via${i + 1}`]: value }))} />
                   </div>
                   <div onClick={() => handleVia('subtract')}>
                     <img
@@ -169,7 +141,8 @@ const CabSearch: FunctionComponent = () => {
                 </div>
               ))
             }
-            <ReactGoogleAutocomplete
+            <AutocompleteInput style={styles.enterDropLocationWrapper} address={bookingForm.dropoff} setAddress={(value: string) => setBookingForm((prev: any) => ({ ...prev, dropoff: value }))} />
+            {/* <ReactGoogleAutocomplete
               apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
               defaultValue={bookingForm.dropoff}
               onPlaceSelected={(place) => {
@@ -203,7 +176,7 @@ const CabSearch: FunctionComponent = () => {
                 strictBounds: false
               }}
               className={styles.enterDropLocationWrapper}
-            />
+            /> */}
             {/* <div className={styles.enterDropLocationWrapper}>
               <div className={styles.enterDropLocation}>
                 Enter Drop Location
@@ -240,11 +213,12 @@ const CabSearch: FunctionComponent = () => {
             {/* <div className={styles.passengers}>Passengers</div> */}
           </div>
           <div className={styles.luggageWrapper}>
-            <select className={styles.luggage} onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))}>
+            <SelectTree style={styles.luggage} setValue={(value: string) => setBookingForm((prev: any) => ({ ...prev, luggage: value }))} />
+            {/* <select className={styles.luggage} onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))}>
               <option value="">Luggage</option>
               <option value="suitcase">Suitcase (Approx 78x50x32 cm) </option>
               <option value="hand">Hand Luggage</option>
-            </select>
+            </select> */}
             {/* <input
               className={styles.luggage}
               type="number"

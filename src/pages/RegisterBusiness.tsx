@@ -19,7 +19,7 @@ const RegisterBusiness = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmittedData(formData);
+    setSubmittedData(formData as any);
     setFormData({
       businessName: '',
       ownerName: '',

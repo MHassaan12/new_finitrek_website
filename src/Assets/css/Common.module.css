@@ -1,0 +1,78 @@
+.autocompleteContainer {
+    position: relative;
+    width: 94%;
+}
+
+.autocompleteContainer input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.suggestionsList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 112%;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 2px;
+    list-style: none;
+    margin: 0;
+    font-size: 14px;
+    z-index: 4;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+
+.suggestionsList li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestionsList li:hover {
+    background-color: #f0f0f0;
+}
+
+.noMatch {
+    color: 'red';
+    font-size: 14px;
+    padding: 10px;
+}
+
+.luggageInput {
+    position: relative;
+}
+
+.list {
+    position: absolute;
+    background-color: #fff;
+    width: 120%;
+    top: 50px;
+    /* left: 0; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* height: 100%; */
+    z-index: 4;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.ul {
+    padding: 2px;
+    list-style: none;
+    margin: 0;
+    font-size: 14px;
+}
+
+.ul li {
+    padding: 2px;
+    padding-left: 10px;
+    cursor: pointer;
+}

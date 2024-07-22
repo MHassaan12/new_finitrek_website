@@ -7,6 +7,8 @@ import { bookingCarsState, bookingFormState } from "../../stores/atoms";
 import TimePicker from "../Common/TimePicker";
 import { post } from "../../utils/api";
 import { useNavigate } from "react-router-dom";
+import AutocompleteInput from "../Common/AutocompleteInput";
+import SelectTree from "../Common/TreeSelector";
 
 interface HeaderProps {
   setLoading: Function;
@@ -83,7 +85,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
         setVia((prev: any) => [...prev, { [`via${prev.length + 1}`]: '' }])
       }
     } else {
-      setVia((prev:any) => prev.slice(0, -1));
+      setVia((prev: any) => prev.slice(0, -1));
     }
   }
 
@@ -102,7 +104,8 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
               <div className={styles.frameChild} />
               <div className={styles.pickUpLocation}>
                 {/* <div className={styles.inputBox}> */}
-                <ReactGoogleAutocomplete
+                <AutocompleteInput style={styles.inputBox} address={bookingForm.pickup} setAddress={(value: string) => setBookingForm((prev: any) => ({ ...prev, pickup: value }))} />
+                {/* <ReactGoogleAutocomplete
                   apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
                   onPlaceSelected={(place) => {
                     setErrors((prev) => ({ ...prev, pickup: '' }))
@@ -134,7 +137,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
 
                   className={styles.inputBox}
 
-                />
+                /> */}
                 {errors.pickup && <span className={styles.error}>{errors.pickup}</span>}
                 {/* <div className={styles.enterPickUp}>Enter Pick Up Location</div> */}
                 {/* </div> */}
@@ -162,37 +165,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
                     via.map((_: any, i: number) => (
                       <div className={styles.viaDiv}>
                         <div style={{ margin: "0px 12px" }}>
-                          <ReactGoogleAutocomplete
-                            apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
-                            onPlaceSelected={(place) => {
-                              if (place?.formatted_address) {
-                                setBookingForm((prev: any) => ({ ...prev, [`via${i + 1}`]: place.formatted_address }))
-                              }
-                            }}
-                            options={{
-                              types: [
-                                'address',
-                                // '(regions)',
-                                // '(cities)',
-                                // '(countries)',
-                                // '(streets)',
-                                // '(routes)',
-                                // '(airports)',
-                                // '(postal_code)',
-                              ],// You can customize this array
-                              componentRestrictions: { country: 'uk' },
-                              fields: ['formatted_address', 'geometry', 'name'],
-                              bounds: {
-                                north: 55.0,
-                                south: 50.0,
-                                east: 1.5,
-                                west: -3.0
-                              },
-                              strictBounds: false
-                            }}
-
-                            className={styles.inputBox}
-                          />
+                          <AutocompleteInput style={styles.inputBox} address={bookingForm[`via${i + 1}`]} setAddress={(value: string) => setBookingForm((prev: any) => ({ ...prev, [`via${i + 1}`]: value }))} />
                         </div>
                         <div onClick={() => handleVia('subtract')}>
                           <img
@@ -205,7 +178,8 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
                       </div>
                     ))
                   }
-                  <ReactGoogleAutocomplete
+                  <AutocompleteInput style={styles.inputBox} address={bookingForm.dropoff} setAddress={(value: string) => setBookingForm((prev: any) => ({ ...prev, dropoff: value }))} />
+                  {/* <ReactGoogleAutocomplete
                     apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}
                     onPlaceSelected={(place) => {
                       setErrors((prev) => ({ ...prev, drop: '' }))
@@ -237,7 +211,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
                     }}
                     className={styles.dropOffLocation}
 
-                  />
+                  /> */}
                   {errors.drop && <span className={styles.error}>{errors.drop}</span>}
                   {/* <div className={styles.dropOffLocation}>
                     <div className={styles.enterDropLocation}>
@@ -279,7 +253,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
                     </div>
 
                   </div>
- 
+
                 </div>
               </div>
               <div className={styles.travelers}>
@@ -301,11 +275,12 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
                   {errors.passenger && <span className={styles.error}>{errors.passenger}</span>}
                 </div>
                 <div className={styles.luggageCount}>
-                  <select className={styles.luggage} onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))}>
+                  <SelectTree style={styles.luggage} setValue={(value: string) => setBookingForm((prev: any) => ({ ...prev, luggage: value }))} />
+                  {/* <select className={styles.luggage} onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))}>
                     <option value="">Luggage</option>
                     <option value="suitcase">Suitcase (Approx 78x50x32 cm) </option>
                     <option value="hand">Hand Luggage</option>
-                  </select>
+                  </select> */}
                   {/* <input className={styles.luggage} type="number" min="16" max="1" placeholder="Luggage" onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))} /> */}
                 </div>
               </div>

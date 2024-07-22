@@ -655,7 +655,7 @@
   background-color: var(--color-white);
   border: 0.3px solid var(--color-purple-200);
   box-sizing: border-box;
-
+  font-size: 12px;
   min-width: 114px;
   z-index: 1;
 }
