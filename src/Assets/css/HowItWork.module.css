@@ -111,16 +111,23 @@
     gap: var(--gap-base);
   }
   .frameGroup {
-    gap: var(--gap-21xl);
+    /* gap: var(--gap-21xl); */
   }
   .frameParent {
     gap: var(--gap-59xl);
+  }
+  .howItWork {
+    /* padding-top: var(--padding-24xl); */
+    margin-top: 50px;
+    padding-bottom: var(--padding-24xl);
+    box-sizing: border-box;
   }
 }
 @media screen and (max-width: 450px) {
   .rentWithFollowing {
     font-size: var(--font-size-4xl);
     line-height: 30px;
+    margin-bottom: 30px;
   }
   .frameGroup {
     gap: var(--gap-xl);
@@ -129,7 +136,8 @@
     /* gap: var(--gap-13xl); */
   }
   .howItWork {
-    padding-top: var(--padding-24xl);
+    /* padding-top: var(--padding-24xl); */
+    margin-top: 30;
     padding-bottom: var(--padding-24xl);
     box-sizing: border-box;
   }
