@@ -112,7 +112,7 @@ const RegisterOptions: FunctionComponent<RegisterOptionsProps> = ({setLoading}) 
 
                 <button className={styles.button} type="submit">
                     <div className={styles.buttonChild} />
-                    <div className={styles.login}>Carete Account</div>
+                    <div className={styles.login}>Create Account</div>
                 </button>
 
                 <div className={styles.or}>OR</div>

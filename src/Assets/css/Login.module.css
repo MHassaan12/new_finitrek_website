@@ -60,6 +60,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap:17px;
 }
 
 /* .bgParent,
@@ -131,7 +132,7 @@
     */
 } 
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1063px) {
     .welcomeToFinitrekContainer {
         font-size: var(--font-size-10xl);
         /* line-height: 50px; */
@@ -143,8 +144,16 @@
         width: 60% !important;
     }
 }
+@media screen and (min-width: 1321px) and (max-width:1500px) {
 
-@media screen and (max-width: 700px) {
+    .bgParent {
+        /* padding: 29px var(--padding-2xl) 51px var(--padding-13xl); */
+        box-sizing: border-box;
+        width: 57% !important;
+    }
+}
+
+@media screen and (max-width: 760px) {
     .bgParent {
         padding-top: var(--padding-xl);
         padding-bottom: var(--padding-14xl);
@@ -152,15 +161,90 @@
         width: 80% !important;
     }
 }
-
+@media  screen and (min-width:1820px) {
+    .welcomeToFinitrekContainer {
+      padding-top: 30px;
+    }}
+@media  screen and (min-width:451px) and (max-width:768px) {
+    .welcomeToFinitrekContainer {
+        font-size: var(--font-size-xl);
+        /* line-height: 37px; */
+        line-height: 30px;
+    }
+    .welcomeTo{
+        font-size: x-large;
+    }
+    .finitrek{
+        font-size: xx-large ;
+    }
+}
 @media screen and (max-width: 450px) {
     .welcomeToFinitrekContainer {
-        font-size: var(--font-size-3xl);
+        font-size: var(--font-size-xl);
         /* line-height: 37px; */
+        line-height: 26px;
     }
-
+    .welcomeTo{
+        font-size: large;
+    }
+    .finitrek{
+        font-size: x-large;
+    }
+   
+    .bgParent{
+        padding-top: 0% ;
+    }
+    .login{
+        padding-left: 5%;
+       
+        padding-right: 4%;
+        width: 90%;
+    }
+  
     .bgParent {
         gap: 23px;
         width: 100% !important;
+    }
+    .register {
+        font-size: smaller;
+    }
+    .dontHaveAnContainer{
+        margin: 17px 11px;
+        justify-content: space-evenly;
+    }
+    .dontHaveAnContainer span{
+        font-size: small;
+    }
+}
+@media screen and (min-width:1024px) and (max-width:1320px){
+    .bgParent{
+        width: 57%;
+    }
+
+}
+@media  screen and (min-width:769px) {
+    .welcomeToFinitrekContainer {
+        font-size: var(--font-size-xl);
+        /* line-height: 37px; */
+        line-height: 30px;
+    }
+    .welcomeTo{
+        font-size: x-large;
+    }
+    .finitrek{
+        font-size: xx-large ;
+    }
+}
+@media  screen and (min-width : 1820px) {
+    .welcomeToFinitrekContainer {
+        font-size: var(--font-size-xl);
+        /* line-height: 37px; */
+        line-height: 49px;
+    }
+    .welcomeTo{
+        font-size: xx-large;
+    }
+    .finitrek{
+        font-size: xxx-large ;
     }
 }
