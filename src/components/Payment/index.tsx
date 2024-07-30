@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { post } from "../../utils/api";
 import { bookingCarsState, bookingFormState } from "../../stores/atoms";
 import moment from "moment";
+import StripePayment from "./StripePayment";
 
 
 interface PaymentProps {
@@ -44,7 +45,8 @@ const Payment: FunctionComponent<PaymentProps> = ({ setLoading }) => {
         }) => {
             const formData = {
                 user_id: '',
-                vendor_id: selectedCar.vendor_id,
+                // vendor_id: selectedCar.vendor_id,
+                vendor_id: 27,
                 payment_id: details.id,
                 transaction_id: details.purchase_units[0].payments.captures[0].id,
                 status: details.status,
@@ -78,7 +80,7 @@ const Payment: FunctionComponent<PaymentProps> = ({ setLoading }) => {
         }).catch(() => nvigation('/booking-failed'))
     }
     return (
-        <PayPalScriptProvider options={{ clientId: "AZ14k0vPCKHE5Ho2Rnprj0BM5ap081VPvnA5AAK880mlnmFPYpeh3y37GFxtfAbgSeQWJpF9WGdArvMB", components: "buttons", currency: "GBP", intent: "capture", }}>
+        <PayPalScriptProvider options={{ merchantId: import.meta.env.VITE_PAYPAL_MERCHANTID, clientId: import.meta.env.VITE_PAYPAL_CLIENTID, components: "buttons", currency: "GBP", intent: "capture", }}>
             <div className={styles.payment}>
                 <section className={styles.frameParent}>
                     <div className={styles.paymentParent}>
@@ -87,6 +89,7 @@ const Payment: FunctionComponent<PaymentProps> = ({ setLoading }) => {
                             <div className={styles.rectangleParent}>
                                 <div className={styles.frameChild} />
                                 <div style={{ width: '90%' }}>
+                                    {/* <StripePayment/> */}
 
                                     <PayPalButtons
                                         // style={style}

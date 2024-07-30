@@ -5,7 +5,7 @@ const { persistAtom } = recoilPersist()
 
 export const bookingFormState = atom({
     key: 'bookingForm',
-    default: { pickup: '', dropoff: '',via1: "", via2: "", via3: "", bookingtype: '', myDate: '', hiddenmyDate: '', myTime: "", retmyTime: '', passengers: 0, luggage: 0, current_date: new Date(), submit: 'submit' },
+    default: { pickup: 'London Heathrow terminal 5 TW6 2GA', dropoff: 'London Stansted Airport CM24 1RW',via1: "", via2: "", via3: "", bookingtype: '', myDate: '', hiddenmyDate: '', myTime: "", retmyTime: '', passengers: 0, luggage: 0, current_date: new Date(), submit: 'submit' },
     effects_UNSTABLE: [persistAtom]
 });
 
