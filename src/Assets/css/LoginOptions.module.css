@@ -49,10 +49,10 @@
 
 .frameItem {
   /* align-self: stretch; */
-  height: 1px;
+  
   border-top: 1px solid var(--color-silver-100);
   box-sizing: border-box;
-  height: 11px;
+  height: 18px;
   /* border-top: 3px solid var(--color-silver-100); */
   box-sizing: border-box;
   border-top: 2px solid silver;
@@ -446,6 +446,17 @@
   /* padding: var(--padding-8xl) var(--padding-xl) var(--padding-9xl);
     box-sizing: border-box; */
   /* z-index: 1; */
+}
+.line{
+  display: flex;
+  right: 282%;
+  width: 660%;
+  border-top: 2px solid silver;
+  position: relative;
+  top:-14px;
+ padding-left: 2px;
+ padding-right: 2px;
+ z-index: 0;
 }
 
 .credentialsArea,
