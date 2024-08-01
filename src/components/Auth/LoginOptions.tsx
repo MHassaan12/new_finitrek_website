@@ -1,9 +1,10 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState } from "react";
 import styles from "../../Assets/css/LoginOptions.module.css";
 import LoginWithGoogle from "./LoginWithGoogle";
 import { useForm } from "react-hook-form";
 import { post } from "../../utils/api";
 import { useNavigate } from "react-router-dom";
+
 
 interface LoginOptionsProps {
     setLoading: Function;
@@ -32,7 +33,12 @@ const LoginOptions: FunctionComponent<LoginOptionsProps> = ({ setLoading }) => {
             console.log(error)
         }
     }
+    const [showPassword, setShowPassword] = useState(false);
 
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
+    
     return (
         <form className={styles.loginOptions} onSubmit={handleSubmit(onSubmit)}>
             <div className={styles.socialLogin}>
@@ -74,16 +80,22 @@ const LoginOptions: FunctionComponent<LoginOptionsProps> = ({ setLoading }) => {
 
 
                     <div className={styles.emailField}>
+    <div className={styles.inputContainers}>
+        <img className={styles.emailIcon} alt="" src="/group.svg" />
+    </div>
+    <div className={styles.input}>
+        <div className={styles.password1}>Password</div>
+        <input
+            className={styles.examplegmailcom}
+            type="password"
+            placeholder="***********"
+            {...register("password", { required: "Password is required" })}
+        />
+        {errors.password && <span className={styles.error}>{errors.password.message}</span>}
+    </div>
+   
+</div>
 
-                        <div className={styles.inputContainers}>
-                            <img className={styles.emailIcon} alt="" src="/group.svg" />
-                        </div>
-                        <div className={styles.input}>
-                            <div className={styles.password1}>Password</div>
-                            <input className={styles.examplegmailcom} placeholder="***********"  {...register("password", { required: "Password is required" })} />
-                            {errors.password && <span className={styles.error}>{errors.password.message}</span>}
-                        </div>
-                    </div>
 
                 </div>
                 <div className={styles.optionsArea}>

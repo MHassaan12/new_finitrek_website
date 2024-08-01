@@ -19,7 +19,14 @@ const AutocompleteInput: React.FC<Props> = ({ style, address, setAddress }) => {
     useEffect(() => {
         const fetchSuggestions = async () => {
             if (inputValue.length >= 3) {
-                const response = await fetch(`https://maps.googleapis.com/maps/api/place/autocomplete/json?key=AIzaSyA0BghYPbeNB0v96lsIhhpx9SgZTC7AS3I&components=country:uk&input=${inputValue}`);
+                // axios.get(`https://thingproxy.freeboard.io/fetch/https://maps.googleapis.com/maps/api/place/autocomplete/json`, {
+                //     params: {
+                //       key: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
+                //       components: 'country:uk',
+                //       input: inputValue,
+                //     },
+                //   });
+                const response = await fetch(`https://thingproxy.freeboard.io/fetch/https://maps.googleapis.com/maps/api/place/autocomplete/json?key=AIzaSyA0BghYPbeNB0v96lsIhhpx9SgZTC7AS3I&components=country:uk&input=${inputValue}`);
                 const data = await response.json();
                 if (data.predictions.length > 0) {
 

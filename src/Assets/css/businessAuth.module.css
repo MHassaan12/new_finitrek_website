@@ -64,6 +64,11 @@
     color: var(--color-darkslategray-100);
     font-family: var(--font-poppins);
 }
+@media screen and (min-width:1050px) and (max-width:1400px) {
+    .benefitItems{
+        gap: 0px;
+    }
+}
 
 .benefitItemsWrapper {
     flex-direction: column;
@@ -183,6 +188,12 @@
 .frameParent {
     width: 50%;
     z-index: 2;
+    
+}
+@media screen and (min-width: 866px) and (max-width: 1050px) {
+    .frameParent {
+        margin-top: 15px;
+    }
 }
 
 .frameContainer {
@@ -191,11 +202,13 @@
 
 }
 
+
+
 .findBookAndRentACarEasiWrapper {
     width: 566px;
     display: flex;
     flex-direction: column;
-    gap: var(--gap-5xl);
+    /* gap: var(--gap-5xl); */
     /* align-items: flex-start; */
     /* justify-content: flex-start; */
     /* padding: 0 var(--padding-3xs); */
@@ -310,6 +323,7 @@
 
 .para {
     padding-right: 132px;
+    font-weight: 500;
 }
 
 .register {
@@ -319,6 +333,18 @@
     /* width: 350px; */
     margin-top: 28px;
 }
+@media screen and (max-width:430px) {
+    .register{
+        margin: 15px 0px;
+    }
+    
+}
+@media screen and (min-width: 435px) and (max-width: 450px) {
+    .register {
+        margin: 20px 0px;
+    }
+}
+
 
 .registerBtn {
     width: 100%;
@@ -637,6 +663,7 @@
     border: inherit;
     border-radius: inherit;
     width: 100%;
+    border: 1.3px solid var(--color-purple-200);
 }
 
 .travelerOptions {
@@ -644,7 +671,7 @@
     box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
     border-radius: var(--br-5xs);
     background-color: var(--color-white);
-    border: 0.3px solid var(--color-purple-200);
+    /* border: 0.3px solid var(--color-purple-200); */
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -679,7 +706,7 @@
 }
 
 .luggageCount {
-    flex: 1;
+    /* flex: 1;
     box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
     border-radius: var(--br-5xs);
     background-color: var(--color-white);
@@ -687,7 +714,20 @@
     box-sizing: border-box;
 
     min-width: 114px;
+    z-index: 1; */
+    flex: 1;
+    box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
+    border-radius: var(--br-5xs);
+    background-color: var(--color-white);
+    border: 0.3px solid var(--color-purple-200);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 158px;
     z-index: 1;
+
 }
 
 .travelers {
@@ -811,6 +851,18 @@
     color: red;
 
 }
+@media screen and (min-width:451px) and (max-width:515px) {
+    .frameParent {
+        width: 400px !important;
+        margin: 0px 0px 0px -33px;
+    }
+}
+@media screen and (min-width:470px) and (max-width:1400px) {
+    .frameParent {
+        padding: 12px 0px 12px 30px !important;
+    }
+}
+
 
 @media screen and (max-width: 1250px) {
     .treeStructure {
@@ -819,6 +871,7 @@
 
     .frameParent {
         width: 100%;
+        /* margin-top: 20px; */
     }
 
     /* .formLayoutChild{
@@ -895,7 +948,11 @@
 
     .mainContent {
         margin-top: -72px;
-        gap: var(--gap-lg);
+        /* gap: var(--gap-lg); */
+    }
+    .frameParent {
+        padding: 8px 0px 8px 15px !important;
+        margin: 0px 0px 0px -12px;
     }
 
     .header,
@@ -909,37 +966,56 @@
         padding-top: 212px;
 
     }
+    .car21{
+        filter: opacity(50%);
+
+    }
 }
+
+
+
 
 @media screen and (max-width:786px) {
     .viaDropdown {
         display: none;
     }
+  
+    
+    
    
 }
-@media (max-width: 1430px) and (min-width: 1250px) {
+@media (max-width: 1430px) and (min-width: 1251px) {
     .formLayoutChild{
-        top: 357px;
-        left: 236px !important;
+        top: 365px;
+        left: 245px !important;
     }
 }
-@media screen and  (max-width: 1248px) {
+@media screen and  (max-width: 1250px) {
     .formLayoutChild{
       display: none;
+    }
+    .car21{
+        filter: opacity(70%);
+
+    }
+    .text{
+        color: #000; 
+        font-weight: 600;
+    }
+    ._para_1dzyq_621{
+        font-weight: 800;
     }
     
 }
 @media screen and  (max-width: 1431px) {
     .frameParent{
         background-color: var(--color-purple-300);
+        
         padding: 8px;
         border-radius: 10px;
 
      
     }
-    .car21{
-        filter: opacity(70%);
-
-    }
+   
     
 }

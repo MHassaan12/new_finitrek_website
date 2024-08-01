@@ -639,9 +639,12 @@
         font-size: var(--font-size-3xl);
         line-height: 37px;
     }
-
+      .emailIcon{
+        width:24px;
+      }
     .bgParent {
         gap: 23px;
         width: 100% !important;
     }
+    
 }

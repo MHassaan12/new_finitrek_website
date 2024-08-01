@@ -88,7 +88,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start; */
-  padding: var(--padding-xs) 0 0;
+  padding-top: 8px;
 }
 
 .signUp {
@@ -116,6 +116,7 @@
 .authOptions {
   flex-direction: row;
   gap: var(--gap-5xl);
+  align-items: center;
 }
 
 .authOptions,
@@ -130,7 +131,7 @@
 .authentication {
   display: none !important;
   flex-direction: column;
-  padding: var(--padding-9xs-2) 0 0;
+  /* padding: var(--padding-9xs-2) 0 0; */
 }
 
 .treeStructure,
@@ -153,6 +154,12 @@
   }
 }
 
+@media screen and (min-width:1050px) and (max-width:1400px) {
+  /* .treeStructure{
+      flex: none !important;
+  } */
+  
+}
 .uSPLayout {
   align-self: stretch;
   padding: 0 var(--padding-3xs);
@@ -300,8 +307,8 @@
 }
 
 .vuesaxboldlocationAddIcon {
-  height: 24px;
-  width: 24px;
+  height: 22px;
+  width: 22px;
   position: relative;
   z-index: 1;
 }
@@ -325,7 +332,7 @@
   /* flex-direction: column; */
   align-items: center;
   justify-content: flex-start;
-  padding: var(--padding-7xs) var(--padding-xl) 0 0;
+  padding: 0 0 0 0;
   box-sizing: border-box;
   min-width: 190px;
   cursor: pointer;
@@ -435,7 +442,12 @@
   border: 0.3px solid var(--color-purple-200);
   padding: var(--padding-sm);
   width: 80%;
-
+ 
+}
+.selectDate{
+  overflow: hidden !important;
+  white-space: nowrap;
+  text-overflow: clip;
 }
 
 .selectDateWrapper {
@@ -613,6 +625,7 @@
   border: inherit;
   border-radius: inherit;
   width: 100%;
+  border: 1.3px solid var(--color-purple-200);
 }
 
 .travelerOptions {
@@ -620,7 +633,7 @@
   box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
   border-radius: var(--br-5xs);
   background-color: var(--color-white);
-  border: 0.3px solid var(--color-purple-200);
+  /* border: 0.3px solid var(--color-purple-200); */
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -642,8 +655,126 @@
   min-width: 53px;
   padding: var(--padding-sm) var(--padding-xl);
   border: inherit;
-  border-radius: inherit;
-  width: 100%;
+  border-radius: 9px;
+  width: 75%;
+  border: 0.3px solid 0.3px solid var(--color-purple-200);
+}
+@media screen and (min-width:451px) and (max-width:465px) {
+  .luggage{
+    max-width:119%;
+  }
+  .luggage{
+    width: 83% !important;;
+  }
+ 
+}
+@media screen and (min-width:484px) and (max-width:508px) {
+  .luggage{
+    max-width:119%;
+  }
+  .luggage{
+    width: 84% ;
+  }
+ 
+}
+@media screen and (max-width:355px) {
+  .luggage{
+    max-width:119%;
+  }
+  .luggage{
+    width:81%;
+  }
+ 
+ }
+ @media screen and (min-width:356px) and (max-width:369px){
+  .luggage{
+    max-width:119%;
+  }
+  .luggage{
+    width:82%;
+  }
+ 
+ }
+ @media screen and (min-width:370px) and (max-width:381px){
+  .luggage{
+    max-width:119%;
+  }
+  .luggage{
+    width:83%;
+  }
+ 
+ }
+ @media screen and (min-width:382px) and (max-width:400px){
+  .luggage{
+    max-width:119%;
+  }
+  .luggage{
+    width:84%;
+  }
+ 
+ }
+ @media screen and (min-width:401px) and (max-width:417px){
+  .luggage{
+    max-width:119%;
+  }
+  .luggage{
+    width:85%;
+  }
+ 
+ }
+ @media screen and (min-width:418px) and (max-width:433px){
+  .luggage{
+    max-width:119%;
+  }
+  .luggage{
+    width:86%;
+  }
+ 
+ }
+ @media screen and (min-width:434px) and (max-width:450px){
+  .luggage{
+    max-width:119%;
+  }
+  .luggage{
+    width:87%;
+  }
+ 
+ }
+ @media screen and (min-width:466px) and (max-width:482px){
+  .luggage{
+    max-width:119%;
+  }
+  .luggage{
+    width:84%;
+  }
+ 
+ }
+ @media screen and (min-width:483px) and (max-width:500px){
+  .luggage{
+    max-width:119%;
+  }
+  .luggage{
+    width:85%;
+  }
+ 
+ }
+ @media screen and (min-width:501px) and (max-width:508px){
+  .luggage{
+    max-width:119%;
+  }
+  .luggage{
+    width:86%;
+  }
+ 
+ }
+ @media screen and (max-width:335px) {
+  .luggage{
+    max-width:119%;
+  }
+  .luggage{
+    width:78% !important;
+  }
+ 
 }
 
 .luggageCount,
@@ -652,6 +783,20 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+}
+@media screen and (min-width:441px) and (max-width:508px) {
+  .travelers{
+    flex-direction: column;
+    align-items: normal;
+    
+  }
+}
+@media screen  and (max-width:440px) {
+  .travelers{
+    flex-direction: column;
+    align-items: normal;
+    
+  }
 }
 
 .luggageCount {
@@ -693,7 +838,7 @@
   justify-content: flex-start;
   padding: var(--padding-smi) var(--padding-16xl-5);
   white-space: nowrap;
-  z-index: 1;
+  z-index: 0;
   border: none;
   cursor: pointer;
 }
@@ -754,7 +899,11 @@
   color: var(--color-gray-600);
   font-family: var(--font-poppins);
 }
-
+@media screen and (min-width:1051px) and (max-width:1380px) {
+  .header{
+    padding: var(--padding-21xl) 22px var(--padding-44xl);;
+  }
+}
 .hero {
   align-self: stretch;
   background-color: var(--color-white);
@@ -875,9 +1024,16 @@
 }
 @media screen and (max-width: 1250px) {
   .treeStructure {
-    gap: var(--gap-20xl);
+    /* gap: var(--gap-20xl); */
   }
-
+  @media screen and (min-width:1050px) and (max-width:1249px) {
+    .benefitItems{
+        gap: 0px ;
+        padding: 0;;
+    }
+    
+    
+  }
   .frameParent {
     width: 100%;
   }
@@ -921,6 +1077,8 @@
   .benefitItems,
   .treeStructure {
     gap: var(--gap-xl);
+    display: flex;
+    justify-content: space-between;
   }
 
   .findBookAndContainer {

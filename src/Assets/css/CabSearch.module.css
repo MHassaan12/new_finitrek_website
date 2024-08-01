@@ -145,6 +145,7 @@
   padding: var(--padding-sm) var(--padding-xl);
   border: inherit;
   border-radius: inherit;
+  border: 1.3px solid var(--color-purple-200);
 }
 
 .passengersWrapper {
@@ -173,7 +174,7 @@
   display: inline-block;
   min-width: 100%;
   padding: var(--padding-sm) var(--padding-xl);
-  border: inherit;
+  border: 0.3px solid (--color-purple-200);
   border-radius: inherit;
 }
 

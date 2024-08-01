@@ -34,7 +34,6 @@ const StripePayment: FunctionComponent<PaymentProps> = () => {
     }
 
     const onApproveOrder = (data: any, actions: any) => {
-        setLoading(true)
         const params = new URLSearchParams();
         return actions.order.capture().then(async (details: {
             id: any; purchase_units: {
@@ -67,11 +66,9 @@ const StripePayment: FunctionComponent<PaymentProps> = () => {
                     // localStorage.setItem('user', JSON.stringify(data.authUser))
                     resetBookingForm()
                     resetBookingCars()
-                    setLoading(false)
                     nvigation('/booking-success')
                 }
             } catch (error) {
-                setLoading(false)
                 nvigation('/booking-failed')
                 console.log(error)
             }

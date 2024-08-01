@@ -51,12 +51,20 @@
   color: var(--color-black);
   font-family: var(--font-poppins);
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .experienceDriver {
     font-size: var(--font-size-base);
     line-height: 24px;
   }
   .experience {
     flex-wrap: wrap;
+    margin: 10px 0px;
+  }
+}
+@media screen and (max-width:700px) {
+
+  .experience {
+    /* flex-wrap: wrap; */
+    margin: 15px 0px;
   }
 }
