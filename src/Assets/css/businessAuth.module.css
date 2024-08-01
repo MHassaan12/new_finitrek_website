@@ -64,6 +64,11 @@
     color: var(--color-darkslategray-100);
     font-family: var(--font-poppins);
 }
+@media screen and (min-width:1050px) and (max-width:1400px) {
+    .benefitItems{
+        gap: 0px;
+    }
+}
 
 .benefitItemsWrapper {
     flex-direction: column;
