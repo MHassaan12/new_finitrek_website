@@ -40,11 +40,11 @@ const RegisterOptions: FunctionComponent<RegisterOptionsProps> = ({setLoading}) 
             <div className={styles.socialLogin}>
                 <LoginWithGoogle
                     search1="/search-1.svg"
-                    loginWithGoogle="Login with Google"
+                    loginWithGoogle="Sign Up with Google"
                 />
                 <LoginWithGoogle
                     search1="/vector.svg"
-                    loginWithGoogle="Login with Facebook"
+                    loginWithGoogle="Sign Up with Facebook"
                     propWidth="16px"
                     propOverflow="unset"
                 />
@@ -112,11 +112,12 @@ const RegisterOptions: FunctionComponent<RegisterOptionsProps> = ({setLoading}) 
 
                 <button className={styles.button} type="submit">
                     <div className={styles.buttonChild} />
-                    <div className={styles.login}>Carete Account</div>
+                    <div className={styles.login}>Create Account</div>
                 </button>
 
-                <div className={styles.or}>OR</div>
-
+                <div className={styles.or}>OR </div>
+                
+                
                 <Link to="/signin" className={styles.button} type="submit">
                     <div className={styles.buttonChild} />
                     <div className={styles.login}>Login</div>

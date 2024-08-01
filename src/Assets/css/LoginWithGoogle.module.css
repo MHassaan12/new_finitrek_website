@@ -1,6 +1,6 @@
 .loginWithGoogleChild {
     height: 78px;
-    width: 681px;
+    width: 90%;
     position: relative;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.11);
     border-radius: var(--br-5xs);
@@ -35,7 +35,8 @@
   }
   .loginWithGoogle {
     /* align-self: stretch; */
-    width: 82%;
+    /* width: 82%; */
+    width:81%;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.11);
     border-radius: 8px;
     background-color: var(--color-white);
@@ -54,8 +55,31 @@
   }
   @media screen  and (max-width : 768px){
     .loginWithGoogle{
-      width: 90%;
+      width: 81% !important;
+    }}
+    @media screen  and (min-width : 1820px){
+      /* .loginWithGoogleWrapper{
+        font-size: larger;
+      } */
+      .loginWithGoogle{
+  
+        /* width: 678px !important;
+        height: 78px; */
+      }
     }
+    @media screen  and (max-width : 450px){
+      .loginWithGoogle{
+        width: 90% !important;
+        padding: 7px;
+        margin-bottom: 10px ;
+      }
+      .loginWithGoogleWrapper{
+        font-size: x-small;
+      }
+      .search1Icon{
+        height: 20px;
+        width:20px;
+      }
 
   }
   

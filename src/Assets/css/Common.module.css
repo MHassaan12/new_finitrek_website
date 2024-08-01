@@ -50,6 +50,18 @@
     position: relative;
 }
 
+
+@media screen and (max-width:508px) {
+    .luggageInput{
+      width: 100%;
+    }
+    .list{
+        width: 113% !important;
+    }
+    
+   
+  }
+
 .list {
     position: absolute;
     background-color: #fff;
