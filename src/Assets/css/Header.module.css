@@ -921,6 +921,8 @@
   .benefitItems,
   .treeStructure {
     gap: var(--gap-xl);
+    display: flex;
+    justify-content: space-between;
   }
 
   .findBookAndContainer {
