@@ -6,35 +6,38 @@ const CheckoutForm = () => {
     const stripe = useStripe();
     const elements = useElements();
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: { preventDefault: () => void; }) => {
         event.preventDefault();
-
+    
         if (!stripe || !elements) {
             return;
         }
-
+    
         const cardElement = elements.getElement(CardElement);
-
-        const { error, paymentMethod } = await stripe.createPaymentMethod({
-            type: 'card',
-            card: cardElement,
-        });
-
-        if (error) {
-            console.log('[error]', error);
-        } else {
-            const response = await axios.post('/charge', {
-                amount: 1000, // Amount in cents
-                stripeToken: paymentMethod.id,
+    
+        if (cardElement) {
+            const { error, paymentMethod } = await stripe.createPaymentMethod({
+                type: 'card',
+                card: cardElement,
             });
-
-            if (response.data.status === 'success') {
-                alert('Payment Successful!');
+    
+            if (error) {
+                console.log('[error]', error);
             } else {
-                alert('Payment Failed: ' + response.data.message);
+                const response = await axios.post('/charge', {
+                    amount: 1000, // Amount in cents
+                    stripeToken: paymentMethod.id,
+                });
+    
+                if (response.data.status === 'success') {
+                    alert('Payment Successful!');
+                } else {
+                    alert('Payment Failed: ' + response.data.message);
+                }
             }
         }
     };
+    
 
 
     return (
