@@ -29,7 +29,7 @@ const Header: FunctionComponent = () => {
                         {isOpen && (
                             <div className={`menu ${isOpen ? 'open' : ''}`}>
                                 <Navbar />
-                                <div className={styles.authentication}>
+                                <div className={`${styles.authentication} ${styles.hidden}` }>
                                     <div className={styles.authOptions}>
                                         <div className={styles.signInButton}>
                                             <Link to="/signin">

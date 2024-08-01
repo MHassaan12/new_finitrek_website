@@ -778,7 +778,12 @@
   /* width: 100%; */
   /* margin-bottom: 0.5rem; */
 }
-
+.hidden{
+  display: block !important;
+  position: absolute;
+    right: 30px;
+    top: 70px;
+}
 .error {
   font-size: 12px;
   /* padding: 0px 30px; */
