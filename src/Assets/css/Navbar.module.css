@@ -91,7 +91,7 @@
 
 .megamenu__content a {
   color: black;
-  padding: 12px 16px;
+  padding: 12px 0;
   text-decoration: none;
   display: block;
 }
@@ -118,7 +118,35 @@
     padding: 100px 60px ;
     position: absolute;
     left: -225px;
-  
-
   }
+}
+@media screen and (max-width:768px) {
+  .megamenu__content{
+    width: 250px;
+    height: 350px;
+    overflow: scroll;
+    left: -220px;
+    top: 170px;
+    flex-direction: column;
+    
+  }
+  .megamenu__column{
+    width: 90%;
+  }
+}
+@media screen and (min-width:769px) and (max-width:1050px) {
+  .megamenu__content{
+    width: 600px;
+    height: 400px;
+    /* overflow: scroll; */
+    left: -500px;
+    top: 170px;
+    /* flex-direction: column; */
+    
+  }
+  .megamenu__content a {
+    padding: 12px 0px 0px;
+ 
+  }
+
 }
