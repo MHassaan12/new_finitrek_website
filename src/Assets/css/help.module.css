@@ -26,6 +26,7 @@ h2 {
 }
 
 .question {
+    border-radius: 12px;
     background-color: var(--color-lavenderblush);padding: 18px;
     cursor: pointer;
     user-select: none;
