@@ -12,10 +12,11 @@ import StripePayment from "./StripePayment";
 
 interface PaymentProps {
     setLoading: Function;
+    clientSecret: String;
 }
 
 
-const Payment: FunctionComponent<PaymentProps> = ({ setLoading }) => {
+const Payment: FunctionComponent<PaymentProps> = ({ setLoading, clientSecret }) => {
     const bookingForm = useRecoilValue(bookingFormSelector)
     const selectedCar = useRecoilValue(selectedCarSelector)
     const resetBookingForm = useResetRecoilState(bookingFormState)
@@ -45,8 +46,8 @@ const Payment: FunctionComponent<PaymentProps> = ({ setLoading }) => {
         }) => {
             const formData = {
                 user_id: '',
-                // vendor_id: selectedCar.vendor_id,
-                vendor_id: 27,
+                vendor_id: selectedCar.vendor_id,
+                // vendor_id: 27,
                 payment_id: details.id,
                 transaction_id: details.purchase_units[0].payments.captures[0].id,
                 status: details.status,
@@ -89,7 +90,7 @@ const Payment: FunctionComponent<PaymentProps> = ({ setLoading }) => {
                             <div className={styles.rectangleParent}>
                                 <div className={styles.frameChild} />
                                 <div style={{ width: '90%' }}>
-                                    {/* <StripePayment/> */}
+                                    <StripePayment clientSecret={clientSecret} setLoading={setLoading}/>
 
                                     <PayPalButtons
                                         // style={style}

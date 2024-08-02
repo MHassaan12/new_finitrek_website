@@ -9,13 +9,13 @@ import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "./CardElement";
 
 interface PaymentProps {
-    
+
 }
 
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE);
 
-const StripePayment: FunctionComponent<PaymentProps> = () => {
+const StripePayment: FunctionComponent<PaymentProps> = ({ clientSecret, setLoading }) => {
     const bookingForm = useRecoilValue(bookingFormSelector)
     const selectedCar = useRecoilValue(selectedCarSelector)
     const resetBookingForm = useResetRecoilState(bookingFormState)
@@ -82,9 +82,15 @@ const StripePayment: FunctionComponent<PaymentProps> = () => {
     };
 
     return (
-        <Elements stripe={stripePromise} options={{ currency: "gbp", locale: 'en', mode: 'payment', }}>
-            <CheckoutForm />
-        </Elements>
+        <>
+            {
+                clientSecret &&
+
+                <Elements stripe={stripePromise} options={{ clientSecret }}>
+                    <CheckoutForm setLoading={setLoading} />
+                </Elements>
+            }
+        </>
 
     );
 };

@@ -68,8 +68,12 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
             const { data } = await post(`/api/userRequest?${params}`, body);
             if (data.message) {
                 setBookingForm((prev: any) => ({ ...prev, ...body }))
+                const formData = new FormData();
+                formData.append('amount', parseInt(selectedCar.vehiclePrice))
+                const { data } = await post(`/api/paybystripe`, formData);
+                console.log('VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV', data)
                 setLoading(false)
-                nvigation('/payment')
+                nvigation('/payment', { state: { clientSecret: data.clientSecret} })
                 // localStorage.setItem('user', JSON.stringify(data.authUser))
                 // ('/cab/booking/booking-payment')
             }
