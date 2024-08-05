@@ -98,7 +98,6 @@
   font-weight: 500;
   /* display: inline-block; */
   min-width: 61px;
-
 }
 
 .signUpWrapper {
@@ -148,17 +147,15 @@
   z-index: 1;
 }
 @media screen and (max-width: 1050px) {
-  .treeStructure{
+  .treeStructure {
     align-items: normal;
-
   }
 }
 
-@media screen and (min-width:1050px) and (max-width:1400px) {
+@media screen and (min-width: 1050px) and (max-width: 1400px) {
   /* .treeStructure{
       flex: none !important;
   } */
-  
 }
 .uSPLayout {
   align-self: stretch;
@@ -201,7 +198,6 @@
 .frameContainer {
   width: 50%;
   /* position: relative; */
-
 }
 
 .findBookAndRentACarEasiWrapper {
@@ -224,18 +220,15 @@
   height: 866px;
   overflow: hidden;
   /* object-fit: contain; */
-
 }
 
 .formContentIcon .bgframe {
-
   right: -277px;
   top: -59px;
   width: 951px;
   position: absolute;
 
   /* right: -220px; */
-
 }
 
 .car21 {
@@ -336,7 +329,6 @@
   box-sizing: border-box;
   min-width: 190px;
   cursor: pointer;
-
 }
 
 .vuesaxboldarrangeSquare2Icon {
@@ -442,9 +434,8 @@
   border: 0.3px solid var(--color-purple-200);
   padding: var(--padding-sm);
   width: 80%;
- 
 }
-.selectDate{
+.selectDate {
   overflow: hidden !important;
   white-space: nowrap;
   text-overflow: clip;
@@ -480,7 +471,6 @@
   justify-content: flex-start;
 }
 
-
 .endDatePicker {
   align-self: stretch;
   box-shadow: 0 6px 12px rgba(147, 39, 143, 0.1);
@@ -499,7 +489,7 @@
   flex: 1;
   flex-direction: row;
   gap: calc(var(--gap-xs) * 1.5);
-    min-width: 76%;
+  min-width: 76%;
   /* min-width: 83px; */
 }
 
@@ -659,122 +649,109 @@
   width: 75%;
   border: 0.3px solid 0.3px solid var(--color-purple-200);
 }
-@media screen and (min-width:451px) and (max-width:465px) {
-  .luggage{
-    max-width:119%;
+@media screen and (min-width: 451px) and (max-width: 465px) {
+  .luggage {
+    max-width: 119%;
   }
-  .luggage{
-    width: 83% !important;;
+  .luggage {
+    width: 83% !important;
   }
- 
 }
-@media screen and (min-width:484px) and (max-width:508px) {
-  .luggage{
-    max-width:119%;
+@media screen and (min-width: 484px) and (max-width: 508px) {
+  .luggage {
+    max-width: 119%;
   }
-  .luggage{
-    width: 84% ;
+  .luggage {
+    width: 84%;
   }
- 
 }
-@media screen and (max-width:355px) {
-  .luggage{
-    max-width:119%;
+@media screen and (max-width: 355px) {
+  .luggage {
+    max-width: 119%;
   }
-  .luggage{
-    width:81%;
+  .luggage {
+    width: 81%;
   }
- 
- }
- @media screen and (min-width:356px) and (max-width:369px){
-  .luggage{
-    max-width:119%;
+}
+@media screen and (min-width: 356px) and (max-width: 369px) {
+  .luggage {
+    max-width: 119%;
   }
-  .luggage{
-    width:82%;
+  .luggage {
+    width: 82%;
   }
- 
- }
- @media screen and (min-width:370px) and (max-width:381px){
-  .luggage{
-    max-width:119%;
+}
+@media screen and (min-width: 370px) and (max-width: 381px) {
+  .luggage {
+    max-width: 119%;
   }
-  .luggage{
-    width:83%;
+  .luggage {
+    width: 83%;
   }
- 
- }
- @media screen and (min-width:382px) and (max-width:400px){
-  .luggage{
-    max-width:119%;
+}
+@media screen and (min-width: 382px) and (max-width: 400px) {
+  .luggage {
+    max-width: 119%;
   }
-  .luggage{
-    width:84%;
+  .luggage {
+    width: 84%;
   }
- 
- }
- @media screen and (min-width:401px) and (max-width:417px){
-  .luggage{
-    max-width:119%;
+}
+@media screen and (min-width: 401px) and (max-width: 417px) {
+  .luggage {
+    max-width: 119%;
   }
-  .luggage{
-    width:85%;
+  .luggage {
+    width: 85%;
   }
- 
- }
- @media screen and (min-width:418px) and (max-width:433px){
-  .luggage{
-    max-width:119%;
+}
+@media screen and (min-width: 418px) and (max-width: 433px) {
+  .luggage {
+    max-width: 119%;
   }
-  .luggage{
-    width:86%;
+  .luggage {
+    width: 86%;
   }
- 
- }
- @media screen and (min-width:434px) and (max-width:450px){
-  .luggage{
-    max-width:119%;
+}
+@media screen and (min-width: 434px) and (max-width: 450px) {
+  .luggage {
+    max-width: 119%;
   }
-  .luggage{
-    width:87%;
+  .luggage {
+    width: 87%;
   }
- 
- }
- @media screen and (min-width:466px) and (max-width:482px){
-  .luggage{
-    max-width:119%;
+}
+@media screen and (min-width: 466px) and (max-width: 482px) {
+  .luggage {
+    max-width: 119%;
   }
-  .luggage{
-    width:84%;
+  .luggage {
+    width: 84%;
   }
- 
- }
- @media screen and (min-width:483px) and (max-width:500px){
-  .luggage{
-    max-width:119%;
+}
+@media screen and (min-width: 483px) and (max-width: 500px) {
+  .luggage {
+    max-width: 119%;
   }
-  .luggage{
-    width:85%;
+  .luggage {
+    width: 85%;
   }
- 
- }
- @media screen and (min-width:501px) and (max-width:508px){
-  .luggage{
-    max-width:119%;
+}
+@media screen and (min-width: 501px) and (max-width: 508px) {
+  .luggage {
+    max-width: 119%;
   }
-  .luggage{
-    width:86%;
+  .luggage {
+    width: 86%;
   }
- 
- }
- @media screen and (max-width:335px) {
-  .luggage{
-    max-width:119%;
+}
+@media screen and (max-width: 335px) {
+  .luggage {
+    max-width: 119%;
   }
-  .luggage{
-    width:78% !important;
+  .luggage {
+    width: 78% !important;
   }
- 
 }
 
 .luggageCount,
@@ -784,18 +761,16 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
-@media screen and (min-width:441px) and (max-width:508px) {
-  .travelers{
+@media screen and (min-width: 441px) and (max-width: 508px) {
+  .travelers {
     flex-direction: column;
     align-items: normal;
-    
   }
 }
-@media screen  and (max-width:440px) {
-  .travelers{
+@media screen and (max-width: 440px) {
+  .travelers {
     flex-direction: column;
     align-items: normal;
-    
   }
 }
 
@@ -899,9 +874,9 @@
   color: var(--color-gray-600);
   font-family: var(--font-poppins);
 }
-@media screen and (min-width:1051px) and (max-width:1380px) {
-  .header{
-    padding: var(--padding-21xl) 22px var(--padding-44xl);;
+@media screen and (min-width: 1051px) and (max-width: 1380px) {
+  .header {
+    padding: var(--padding-21xl) 22px var(--padding-44xl);
   }
 }
 .hero {
@@ -927,28 +902,27 @@
   /* width: 100%; */
   /* margin-bottom: 0.5rem; */
 }
-.hidden{
+.hidden {
   display: block !important;
   position: absolute;
-    right: 30px;
-    top: 70px;
+  right: 30px;
+  top: 70px;
 }
 .error {
   font-size: 12px;
   /* padding: 0px 30px; */
   color: red;
-
 }
 
 /* HamburgerMenu.css */
 
-.hamburger_menu{
+.hamburger_menu {
   position: relative;
   display: none;
 }
 
 .hamburger {
-  border:  10px solid;
+  border: 10px solid;
   cursor: pointer;
   width: 90px;
   height: 90px;
@@ -956,7 +930,6 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
 
 .bar {
   width: 100%;
@@ -974,7 +947,7 @@
 }
 
 .hamburger.open .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  trans: rotate(-45deg) translate(5px, -5px);
 }
 
 .menu {
@@ -1013,26 +986,20 @@
   background-color: #f5f5f5;
 }
 
-
-
 @media screen and (max-width: 440px) {
-  .oneWayWrapper{
+  .oneWayWrapper {
     flex-wrap: wrap;
-    
   }
- 
 }
 @media screen and (max-width: 1250px) {
   .treeStructure {
     /* gap: var(--gap-20xl); */
   }
-  @media screen and (min-width:1050px) and (max-width:1249px) {
-    .benefitItems{
-        gap: 0px ;
-        padding: 0;;
+  @media screen and (min-width: 1050px) and (max-width: 1249px) {
+    .benefitItems {
+      gap: 0px;
+      padding: 0;
     }
-    
-    
   }
   .frameParent {
     width: 100%;
@@ -1044,10 +1011,9 @@
 }
 
 @media screen and (min-width: 1051px) {
-  .authentication{
+  .authentication {
     display: block !important ;
   }
-
 }
 @media screen and (max-width: 1050px) {
   .benefitItemsWrapper {
@@ -1063,17 +1029,13 @@
 
   .hero {
     padding-top: 212px;
-
   }
-  .hamburger_menu{
+  .hamburger_menu {
     display: block;
   }
-
 }
 
-
 @media screen and (max-width: 750px) {
-
   .benefitItems,
   .treeStructure {
     gap: var(--gap-xl);
@@ -1098,11 +1060,10 @@
     top: 286px;
     left: 148px !important;
     height: 17px;
-
   }
   .authOptions,
-.authentication,
-.treeStructure,
+  .authentication,
+  .treeStructure,
   .uSPLayout {
     display: flex;
     /* flex-wrap: wrap; */
@@ -1142,13 +1103,11 @@
 
   .hero {
     padding-top: 212px;
-
   }
 }
 
-@media screen and (max-width:786px) {
+@media screen and (max-width: 786px) {
   .viaDropdown {
     display: none;
   }
 }
-
