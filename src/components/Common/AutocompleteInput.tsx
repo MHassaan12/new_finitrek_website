@@ -26,7 +26,7 @@ const AutocompleteInput: React.FC<Props> = ({ style, address, setAddress }) => {
                 //       input: inputValue,
                 //     },
                 //   });
-                const response = await fetch(`https://thingproxy.freeboard.io/fetch/https://maps.googleapis.com/maps/api/place/autocomplete/json?key=AIzaSyA0BghYPbeNB0v96lsIhhpx9SgZTC7AS3I&components=country:uk&input=${inputValue}`);
+                const response = await fetch(`https://admin.finitrek.com/autocomplete-api.php?query=${inputValue}`);
                 const data = await response.json();
                 if (data.predictions.length > 0) {
 
