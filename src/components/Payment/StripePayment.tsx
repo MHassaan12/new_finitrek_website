@@ -9,7 +9,8 @@ import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "./CardElement";
 
 interface PaymentProps {
-
+    clientSecret: String,
+    setLoading: Function
 }
 
 
@@ -76,17 +77,18 @@ const StripePayment: FunctionComponent<PaymentProps> = ({ clientSecret, setLoadi
         }).catch(() => nvigation('/booking-failed'))
     }
 
-    const options = {
+    const options: { clientSecret: string } = {
         // passing the client secret obtained from the server
-        clientSecret: '{{CLIENT_SECRET}}',
+        clientSecret: clientSecret as string,
     };
+
 
     return (
         <>
             {
                 clientSecret &&
 
-                <Elements stripe={stripePromise} options={{ clientSecret }}>
+                <Elements stripe={stripePromise} options={options}>
                     <CheckoutForm setLoading={setLoading} />
                 </Elements>
             }

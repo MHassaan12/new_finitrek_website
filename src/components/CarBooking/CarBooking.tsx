@@ -69,7 +69,7 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
             if (data.message) {
                 setBookingForm((prev: any) => ({ ...prev, ...body }))
                 const formData = new FormData();
-                formData.append('amount', parseInt(selectedCar.vehiclePrice))
+                formData.append('amount', parseInt(selectedCar.vehiclePrice).toString())
                 const { data } = await post(`/api/paybystripe`, formData);
                 console.log('VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV', data)
                 setLoading(false)

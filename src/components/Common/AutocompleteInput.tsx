@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import styles from '../../Assets/css/Common.module.css';
+import { post } from '../../utils/api';
 
 interface Suggestion {
     address?: string;
@@ -26,8 +27,7 @@ const AutocompleteInput: React.FC<Props> = ({ style, address, setAddress }) => {
                 //       input: inputValue,
                 //     },
                 //   });
-                const response = await fetch(`https://admin.finitrek.com/autocomplete-api.php?query=${inputValue}`);
-                const data = await response.json();
+                const { data } = await post('/api/autocomplete', { query: inputValue });
                 if (data.predictions.length > 0) {
 
                     setSuggestions(data.predictions.map((item: any) => ({ address: item.description, addressType: 'Address' })));

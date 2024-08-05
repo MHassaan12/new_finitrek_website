@@ -10,7 +10,7 @@ import { bookingCarsState, bookingFormState } from "../../stores/atoms";
 import { useNavigate } from "react-router-dom";
 import { post } from "../../utils/api";
 
-const CheckoutForm = ({ setLoading: { setLoading: any } }) => {
+const CheckoutForm = ({ setLoading }: { setLoading: Function }) => {
   const stripe = useStripe();
   const elements = useElements();
   const bookingForm = useRecoilValue(bookingFormSelector);
