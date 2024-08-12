@@ -59,22 +59,23 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/signin" element={<LoginPage />} />
-      <Route path="/signup" element={<RegisterPage />} />
       <Route path="/business-signup" element={<BusinessRegisterPage />} />
       <Route path="/" element={<Layout />}>
         <Route index element={<LandingPage />} />
+        <Route path="/home/:slug" element={<LandingPage />} />
+        <Route path="/signin" element={<LoginPage />} />
+        <Route path="/signup" element={<RegisterPage />} />
         <Route path="/car-search" element={<CarSearchPage />} />
-        <Route path="/car-booking" element={<CarBookingPage />} />
+        <Route path="/car-booking" element={<CarBookingPage />} /> 
         <Route path="/payment" element={<PaymentPage />} />
 
-        <Route path="/register-business" element={<RegisterBusiness/>} />
+        <Route path="/register-business" element={<RegisterBusiness />} />
 
         <Route path="/business-account" element={<BusinessAccountPage />} />
         <Route path="/booking-success" element={<PaymentSuccessPage />} />
         <Route path="/booking-failed" element={<PaymentFailPage />} />
         <Route path="/help" element={<HelpPage />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} /> 
+        <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermConditions />} />
       </Route>
     </Routes>

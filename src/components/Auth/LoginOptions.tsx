@@ -10,7 +10,7 @@ interface LoginOptionsProps {
     setLoading: Function;
 }
 
-interface FormData{
+interface FormData {
     username: string
     password: string
 }
@@ -38,10 +38,10 @@ const LoginOptions: FunctionComponent<LoginOptionsProps> = ({ setLoading }) => {
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
-    
+
     return (
         <form className={styles.loginOptions} onSubmit={handleSubmit(onSubmit)}>
-            <div className={styles.socialLogin}>
+            {/* <div className={styles.socialLogin}>
                 <LoginWithGoogle
                     search1="/search-1.svg"
                     loginWithGoogle="Login with Google"
@@ -53,8 +53,8 @@ const LoginOptions: FunctionComponent<LoginOptionsProps> = ({ setLoading }) => {
                 // propWidth="16px"
                 // propOverflow="unset"
                 />
-            </div>
-            <div className={styles.loginOptionsInner}>
+            </div> */}
+            {/* <div className={styles.loginOptionsInner}>
                 <div className={styles.frameParent}>
                     <div className={styles.lineWrapper}>
                         <div className={styles.frameChild} />
@@ -64,7 +64,7 @@ const LoginOptions: FunctionComponent<LoginOptionsProps> = ({ setLoading }) => {
                         <div className={styles.frameItem} />
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className={styles.credentialsArea}>
                 <div className={styles.inputFields}>
                     <div className={styles.emailField}>
@@ -80,21 +80,21 @@ const LoginOptions: FunctionComponent<LoginOptionsProps> = ({ setLoading }) => {
 
 
                     <div className={styles.emailField}>
-    <div className={styles.inputContainers}>
-        <img className={styles.emailIcon} alt="" src="/group.svg" />
-    </div>
-    <div className={styles.input}>
-        <div className={styles.password1}>Password</div>
-        <input
-            className={styles.examplegmailcom}
-            type="password"
-            placeholder="***********"
-            {...register("password", { required: "Password is required" })}
-        />
-        {errors.password && <span className={styles.error}>{errors.password.message}</span>}
-    </div>
-   
-</div>
+                        <div className={styles.inputContainers}>
+                            <img className={styles.emailIcon} alt="" src="/group.svg" />
+                        </div>
+                        <div className={styles.input}>
+                            <div className={styles.password1}>Password</div>
+                            <input
+                                className={styles.examplegmailcom}
+                                type="password"
+                                placeholder="***********"
+                                {...register("password", { required: "Password is required" })}
+                            />
+                            {errors.password && <span className={styles.error}>{errors.password.message}</span>}
+                        </div>
+
+                    </div>
 
 
                 </div>

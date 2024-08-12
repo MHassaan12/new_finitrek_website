@@ -37,29 +37,29 @@ const RegisterOptions: FunctionComponent<RegisterOptionsProps> = ({setLoading}) 
 
     return (
         <form className={styles.loginOptions} onSubmit={handleSubmit(onSubmit)}>
-            <div className={styles.socialLogin}>
-                <LoginWithGoogle
-                    search1="/search-1.svg"
-                    loginWithGoogle="Sign Up with Google"
-                />
-                <LoginWithGoogle
-                    search1="/vector.svg"
-                    loginWithGoogle="Sign Up with Facebook"
-                    propWidth="16px"
-                    propOverflow="unset"
-                />
-            </div>
-            <div className={styles.loginOptionsInner}>
-                <div className={styles.frameParent}>
-                    <div className={styles.lineWrapper}>
-                        <div className={styles.frameChild} />
-                    </div>
-                    <div className={styles.or}>OR</div>
-                    <div className={styles.lineContainer}>
-                        <div className={styles.frameItem} />
-                    </div>
+                {/* <div className={styles.socialLogin}>
+                    <LoginWithGoogle
+                        search1="/search-1.svg"
+                        loginWithGoogle="Sign Up with Google"
+                    />
+                    <LoginWithGoogle
+                        search1="/vector.svg"
+                        loginWithGoogle="Sign Up with Facebook"
+                        propWidth="16px"
+                        propOverflow="unset"
+                    />
                 </div>
-            </div>
+                <div className={styles.loginOptionsInner}>
+                    <div className={styles.frameParent}>
+                        <div className={styles.lineWrapper}>
+                            <div className={styles.frameChild} />
+                        </div>
+                        <div className={styles.or}>OR</div>
+                        <div className={styles.lineContainer}>
+                            <div className={styles.frameItem} />
+                        </div>
+                    </div>
+                </div> */}
             <div className={styles.credentialsArea}>
                 <div className={styles.inputFields}>
                     <div className={styles.emailField}>

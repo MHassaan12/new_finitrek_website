@@ -259,7 +259,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
               <div className={styles.travelers}>
                 <div style={{ display: "flex", flexDirection: "column" }}>
                   <div className={styles.travelerOptions}>
-                    <select className={styles.passengers} onChange={(e) => { setBookingForm((prev: any) => ({ ...prev, passengers: e.target.value })); setErrors((prev) => ({ ...prev, passenger: '' })) }}>
+                    <select className={styles.passengers} value={bookingForm.passengers} onChange={(e) => { setBookingForm((prev: any) => ({ ...prev, passengers: e.target.value })); setErrors((prev) => ({ ...prev, passenger: '' })) }}>
                       <option value="">Passengers</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -275,7 +275,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setLoading }) => {
                   {errors.passenger && <span className={styles.error}>{errors.passenger}</span>}
                 </div>
                 <div className={styles.luggageCount}>
-                  <SelectTree style={styles.luggage} setValue={(value: string) => setBookingForm((prev: any) => ({ ...prev, luggage: value }))} />
+                  <SelectTree style={styles.luggage} value={bookingForm.luggage} setValue={(value: string) => setBookingForm((prev: any) => ({ ...prev, luggage: value }))} />
                   {/* <select className={styles.luggage} onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))}>
                     <option value="">Luggage</option>
                     <option value="suitcase">Suitcase (Approx 78x50x32 cm) </option>

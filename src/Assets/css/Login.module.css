@@ -37,7 +37,7 @@
     flex-direction: column;
 }
 
-/* .welcomePanel {
+.welcomePanel {
     width: 660px;
     display: flex;
     flex-direction: row;
@@ -46,7 +46,7 @@
     padding: 0 0 var(--padding-7xs);
     box-sizing: border-box;
     max-width: 100%;
-} */
+}
 
 .register {
     color: var(--color-purple-100);
@@ -99,6 +99,7 @@
     justify-content: flex-start;
     gap: 47px;
     max-width: 100%; */
+    margin: 120px 0px;
 } 
 .login {
    

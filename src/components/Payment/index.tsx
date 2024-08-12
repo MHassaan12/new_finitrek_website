@@ -2,7 +2,7 @@ import { FunctionComponent } from "react";
 import styles from "../../Assets/css/Payment.module.css";
 import { PayPalButtons, PayPalScriptProvider, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 import { useRecoilValue, useResetRecoilState } from "recoil";
-import { bookingFormSelector, selectedCarSelector } from "../../stores/selectors";
+import { bookingDetailFormSelector, bookingFormSelector, selectedCarSelector } from "../../stores/selectors";
 import { useNavigate } from "react-router-dom";
 import { post } from "../../utils/api";
 import { bookingCarsState, bookingFormState } from "../../stores/atoms";
@@ -18,6 +18,7 @@ interface PaymentProps {
 
 const Payment: FunctionComponent<PaymentProps> = ({ setLoading, clientSecret }) => {
     const bookingForm = useRecoilValue(bookingFormSelector)
+    const bookingDetailForm = useRecoilValue(bookingDetailFormSelector)
     const selectedCar = useRecoilValue(selectedCarSelector)
     const resetBookingForm = useResetRecoilState(bookingFormState)
     const resetBookingCars = useResetRecoilState(bookingCarsState)
@@ -90,7 +91,7 @@ const Payment: FunctionComponent<PaymentProps> = ({ setLoading, clientSecret }) 
                             <div className={styles.rectangleParent}>
                                 <div className={styles.frameChild} />
                                 <div style={{ width: '90%' }}>
-                                    <StripePayment clientSecret={clientSecret} setLoading={setLoading}/>
+                                    <StripePayment clientSecret={clientSecret} setLoading={setLoading} />
 
                                     <PayPalButtons
                                         // style={style}
@@ -113,7 +114,8 @@ const Payment: FunctionComponent<PaymentProps> = ({ setLoading, clientSecret }) 
                                 <div className={styles.frameInner} />
                                 <div className={styles.frameDiv}>
                                     <div className={styles.frameParent1}>
-                                        <div className={styles.frameParent2}>
+                                        {/* <div className={styles.frameParent2}>
+                                            
                                             {selectedCar.name && <div className={styles.totalTax}>Provider</div>}
                                             <div className={styles.insurance}>Date</div>
                                             <div className={styles.insurance}>Time</div>
@@ -127,21 +129,21 @@ const Payment: FunctionComponent<PaymentProps> = ({ setLoading, clientSecret }) 
                                             <div className={styles.insurance}>Phone Number</div>
                                             {bookingForm.flight_number && <div className={styles.insurance}>Flight</div>}
                                             {bookingForm.instruction && <div className={styles.insurance}>Notes</div>}
-                                        </div>
+                                        </div> */}
                                         <div className={styles.frameParent3}>
-                                            {selectedCar.name && <div className={styles.div1}>{selectedCar.name}</div>}
-                                            <div className={styles.div1}> {moment(bookingForm.myDate).format('DD/MM/YYYY')}</div>
-                                            <div className={styles.div1}>{bookingForm.myTime}</div>
-                                            <div className={styles.div1}>{selectedCar.vehicleTypeName}</div>
-                                            <div className={styles.div1}>{bookingForm.pickup}</div>
-                                            <div className={styles.div1}>{bookingForm.dropoff}</div>
-                                            <div className={styles.div1}>£{selectedCar.vehiclePrice}</div>
-                                            <div className={styles.div1}>{selectedCar.car_seats}</div>
-                                            <div className={styles.div1}>{selectedCar.luggage_count}</div>
-                                            <div className={styles.div1}>{selectedCar.name}</div>
-                                            <div className={styles.div1}>{selectedCar.contact_number}</div>
-                                            {bookingForm.flight_number && <div className={styles.div1}>{selectedCar.flight_number}</div>}
-                                            {bookingForm.instruction && <div className={styles.div1}>{selectedCar.instruction}</div>}
+                                            {selectedCar.name && <div className={styles.div1}><div className={styles.insurance}>Provider</div> {selectedCar.name}</div>}
+                                            <div className={styles.div1}><div className={styles.insurance}>Date</div> {moment(bookingForm.myDate).format('DD/MM/YYYY')}</div>
+                                            <div className={styles.div1}><div className={styles.insurance}>Time</div> {bookingForm.myTime}</div>
+                                            <div className={styles.div1}><div className={styles.insurance}>Desired Vehicle</div> {selectedCar.vehicleTypeName}</div>
+                                            <div className={styles.div1}><div className={styles.insurance}>Pickup Address</div>{bookingForm.pickup}</div>
+                                            <div className={styles.div1}> <div className={styles.insurance}>Drop-off Address</div>{bookingForm.dropoff}</div>
+                                            <div className={styles.div1}><div className={styles.insurance}>Price</div> £{selectedCar.vehiclePrice}</div>
+                                            <div className={styles.div1}><div className={styles.insurance}>Persons</div> {bookingForm.passenger}</div>
+                                            <div className={styles.div1}> <div className={styles.insurance}>Luggage</div> {bookingForm.luggage}</div>
+                                            <div className={styles.div1}><div className={styles.insurance}>Passenger Name</div> {bookingDetailForm.name}</div>
+                                            <div className={styles.div1}><div className={styles.insurance}>Phone Number</div> {bookingDetailForm.contact_number}</div>
+                                            {bookingForm.flight_number && <div className={styles.div1}><div className={styles.insurance}>Flight</div> {bookingDetailForm.flight_number}</div>}
+                                            {bookingForm.instruction && <div className={styles.div1}><div className={styles.insurance}>Notes</div> {bookingDetailForm.instruction}</div>}
                                         </div>
                                     </div>
                                 </div>
@@ -154,7 +156,7 @@ const Payment: FunctionComponent<PaymentProps> = ({ setLoading, clientSecret }) 
                             </div>
                             <div className={styles.rectangleGroup}>
                                 <div className={styles.frameInner} />
-                                <div className={styles.frameDiv}>
+                                {/* <div className={styles.frameDiv}>
                                     <div className={styles.frameParent1}>
                                         <div className={styles.frameParent2}>
                                             <div className={styles.detail01Wrapper}>
@@ -173,7 +175,7 @@ const Payment: FunctionComponent<PaymentProps> = ({ setLoading, clientSecret }) 
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className={styles.rectangleContainer}>
                                     <div className={styles.rectangleDiv} />
                                     <div className={styles.grandTotal}>Grand Total</div>

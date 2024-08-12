@@ -186,7 +186,7 @@ const CabSearch: FunctionComponent = () => {
         </div>
         <div className={styles.passengerArea}>
           <div className={styles.passengersWrapper}>
-            <select className={styles.passengers} onChange={(e) => { setBookingForm((prev: any) => ({ ...prev, passengers: e.target.value })) }}>
+            <select className={styles.passengers} value={bookingForm.passengers} onChange={(e) => { setBookingForm((prev: any) => ({ ...prev, passengers: e.target.value })) }}>
               <option value="">Passengers</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -213,7 +213,7 @@ const CabSearch: FunctionComponent = () => {
             {/* <div className={styles.passengers}>Passengers</div> */}
           </div>
           <div className={styles.luggageWrapper}>
-            <SelectTree style={styles.luggage} setValue={(value: string) => setBookingForm((prev: any) => ({ ...prev, luggage: value }))} />
+            <SelectTree style={styles.luggage} value={bookingForm.luggage} setValue={(value: string) => setBookingForm((prev: any) => ({ ...prev, luggage: value }))} />
             {/* <select className={styles.luggage} onChange={(e) => setBookingForm((prev: any) => ({ ...prev, luggage: e.target.value }))}>
               <option value="">Luggage</option>
               <option value="suitcase">Suitcase (Approx 78x50x32 cm) </option>

@@ -30,7 +30,7 @@ const AutocompleteInput: React.FC<Props> = ({ style, address, setAddress }) => {
                 const { data } = await post('/api/autocomplete', { query: inputValue });
                 if (data.predictions.length > 0) {
 
-                    setSuggestions(data.predictions.map((item: any) => ({ address: item.description, addressType: 'Address' })));
+                    setSuggestions(data.predictions.map((item: any) => ({ address: item.description, addressType: item.types.includes('airport') ? "Airport" : 'Address' })));
                 }
             }
             if (inputValue.length == 0) {

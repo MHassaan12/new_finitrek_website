@@ -61,14 +61,15 @@ const data = [
 interface Props {
     style: string
     setValue: any
+    value: any
 }
 
 interface ExpandedItems {
     [key: number]: boolean;
 }
 
-const SelectTree: React.FC<Props> = ({ style, setValue }) => {
-    const [selectedItem, setSelectedItem] = useState('');
+const SelectTree: React.FC<Props> = ({ style, value, setValue }) => {
+    const [selectedItem, setSelectedItem] = useState(value);
     const [show, setShow] = useState(false);
     const [expandedItems, setExpandedItems] = useState<ExpandedItems>({});
 

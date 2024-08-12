@@ -7,7 +7,8 @@ import { useForm } from "react-hook-form";
 import moment from "moment";
 import { post } from "../../utils/api";
 import { useNavigate } from "react-router-dom";
-import { bookingFormState } from "../../stores/atoms";
+import { bookingDetailFormState, bookingFormState } from "../../stores/atoms";
+import { format } from "date-fns";
 
 interface CarBookingProps {
     setLoading: Function;
@@ -27,6 +28,7 @@ interface FormData {
 
 const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
     const [_, setBookingForm] = useRecoilState(bookingFormState);
+    const [bookingDetailForm, setBookingDetailForm] = useRecoilState(bookingDetailFormState);
     const bookingForm = useRecoilValue(bookingFormSelector)
     const selectedCar = useRecoilValue(selectedCarSelector)
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
@@ -34,6 +36,7 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
 
     const onSubmit = async (body: any) => {
         setLoading(true)
+        setBookingDetailForm(body)
         const params = new URLSearchParams();
         const formData = {
             pickup: bookingForm.pickup,
@@ -73,7 +76,7 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
                 const { data } = await post(`/api/paybystripe`, formData);
                 console.log('VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV', data)
                 setLoading(false)
-                nvigation('/payment', { state: { clientSecret: data.clientSecret} })
+                nvigation('/payment', { state: { clientSecret: data.clientSecret } })
                 // localStorage.setItem('user', JSON.stringify(data.authUser))
                 // ('/cab/booking/booking-payment')
             }
@@ -94,7 +97,7 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
                                 <div className={styles.pickUp}>Pick Up</div>
                                 <div className={styles.pickupTimeLocation}>
                                     <div className={styles.date29Apr20241120}>
-                                        Date: {bookingForm.myDate} {bookingForm.myTime}
+                                        Date: {format(bookingForm?.myDate, 'dd MMM yyyy')} {bookingForm.myTime}
                                     </div>
                                     <div className={styles.londonHeathrowTerminal}>
                                         {bookingForm.pickup}
@@ -150,7 +153,7 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
                                             alt=""
                                             src="/vuesaxlinearuser.svg"
                                         />
-                                        <div className={styles.passagers}>{selectedCar.car_seats} Passagers</div>
+                                        <div className={styles.passagers}>{bookingForm.passengers} Passagers</div>
                                     </div>
                                 </div>
                                 <div className={styles.featureIcons1}>
@@ -160,15 +163,15 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
                                         alt=""
                                         src="/briefcase.svg"
                                     />
-                                    <div className={styles.auto}>{selectedCar.luggage_count} Luggage</div>
+                                    <div className={styles.auto}>{bookingForm.luggage} Luggage</div>
                                 </div>
                                 <div className={styles.featureIcons2}>
-                                    {/* <img
-                                        className={styles.frameIcon1}
+                                    <img
+                                        className={styles.vuesaxlinearuserIcon}
                                         loading="lazy"
                                         alt=""
-                                        src="/frame-3.svg"
-                                    /> */}
+                                        src="/vuesaxlinearuser.svg"
+                                    />
                                     <div className={styles.doors}>Vender Name: {selectedCar.name || ''}</div>
                                 </div>
                                 {/* <div className={styles.featureIcons3}>
@@ -193,9 +196,9 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.bookingConfirmation}>
+                    {/* <div className={styles.bookingConfirmation}>
                         <h1 className={styles.bookingSummary1}>Booking Summary</h1>
-                    </div>
+                    </div> */}
                 </div>
             </section>
             <section className={styles.bookingForm}>
@@ -257,7 +260,7 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
                                     <div className={styles.contactDetailsLabels}>
                                         <div className={styles.name}>No. of Passengers</div>
                                     </div>
-                                    <input className={styles.pickupLocationInput} placeholder="No. of Passengers" {...(register("passenger", { required: "Passenger is required" }))} />
+                                    <input className={styles.pickupLocationInput} placeholder="No. of Passengers" value={selectedCar.car_seats} {...(register("passenger", { required: "Passenger is required" }))} />
                                     {/* <div className={styles.pickupLocationInput}>
                                         <div className={styles.enterPickUp}>Enter Pick Up Location</div>
                                     </div> */}
@@ -267,7 +270,7 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
                                     <div className={styles.contactDetailsLabels}>
                                         <div className={styles.name}>No. of Luggage</div>
                                     </div>
-                                    <input className={styles.pickupLocationInput} placeholder="No. of Luggage" {...(register("luggage"))} />
+                                    <input className={styles.pickupLocationInput} value={selectedCar.luggage_count} placeholder="No. of Luggage" {...(register("luggage"))} />
                                     {/* <div className={styles.pickupLocationInput}>
                                         <div className={styles.enterPickUp}>Enter Pick Up Location</div>
                                     </div> */}
@@ -336,7 +339,7 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
                         </div>
                     </button>
                 </form>
-                <div className={styles.priceBreakdown}>
+                {/* <div className={styles.priceBreakdown}>
                     <div className={styles.rectangleGroup}>
                         <div className={styles.frameItem} />
                         <div className={styles.costDetails}>
@@ -359,7 +362,7 @@ const CarBooking: FunctionComponent<CarBookingProps> = ({ setLoading }) => {
                             <div className={styles.totalCostLabel}>£{selectedCar.vehiclePrice}</div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
         </div>
     );

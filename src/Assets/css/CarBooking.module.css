@@ -279,6 +279,7 @@
 }
 
 .featureIcons1 {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -365,7 +366,7 @@
 }
 
 .vehicleFeatures {
-    width: 208px;
+    width: 100%;
     position: relative;
     gap: var(--gap-5xs);
     z-index: 1;
@@ -745,7 +746,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-end;
-    padding: 0 var(--padding-8xs);
+    padding: 0px;
     border: none;
     cursor: pointer;
 }
@@ -1236,7 +1237,7 @@
     display: flex;
     flex-wrap: wrap;
     flex: 1;
-    gap: var(--gap-xl);
+    gap: 30px;
     min-width: 159px;
     text-align: left;
     font-size: var(--font-size-sm);
